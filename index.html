@@ -2,820 +2,725 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="スマホ代見直しガイド。あなたにぴったりのSIMを楽しく診断しよう！">
-<meta name="theme-color" content="#12c5df">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="スマホの使い方や希望に合わせて、格安SIM選びのポイントをわかりやすく比較・診断します。">
+<meta name="theme-color" content="#06b6d4">
 <title>スマホ代見直しガイド｜ぴったりSIM診断</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --blue: #10bfdc;
-  --blue-dark: #087eae;
-  --navy: #123b60;
-  --pink: #ff388e;
-  --yellow: #fff04b;
-  --pale: #effcff;
-  --text: #18334b;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
-
-body {
-  margin: 0;
-  color: var(--text);
-  background: #fff;
-  font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN",
-    "Yu Gothic", sans-serif;
-  font-weight: 500;
-  line-height: 1.8;
-  overflow-wrap: anywhere;
-}
-
-a {
-  color: inherit;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(255,255,255,.96);
-  border-bottom: 2px solid #e7f4f8;
-}
-
-.nav {
-  max-width: 1100px;
-  margin: auto;
-  padding: 10px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  text-decoration: none;
-  color: var(--navy);
-  font-size: clamp(13px, 2.4vw, 21px);
-  font-weight: 900;
-  line-height: 1.3;
-}
-
-.brand-icon {
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  border-radius: 13px;
-  background: #39d7cb;
-  font-size: 23px;
-}
-
-.brand small {
-  display: block;
-  margin-top: 3px;
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.navlinks {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.navlinks a {
-  text-decoration: none;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 3px solid #fff;
-  border-radius: 999px;
-  padding: 13px 22px;
-  background: var(--pink);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 900;
-  box-shadow: 0 5px 0 #d51c70;
-  cursor: pointer;
-  transition: transform .15s;
-}
-
-.btn:active {
-  transform: translateY(3px);
-  box-shadow: 0 2px 0 #d51c70;
-}
-
-.navcta {
-  white-space: nowrap;
-  font-size: 12px;
-  padding: 9px 13px;
-  border: 0;
-}
-
-.hero {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(125deg, #08b7d7, #22d3e5 58%, #74e8dc);
-  color: white;
-}
-
-.hero-inner {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 24px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 25px;
-}
-
-.kicker {
-  display: inline-block;
-  background: var(--yellow);
-  color: var(--navy);
-  border: 3px solid #fff;
-  border-radius: 999px;
-  padding: 5px 17px;
-  font-weight: 900;
-  font-size: 15px;
-}
-
-.hero h1 {
-  margin: 20px 0 15px;
-  font-size: clamp(34px, 5vw, 59px);
-  line-height: 1.28;
-  font-weight: 900;
-  letter-spacing: -.04em;
-  text-shadow: none;
-}
-
-.hero h1 em {
-  color: var(--yellow);
-  font-style: normal;
-}
-
-.hero p {
-  font-size: clamp(14px, 2vw, 18px);
-  font-weight: 700;
-  line-height: 1.8;
-}
-
-.hero-art {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-art img {
-  display: block;
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 18px;
-}
-
-.trustrow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.trustrow span {
-  display: inline-block;
-  padding: 6px 11px;
-  border: 2px solid #ffffff99;
-  border-radius: 999px;
-  background: #ffffff20;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.wrap {
-  max-width: 1100px;
-  margin: auto;
-  padding: 42px 20px;
-}
-
-.section-head {
-  margin-bottom: 22px;
-}
-
-.section-head h2 {
-  margin: 0;
-  font-size: clamp(25px, 3.5vw, 36px);
-  line-height: 1.4;
-  font-weight: 900;
-}
-
-.section-head p {
-  margin: 8px 0 0;
-  color: #526a7e;
-  font-size: 14px;
-}
-
-.marker {
-  background: linear-gradient(transparent 58%, var(--yellow) 58%);
-  padding: 0 3px;
-}
-
-.problems {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 22px;
-}
-
-.problem-card {
-  padding: 23px;
-  background: #effbff;
-  border: 2px solid #d6f4fa;
-  border-radius: 25px;
-}
-
-.problem-card h3 {
-  margin: 0 0 12px;
-  font-size: 21px;
-  font-weight: 900;
-}
-
-.problem-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.problem-list li {
-  padding: 7px 0;
-  font-weight: 800;
-}
-
-.problem-list li::before {
-  content: "✓";
-  display: inline-grid;
-  place-items: center;
-  width: 25px;
-  height: 25px;
-  margin-right: 9px;
-  border-radius: 50%;
-  background: #ffd6e8;
-  color: #e91e78;
-  font-weight: 900;
-}
-
-.callout {
-  width: 100%;
-  padding: 28px 20px;
-  background: var(--yellow);
-  border: 4px solid #ffe039;
-  border-radius: 30px;
-  text-align: center;
-  font-size: clamp(21px, 3vw, 32px);
-  line-height: 1.6;
-  font-weight: 900;
-  overflow-wrap: normal;
-  word-break: keep-all;
-  transform: none;
-}
-
-.callout .line {
-  display: block;
-}
-
-.callout .highlight {
-  display: block;
-  margin: 4px 0;
-  color: var(--pink);
-  font-size: 1.08em;
-  font-weight: 900;
-  white-space: normal;
-}
-
-.sim-section {
-  background: linear-gradient(180deg, #effbff, #fff);
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 17px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.sim-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, .8fr);
-  grid-template-rows: auto auto 1fr;
-  align-items: center;
-  gap: 10px 20px;
-  padding: 22px;
-  background: #fff;
-  border: 3px solid var(--line);
-  border-radius: 22px;
-  box-shadow: 0 5px 0 #18334b08;
-}
-
-.sim-card .logo {
-  color: var(--accent);
-  font-size: 27px;
-  line-height: 1.3;
-  font-weight: 900;
-}
-
-.sim-card .tag {
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.price {
-  grid-column: 2;
-  grid-row: 1 / 3;
-  padding: 15px 10px;
-  border-radius: 15px;
-  background: var(--tint);
-  text-align: center;
-  font-weight: 900;
-}
-
-.price strong {
-  display: block;
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.price small {
-  font-size: 11px;
-}
-
-.sim-card ul {
-  grid-column: 1;
-  grid-row: 3;
-  margin: 4px 0 0;
-  padding-left: 20px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.sim-card .btn {
-  grid-column: 2;
-  grid-row: 3;
-  padding: 11px 13px;
-  border: 0;
-  background: var(--accent);
-  box-shadow: 0 4px 0 color-mix(in srgb, var(--accent), #000 17%);
-  font-size: 13px;
-}
-
-.note {
-  margin-top: 14px;
-  color: #5b7082;
-  font-size: 12px;
-}
-
-.quizbox {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: center;
-  padding: 28px;
-  background: linear-gradient(120deg, #fffde1, #f3ffea);
-  border: 2px solid #f0eb53;
-  border-radius: 28px;
-}
-
-.quizbox h2 {
-  margin: 15px 0 10px;
-  font-size: clamp(25px, 3vw, 36px);
-  line-height: 1.4;
-  font-weight: 900;
-}
-
-.quizform {
-  padding: 20px;
-  margin-top: 10px;
-  background: white;
-  border: 1px solid #e8e8c4;
-  border-radius: 20px;
-}
-
-.qstep {
-  display: none;
-}
-
-.qstep.active {
-  display: block;
-}
-
-.qstep h3 {
-  margin: 0 0 14px;
-  font-size: 17px;
-  font-weight: 900;
-}
-
-.options {
-  display: grid;
-  gap: 10px;
-}
-
-.option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px;
-  border: 2px solid #e6edf3;
-  border-radius: 13px;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-.option:has(input:checked) {
-  border-color: var(--pink);
-  background: #fff1f7;
-}
-
-.option input {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  accent-color: var(--pink);
-}
-
-.quiz-actions {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.btn.secondary {
-  background: #eaf5fb;
-  color: var(--navy);
-  border-color: #eaf5fb;
-  box-shadow: 0 4px 0 #c8e1ed;
-}
-
-.result {
-  display: none;
-  margin-top: 18px;
-  padding: 18px;
-  background: #f0fbff;
-  border: 2px dashed var(--blue);
-  border-radius: 16px;
-}
-
-.result.show {
-  display: block;
-}
-
-.result h3 {
-  margin-top: 0;
-  font-weight: 900;
-}
-
-.ranklist {
-  padding: 22px;
-  background: #fffef5;
-  border: 1px solid #f2e9a2;
-  border-radius: 22px;
-}
-
-.rankrow {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  padding: 14px 0;
-  border-bottom: 1px solid #e9edf0;
-}
-
-.rankrow:last-child {
-  border-bottom: 0;
-}
-
-.medal {
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: var(--yellow);
-  font-size: 20px;
-}
-
-.rankrow strong {
-  display: block;
-  font-weight: 900;
-}
-
-.rankrow small {
-  color: #526a7e;
-}
-
-.rankrow a {
-  margin-left: auto;
-  padding: 7px 12px;
-  border-radius: 999px;
-  background: var(--pink);
-  color: white;
-  text-decoration: none;
-  font-size: 11px;
-  font-weight: 900;
-  white-space: nowrap;
-}
-
-.faq {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-details {
-  padding: 16px;
-  border: 1px solid #e1edf2;
-  border-radius: 15px;
-  background: white;
-}
-
-summary {
-  cursor: pointer;
-  font-weight: 900;
-}
-
-details p {
-  margin-bottom: 0;
-  color: #526a7e;
-  font-size: 14px;
-}
-
-.disclosure {
-  padding: 16px;
-  border-radius: 14px;
-  background: #f6f7fa;
-  color: #5b6c7b;
-  font-size: 12px;
-}
-
-.footer-hero {
-  padding: 35px 20px;
-  background: linear-gradient(120deg, #08b7d7, #20cfe2);
-  color: white;
-  text-align: center;
-}
-
-.footer-hero h2 {
-  margin: 0 0 10px;
-  font-size: clamp(24px, 4vw, 38px);
-  line-height: 1.5;
-  font-weight: 900;
-  text-shadow: none;
-}
-
-.footer-hero p {
-  font-weight: 700;
-}
-
-.footer-hero .btn {
-  margin-top: 12px;
-  padding: 17px 25px;
-  font-size: clamp(16px, 3vw, 22px);
-}
-
-footer {
-  padding: 24px 16px;
-  color: #607384;
-  text-align: center;
-  font-size: 12px;
-}
-
-footer a {
-  margin: 0 8px;
-}
-
-@media (max-width: 800px) {
-  .navlinks {
-    display: none;
+:root{
+  --navy:#12314b;
+  --cyan:#14c8e5;
+  --pink:#ff3d91;
+  --yellow:#fff04b;
+  --ink:#18334b;
+  --muted:#5b7082;
+  --pale:#effaff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{
+  margin:0;
+  background:#fff;
+  color:var(--ink);
+  font-family:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN",sans-serif;
+  line-height:1.7;
+  overflow-wrap:anywhere;
+  font-weight:500;
+}
+a{color:inherit}
+button,input{font:inherit}
+img{max-width:100%;height:auto}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#ffffffed;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e6f0f6;
+}
+.nav{
+  max-width:1120px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 18px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  text-decoration:none;
+  font-weight:900;
+  color:var(--navy);
+  font-size:clamp(15px,2.3vw,22px);
+  line-height:1.2;
+  min-width:0;
+}
+.brand-icon{
+  width:40px;
+  height:40px;
+  flex:0 0 40px;
+  border-radius:13px;
+  background:linear-gradient(135deg,var(--cyan),#73e6a4);
+  display:grid;
+  place-items:center;
+  font-size:23px;
+  box-shadow:0 4px 0 #c3f4f7;
+}
+.brand small{
+  display:block;
+  font-size:10px;
+  font-weight:700;
+  margin-top:4px;
+}
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  font-size:12px;
+  font-weight:800;
+}
+.navlinks a{text-decoration:none}
+
+.navcta,.btn{
+  border:0;
+  border-radius:999px;
+  background:var(--pink);
+  color:white;
+  font-weight:900;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:13px 22px;
+  box-shadow:0 5px 0 #d51c70;
+  cursor:pointer;
+  text-align:center;
+  transition:transform .15s ease,filter .15s ease;
+}
+.navcta{white-space:nowrap;font-size:12px}
+.btn:hover,.navcta:hover{
+  filter:brightness(1.04);
+  transform:translateY(-2px);
+}
+
+.hero{
+  overflow:hidden;
+  background:linear-gradient(120deg,#03a8df 0%,#23d4ed 52%,#8cebd9 100%);
+  color:white;
+  position:relative;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  right:-70px;
+  bottom:-170px;
+  width:440px;
+  height:440px;
+  border-radius:50%;
+  background:#fff5;
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1120px;
+  margin:auto;
+  padding:48px 24px 38px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:22px;
+  position:relative;
+  z-index:1;
+}
+.kicker{
+  display:inline-block;
+  background:var(--yellow);
+  color:var(--navy);
+  padding:6px 16px;
+  border:2px solid #fff;
+  border-radius:999px;
+  font-weight:900;
+  letter-spacing:.02em;
+}
+.hero h1{
+  font-size:clamp(34px,5vw,62px);
+  line-height:1.2;
+  margin:18px 0 14px;
+  font-weight:900;
+  letter-spacing:-.035em;
+  text-shadow:none;
+}
+.hero h1 em{
+  font-style:normal;
+  color:#ffec55;
+  text-shadow:none;
+}
+.hero p{
+  font-size:clamp(15px,2vw,19px);
+  font-weight:700;
+  max-width:540px;
+}
+.hero-art{
+  min-height:300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.hero-art img{
+  display:block;
+  width:100%;
+  max-width:500px;
+  height:auto;
+  object-fit:contain;
+  border-radius:18px;
+}
+.trustrow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+.trustrow span{
+  background:#ffffff24;
+  border:1px solid #ffffff77;
+  padding:7px 11px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.wrap{
+  max-width:1120px;
+  margin:auto;
+  padding:44px 20px;
+}
+.section-head{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  margin-bottom:26px;
+  text-align:center;
+}
+.section-head h2{
+  font-size:clamp(25px,4vw,39px);
+  line-height:1.35;
+  margin:0;
+  font-weight:900;
+  letter-spacing:-.025em;
+  text-wrap:balance;
+}
+.section-head p{
+  margin:10px auto 0;
+  color:var(--muted);
+  font-size:clamp(14px,2vw,17px);
+  line-height:1.8;
+  max-width:700px;
+}
+.section-head>.btn{
+  margin:0 auto;
+  min-width:min(100%,320px);
+  max-width:420px;
+  font-size:clamp(15px,2.5vw,18px);
+  padding:16px 24px;
+}
+.marker{
+  background:linear-gradient(transparent 58%,var(--yellow) 58%);
+  padding:0 3px;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+
+.problems{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:20px;
+  align-items:stretch;
+}
+.problem-card{
+  background:#effaff;
+  border-radius:25px;
+  padding:24px;
+  border:2px solid #d6f4fa;
+}
+.problem-card h3{
+  margin:0 0 12px;
+  font-size:22px;
+  font-weight:900;
+}
+.problem-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.problem-list li{
+  padding:7px 0;
+  font-weight:700;
+}
+.problem-list li:before{
+  content:"✓";
+  display:inline-grid;
+  place-items:center;
+  background:#ffd4e7;
+  color:#e91e78;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  margin-right:9px;
+  font-weight:900;
+}
+.callout{
+  background:#fff04b;
+  border:4px solid #ffe13d;
+  border-radius:28px;
+  padding:clamp(24px,4vw,42px) clamp(16px,3vw,30px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  gap:8px;
+  font-size:clamp(23px,3.5vw,34px);
+  font-weight:900;
+  line-height:1.55;
+  letter-spacing:-.02em;
+  overflow-wrap:normal;
+  word-break:keep-all;
+  min-width:0;
+}
+.callout .callout-line{
+  display:block;
+  width:100%;
+}
+.callout .callout-highlight{
+  display:block;
+  color:var(--pink);
+  font-size:clamp(25px,3.8vw,37px);
+  line-height:1.45;
+  overflow-wrap:normal;
+  word-break:keep-all;
+}
+
+.sim-section{
+  background:linear-gradient(180deg,#effbff,#fff);
+}
+.cards{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  max-width:800px;
+  margin-inline:auto;
+}
+.sim-card{
+  background:white;
+  border:2px solid var(--line);
+  border-radius:22px;
+  padding:22px 24px;
+  box-shadow:0 7px 0 #18334b08;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(180px,.8fr);
+  grid-template-rows:auto auto 1fr;
+  column-gap:22px;
+  align-items:center;
+}
+.sim-card .logo{
+  font-size:clamp(22px,2.3vw,28px);
+  font-weight:900;
+  letter-spacing:-.035em;
+  line-height:1.3;
+}
+.sim-card .tag{
+  font-size:13px;
+  color:var(--muted);
+  font-weight:700;
+  margin-top:6px;
+}
+.price{
+  grid-column:2;
+  grid-row:1/3;
+  background:var(--tint);
+  padding:15px 12px;
+  border-radius:14px;
+  text-align:center;
+  font-weight:900;
+}
+.price strong{
+  font-size:clamp(19px,2.2vw,25px);
+  display:block;
+  line-height:1.4;
+}
+.price small{
+  display:block;
+  font-size:11px;
+  margin-top:4px;
+  line-height:1.6;
+}
+.sim-card ul{
+  grid-column:1;
+  grid-row:3;
+  padding-left:20px;
+  margin:12px 0 0;
+  font-size:13px;
+  font-weight:700;
+}
+.sim-card li{margin:5px 0}
+.sim-card .btn{
+  grid-column:2;
+  grid-row:3;
+  background:var(--accent);
+  box-shadow:0 4px 0 color-mix(in srgb,var(--accent),#000 17%);
+  padding:12px 14px;
+  font-size:13px;
+  align-self:end;
+}
+.note{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:14px;
+  line-height:1.8;
+}
+
+.quizbox{
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:24px;
+  align-items:center;
+  background:linear-gradient(120deg,#fffde1,#f3ffea);
+  border:2px solid #f0eb53;
+  border-radius:28px;
+  padding:clamp(20px,4vw,36px);
+}
+.quizbox h2{
+  font-size:clamp(25px,3vw,36px);
+  line-height:1.4;
+  margin:12px 0;
+  font-weight:900;
+}
+.quizbox p{margin:0 0 20px}
+.quiz-illustration{
+  font-size:96px;
+  text-align:center;
+}
+.quizform{
+  background:white;
+  border:1px solid #e8e8c4;
+  border-radius:20px;
+  padding:22px;
+  margin-top:18px;
+}
+.qstep{display:none}
+.qstep.active{display:block}
+.qstep h3{
+  margin:0 0 14px;
+  font-size:18px;
+  font-weight:900;
+}
+.options{display:grid;gap:10px}
+.option{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px;
+  border:2px solid #e6edf3;
+  border-radius:13px;
+  cursor:pointer;
+  font-weight:700;
+}
+.option:has(input:checked){
+  border-color:var(--pink);
+  background:#fff1f7;
+}
+.option input{
+  accent-color:var(--pink);
+  width:18px;
+  height:18px;
+  flex:0 0 auto;
+}
+.quiz-actions{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:18px;
+}
+.btn.secondary{
+  background:#eaf5fb;
+  color:var(--navy);
+  box-shadow:0 4px 0 #c8e1ed;
+}
+.result{
+  display:none;
+  margin-top:18px;
+  padding:18px;
+  background:#f0fbff;
+  border:2px dashed var(--cyan);
+  border-radius:16px;
+}
+.result.show{display:block}
+.result h3{margin-top:0}
+
+.ranklist{
+  border-radius:22px;
+  border:1px solid #f2e9a2;
+  padding:22px;
+  background:#fffef5;
+}
+.rankrow{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:14px 0;
+  border-bottom:1px solid #e9edf0;
+}
+.rankrow:last-child{border-bottom:0}
+.medal{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--yellow);
+  font-size:20px;
+  font-weight:900;
+  flex-shrink:0;
+}
+.rankrow strong{display:block;font-weight:900}
+.rankrow small{color:var(--muted)}
+.rankrow a{
+  margin-left:auto;
+  background:var(--pink);
+  color:white;
+  text-decoration:none;
+  border-radius:999px;
+  padding:7px 12px;
+  font-size:11px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.faq{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+details{
+  background:white;
+  border:1px solid #e1edf2;
+  border-radius:15px;
+  padding:16px;
+}
+summary{
+  cursor:pointer;
+  font-weight:900;
+}
+details p{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:0;
+}
+.disclosure{
+  background:#f6f7fa;
+  border-radius:14px;
+  padding:16px;
+  font-size:12px;
+  color:#5b6c7b;
+  line-height:1.9;
+}
+.footer-hero{
+  background:linear-gradient(100deg,#134a86,#08a9d6);
+  color:white;
+  padding:34px 20px;
+  text-align:center;
+}
+.footer-hero h2{
+  font-size:clamp(24px,4vw,38px);
+  line-height:1.45;
+  margin:0 0 8px;
+  font-weight:900;
+  text-shadow:none;
+}
+.footer-hero p{
+  max-width:650px;
+  margin:12px auto 22px;
+  line-height:1.9;
+}
+.footer-hero .btn{
+  margin:0 auto;
+  max-width:100%;
+  font-size:clamp(15px,2.5vw,19px);
+  padding:16px 26px;
+}
+footer{
+  padding:24px 16px;
+  text-align:center;
+  font-size:12px;
+  color:#607384;
+}
+footer a{margin:0 8px}
+
+@media(max-width:800px){
+  .nav{padding:9px 12px}
+  .navlinks{display:none}
+  .hero-inner{
+    grid-template-columns:1fr;
+    padding:30px 18px 24px;
+    gap:6px;
   }
-
-  .hero-inner {
-    grid-template-columns: 1fr;
-    padding: 28px 18px;
-    gap: 14px;
+  .hero h1{
+    font-size:clamp(36px,8vw,48px);
+    margin:16px 0 12px;
   }
-
-  .hero h1 {
-    font-size: clamp(35px, 8.5vw, 48px);
-    line-height: 1.28;
+  .hero-art{
+    min-height:0;
+    margin:8px -4px 0;
   }
-
-  .hero-art img {
-    max-width: 560px;
+  .hero-art img{
+    width:100%;
+    max-width:560px;
+    border-radius:14px;
   }
-
-  .problems,
-  .quizbox {
-    grid-template-columns: 1fr;
+  .trustrow{gap:8px;margin-top:18px}
+  .trustrow span{font-size:12px}
+  .problems,.quizbox{grid-template-columns:1fr}
+  .callout{
+    max-width:600px;
+    width:100%;
+    margin:4px auto;
   }
-
-  .callout {
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
-  .faq {
-    grid-template-columns: 1fr;
+  .quiz-illustration{display:none}
+  .faq{grid-template-columns:1fr}
+  .cards{gap:14px}
+  .sim-card{
+    padding:20px;
+    grid-template-columns:minmax(0,1fr) minmax(145px,.75fr);
+    column-gap:14px;
   }
 }
-
-@media (max-width: 480px) {
-  .nav {
-    padding: 8px 10px;
-    gap: 7px;
+@media(max-width:480px){
+  .brand{font-size:14px;gap:7px}
+  .brand-icon{
+    width:34px;
+    height:34px;
+    flex-basis:34px;
+    font-size:20px;
+    border-radius:11px;
   }
-
-  .brand {
-    font-size: 13px;
-    gap: 6px;
+  .brand small{font-size:9px;max-width:205px}
+  .navcta{
+    padding:10px 12px;
+    font-size:11px;
+    box-shadow:0 3px 0 #d51c70;
   }
-
-  .brand-icon {
-    width: 34px;
-    height: 34px;
-    font-size: 19px;
+  .hero-inner{padding:25px 15px 20px}
+  .hero h1{
+    font-size:clamp(33px,9vw,40px);
+    line-height:1.25;
+    letter-spacing:-.03em;
   }
-
-  .brand small {
-    font-size: 9px;
+  .hero p{font-size:15px;line-height:1.8}
+  .hero-art{margin:4px -7px 0}
+  .hero-art img{border-radius:10px}
+  .trustrow span{padding:6px 9px;font-size:11px}
+  .wrap{padding:32px 14px}
+  .section-head{gap:14px;margin-bottom:22px}
+  .section-head h2{font-size:clamp(25px,7vw,31px);line-height:1.4}
+  .section-head p{font-size:14px;line-height:1.8}
+  .section-head>.btn{
+    width:100%;
+    min-width:0;
+    max-width:360px;
+    padding:15px 18px;
+    font-size:15px;
   }
-
-  .navcta {
-    padding: 9px 11px;
-    font-size: 11px;
+  .problem-card{padding:18px;border-radius:20px}
+  .problem-card h3{font-size:19px}
+  .callout{
+    padding:25px 14px;
+    border-radius:23px;
+    gap:7px;
+    font-size:clamp(22px,6.3vw,28px);
+    line-height:1.55;
   }
-
-  .hero-inner {
-    padding: 25px 15px;
+  .callout .callout-highlight{
+    font-size:clamp(23px,6.6vw,30px);
+    line-height:1.5;
   }
-
-  .hero h1 {
-    font-size: clamp(32px, 8.6vw, 43px);
-    line-height: 1.25;
-    letter-spacing: -.04em;
+  .sim-card{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:8px;
+    padding:18px 16px;
+    border-radius:19px;
   }
-
-  .hero p {
-    font-size: 15px;
+  .sim-card .logo{font-size:25px}
+  .sim-card .tag{font-size:12px;margin-top:0}
+  .price{margin:4px 0 0;padding:13px 8px}
+  .price strong{font-size:22px}
+  .sim-card ul{
+    margin:4px 0 8px;
+    font-size:13px;
+    padding-left:20px;
   }
-
-  .hero-art img {
-    border-radius: 12px;
+  .sim-card .btn{
+    width:100%;
+    padding:13px 12px;
+    font-size:14px;
   }
-
-  .wrap {
-    padding: 32px 14px;
-  }
-
-  .problem-card {
-    padding: 18px;
-  }
-
-  .callout {
-    padding: 23px 12px;
-    font-size: clamp(20px, 5.6vw, 27px);
-    line-height: 1.55;
-    border-width: 3px;
-    border-radius: 25px;
-    word-break: keep-all;
-  }
-
-  .callout .line {
-    display: block;
-  }
-
-  .callout .highlight {
-    margin: 5px 0;
-    font-size: 1.03em;
-  }
-
-  .sim-card {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 9px;
-    padding: 18px 15px;
-  }
-
-  .sim-card .logo {
-    font-size: 24px;
-  }
-
-  .price {
-    margin: 3px 0;
-  }
-
-  .sim-card ul {
-    margin: 4px 0;
-  }
-
-  .sim-card .btn {
-    width: 100%;
-    padding: 13px;
-    font-size: 14px;
-  }
-
-  .quizbox {
-    padding: 17px;
-  }
-
-  .quizform {
-    padding: 14px;
-  }
-
-  .quiz-actions .btn {
-    padding: 11px 13px;
-  }
-
-  .ranklist {
-    padding: 15px;
-  }
-
-  .rankrow {
-    gap: 9px;
-  }
-
-  .rankrow small {
-    display: block;
-    line-height: 1.6;
-  }
-
-  .rankrow a {
-    padding: 7px 9px;
-    font-size: 10px;
-  }
-
-  .medal {
-    width: 34px;
-    height: 34px;
-    font-size: 17px;
-  }
-
-  .footer-hero {
-    padding: 30px 15px;
-  }
+  .note{line-height:1.9}
+  .quizbox{padding:17px;border-radius:22px}
+  .quizform{padding:14px;margin-top:10px}
+  .qstep h3{font-size:17px}
+  .option{padding:11px;font-size:14px}
+  .quiz-actions .btn{padding:11px 15px}
+  .ranklist{padding:15px}
+  .rankrow{gap:9px;align-items:flex-start}
+  .rankrow small{display:block;line-height:1.7}
+  .rankrow a{font-size:10px;padding:7px 9px;align-self:center}
+  .medal{width:34px;height:34px;font-size:17px}
+  .footer-hero{padding:28px 16px}
+  .footer-hero .btn{max-width:100%;padding:14px 17px}
+}
+@media(max-width:350px){
+  .brand small{display:none}
+  .navcta{font-size:10px;padding:9px}
+  .hero h1{font-size:32px}
+  .trustrow span{font-size:10px}
+  .rankrow{flex-wrap:wrap}
+  .rankrow a{margin-left:43px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.navcta{transition:none}
 }
 </style>
 </head>
 
 <body>
-
 <div class="topbar">
   <nav class="nav" aria-label="メインナビゲーション">
     <a class="brand" href="#home">
       <span class="brand-icon">📱</span>
-      <span>
-        スマホ代見直しガイド
-        <small>あなたにぴったりのSIM選びを見つけよう</small>
-      </span>
+      <span>スマホ代見直しガイド<small>あなたにぴったりのSIM選びを見つけよう</small></span>
     </a>
-
     <div class="navlinks">
-      <a href="#home">ホーム</a>
-      <a href="#quiz">SIM診断</a>
-      <a href="#compare">料金比較</a>
-      <a href="#ranking">選び方</a>
-      <a href="#faq">よくある質問</a>
+      <a href="#home">⌂ ホーム</a>
+      <a href="#quiz">✓ 診断チャート</a>
+      <a href="#compare">▥ 料金比較</a>
+      <a href="#ranking">♛ 選び方</a>
+      <a href="#faq">？ よくある質問</a>
     </div>
-
-    <a class="btn navcta" href="#quiz">📱 SIM診断へ</a>
+    <a class="navcta" href="#quiz">📱 SIM診断へ</a>
   </nav>
 </div>
 
@@ -823,34 +728,25 @@ footer a {
   <div class="hero-inner">
     <div>
       <span class="kicker">＼ 3分でわかる！ ／</span>
-
       <h1>
         そのスマホ代、<br>
         まだ<strong><em>高い</em></strong>かも…？<br>
         ぴったりSIMを<br>
         見つけよう！
       </h1>
-
-      <p>
-        毎月のスマホ代を見直して、もっと自由に、もっと楽しく！
-        あなたの使い方に合うプランを選ぼう。
-      </p>
-
+      <p>毎月のスマホ代を見直して、もっと自由に、もっと楽しく！使い方に合うプランを選ぼう。</p>
       <div class="trustrow">
         <span>💸 月額料金を見直す</span>
         <span>📶 通信条件を比較</span>
         <span>🔢 番号そのまま乗り換えも</span>
       </div>
-
-      <p style="font-size:12px;margin-top:16px">
-        ※料金・対応端末・キャンペーンは各社の最新条件をご確認ください。
-      </p>
+      <p style="font-size:12px;margin-top:16px">※料金・対応端末・キャンペーンは各社の公式サイトで最新条件をご確認ください。</p>
     </div>
 
     <div class="hero-art">
       <img
         src="hero-pop-girl.PNG"
-        alt="メガネをかけたロングヘアの女の子がスマートフォンを持っているイラスト"
+        alt="スマホ代をもっと軽やかにと呼びかける、メガネをかけたロングヘアの女の子のイラスト"
         onerror="this.onerror=null;this.src='hero-pop-girl.png';"
       >
     </div>
@@ -858,11 +754,12 @@ footer a {
 </header>
 
 <main>
-
 <section class="wrap">
   <div class="section-head">
-    <h2>こんなお悩み、<span class="marker">ありませんか？</span></h2>
-    <p>まずは「何を変えたいか」を整理するところから。</p>
+    <div>
+      <h2>こんなお悩み、<span class="marker">ありませんか？</span></h2>
+      <p>まずは「何を変えたいか」を整理するところから。</p>
+    </div>
   </div>
 
   <div class="problems">
@@ -878,9 +775,9 @@ footer a {
     </div>
 
     <div class="callout" aria-label="その悩み、ぴったりSIM診断で整理しよう">
-      <span class="line">その悩み、</span>
-      <span class="highlight">ぴったりSIM診断</span>
-      <span class="line">で整理しよう！ ✨</span>
+      <span class="callout-line">その悩み、</span>
+      <span class="callout-highlight">ぴったりSIM診断</span>
+      <span class="callout-line">で整理しよう！ ✨</span>
     </div>
   </div>
 </section>
@@ -888,78 +785,80 @@ footer a {
 <section class="sim-section" id="compare">
   <div class="wrap">
     <div class="section-head">
-      <h2>人気サービスを<span class="marker">比較しよう！</span> 🎉</h2>
-      <p>価格だけで決めず、データ容量・通話・使い方もチェック。</p>
+      <div>
+        <h2>人気サービスを<span class="marker">比較しよう！</span> 🎉</h2>
+        <p>価格だけで決めず、データ容量・通話・使い方もチェック。</p>
+      </div>
       <a class="btn" href="#quiz">自分に合うプランを診断 →</a>
     </div>
 
     <div class="cards">
-
       <article class="sim-card" style="--line:#61e9a1;--accent:#0cba67;--tint:#e9fff3">
         <div class="logo">LINEMO</div>
         <div class="tag">ソフトバンク回線のオンライン専用ブランド</div>
         <div class="price">
-          <strong>料金を公式で確認</strong>
-          <small>最新のプラン・条件はこちら</small>
+          <strong>990円〜</strong>
+          <small>税込・プランにより異なる<br>最新料金は公式ページで確認</small>
         </div>
         <ul>
-          <li>データ容量と料金を確認</li>
-          <li>LINE関連の特典条件を確認</li>
+          <li>3GBまで月額990円のプランあり</li>
+          <li>データ容量と通話条件を確認</li>
           <li>オンライン手続きが中心</li>
         </ul>
-        <a class="btn" href="https://www.linemo.jp/" target="_blank" rel="noopener">公式サイトで確認 ↗</a>
+        <a class="btn" href="https://www.linemo.jp/plan/index.html" target="_blank" rel="noopener noreferrer">公式料金を確認 ↗</a>
       </article>
 
       <article class="sim-card" style="--line:#ff9dcc;--accent:#ef318a;--tint:#fff0f7">
         <div class="logo">楽天モバイル</div>
         <div class="tag">データ使用量に応じた料金プラン</div>
         <div class="price">
-          <strong>料金を公式で確認</strong>
-          <small>利用量・通話条件を確認</small>
+          <strong>1,078円〜</strong>
+          <small>税込・利用量により変動<br>最新料金は公式ページで確認</small>
         </div>
         <ul>
-          <li>使うデータ量に応じて選ぶ</li>
+          <li>データ使用量に応じて料金が変わる</li>
           <li>通話アプリの条件を確認</li>
           <li>利用場所の電波状況も確認</li>
         </ul>
-        <a class="btn" href="https://network.mobile.rakuten.co.jp/" target="_blank" rel="noopener">公式サイトで確認 ↗</a>
+        <a class="btn" href="https://network.mobile.rakuten.co.jp/fee/" target="_blank" rel="noopener noreferrer">公式料金を確認 ↗</a>
       </article>
 
       <article class="sim-card" style="--line:#8bd7ff;--accent:#098fe8;--tint:#edf8ff">
         <div class="logo">ahamo</div>
         <div class="tag">ドコモのオンライン専用プラン</div>
         <div class="price">
-          <strong>料金を公式で確認</strong>
-          <small>容量・通話条件を確認</small>
+          <strong>2,970円</strong>
+          <small>税込・30GBプランの基本料金<br>最新料金は公式ページで確認</small>
         </div>
         <ul>
-          <li>必要なデータ容量を確認</li>
-          <li>通話の対象・条件を確認</li>
+          <li>基本プランに5分以内の国内通話無料付き</li>
+          <li>追加データ容量の条件を確認</li>
           <li>海外利用の条件を確認</li>
         </ul>
-        <a class="btn" href="https://ahamo.com/" target="_blank" rel="noopener">公式サイトで確認 ↗</a>
+        <a class="btn" href="https://ahamo.com/plan/" target="_blank" rel="noopener noreferrer">公式料金を確認 ↗</a>
       </article>
 
       <article class="sim-card" style="--line:#b7a8ff;--accent:#7156d9;--tint:#f4f0ff">
         <div class="logo">IIJmio</div>
         <div class="tag">複数の容量から選べる格安SIM</div>
         <div class="price">
-          <strong>料金を公式で確認</strong>
-          <small>音声・データ別の条件を確認</small>
+          <strong>850円〜</strong>
+          <small>税込・音声SIMのプラン例<br>最新料金は公式ページで確認</small>
         </div>
         <ul>
-          <li>月間容量と料金を比較</li>
-          <li>端末セットの条件を確認</li>
+          <li>少容量から大容量まで選べる</li>
+          <li>端末セットやキャンペーンを確認</li>
           <li>回線タイプ・対応端末を確認</li>
         </ul>
-        <a class="btn" href="https://www.iijmio.jp/" target="_blank" rel="noopener">公式サイトで確認 ↗</a>
+        <a class="btn" href="https://www.iijmio.jp/hdc/spec/" target="_blank" rel="noopener noreferrer">公式料金を確認 ↗</a>
       </article>
-
     </div>
 
     <p class="note">
-      ※料金、割引、通話料、契約条件、対応エリアは変更される場合があります。
-      申込前に各社の公式サイトで最新情報をご確認ください。
+      ※表示している料金はプランの代表例です。料金やキャンペーンは変更される場合があります。
+      このHTMLだけでは各社の公式サイトから料金を自動取得し続けることはできません。
+      最新の金額は各社の公式料金ページでご確認ください。
+      自動更新を実装するには、各社が提供するAPIなどのデータ取得手段とサーバー側の処理が必要です。
     </p>
   </div>
 </section>
@@ -969,64 +868,66 @@ footer a {
     <div>
       <span class="kicker">かんたん3問！</span>
       <h2>あなたに合うSIMを<br><span class="marker">一緒に見つけよう</span> 🔎</h2>
-      <p>
-        3つの質問に答えると、選び方のヒントが表示されます。
-        診断は目安なので、最後は公式条件もチェック！
-      </p>
+      <p>3つの質問に答えると、選び方のヒントが表示されます。診断は目安なので、最後は公式条件もチェック！</p>
+      <div class="quiz-illustration">🧑‍💻✨📱</div>
     </div>
 
-    <form class="quizform" id="simQuiz">
-      <div class="qstep active" data-step="0">
-        <h3>Q1. ひと月のデータ使用量は？</h3>
-        <div class="options">
-          <label class="option"><input type="radio" name="data" value="low"> 3〜5GBくらい</label>
-          <label class="option"><input type="radio" name="data" value="mid"> 10〜30GBくらい</label>
-          <label class="option"><input type="radio" name="data" value="high"> たくさん使う・無制限が気になる</label>
-          <label class="option"><input type="radio" name="data" value="unknown"> わからない</label>
+    <div>
+      <form class="quizform" id="simQuiz">
+        <div class="qstep active" data-step="0">
+          <h3>Q1. ひと月のデータ使用量は？</h3>
+          <div class="options">
+            <label class="option"><input type="radio" name="data" value="low" required> 3〜5GBくらい</label>
+            <label class="option"><input type="radio" name="data" value="mid"> 10〜30GBくらい</label>
+            <label class="option"><input type="radio" name="data" value="high"> たくさん使う・無制限が気になる</label>
+            <label class="option"><input type="radio" name="data" value="unknown"> わからない</label>
+          </div>
+          <div class="quiz-actions">
+            <span></span>
+            <button class="btn" type="button" data-next>次へ →</button>
+          </div>
         </div>
-        <div class="quiz-actions">
-          <span></span>
-          <button class="btn" type="button" data-next>次へ →</button>
-        </div>
-      </div>
 
-      <div class="qstep" data-step="1">
-        <h3>Q2. 何を一番重視する？</h3>
-        <div class="options">
-          <label class="option"><input type="radio" name="priority" value="price"> 月額料金の安さ</label>
-          <label class="option"><input type="radio" name="priority" value="data"> データ容量・使いやすさ</label>
-          <label class="option"><input type="radio" name="priority" value="support"> 店舗などのサポート</label>
-          <label class="option"><input type="radio" name="priority" value="balance"> 料金とサービスのバランス</label>
+        <div class="qstep" data-step="1">
+          <h3>Q2. 何を一番重視する？</h3>
+          <div class="options">
+            <label class="option"><input type="radio" name="priority" value="price" required> 月額料金の安さ</label>
+            <label class="option"><input type="radio" name="priority" value="data"> データ容量・使いやすさ</label>
+            <label class="option"><input type="radio" name="priority" value="support"> 店舗などのサポート</label>
+            <label class="option"><input type="radio" name="priority" value="balance"> 料金とサービスのバランス</label>
+          </div>
+          <div class="quiz-actions">
+            <button class="btn secondary" type="button" data-prev>← 戻る</button>
+            <button class="btn" type="button" data-next>次へ →</button>
+          </div>
         </div>
-        <div class="quiz-actions">
-          <button class="btn secondary" type="button" data-prev>← 戻る</button>
-          <button class="btn" type="button" data-next>次へ →</button>
-        </div>
-      </div>
 
-      <div class="qstep" data-step="2">
-        <h3>Q3. 通話はどのくらい使う？</h3>
-        <div class="options">
-          <label class="option"><input type="radio" name="call" value="little"> ほとんどしない</label>
-          <label class="option"><input type="radio" name="call" value="some"> 短い電話をよくする</label>
-          <label class="option"><input type="radio" name="call" value="long"> 長電話が多い</label>
-          <label class="option"><input type="radio" name="call" value="unknown"> わからない</label>
+        <div class="qstep" data-step="2">
+          <h3>Q3. 通話はどのくらい使う？</h3>
+          <div class="options">
+            <label class="option"><input type="radio" name="call" value="little" required> ほとんどしない</label>
+            <label class="option"><input type="radio" name="call" value="some"> 短い電話をよくする</label>
+            <label class="option"><input type="radio" name="call" value="long"> 長電話が多い</label>
+            <label class="option"><input type="radio" name="call" value="unknown"> わからない</label>
+          </div>
+          <div class="quiz-actions">
+            <button class="btn secondary" type="button" data-prev>← 戻る</button>
+            <button class="btn" type="submit">診断結果を見る ✨</button>
+          </div>
         </div>
-        <div class="quiz-actions">
-          <button class="btn secondary" type="button" data-prev>← 戻る</button>
-          <button class="btn" type="submit">診断結果を見る ✨</button>
-        </div>
-      </div>
 
-      <div class="result" id="quizResult" aria-live="polite"></div>
-    </form>
+        <div class="result" id="quizResult" aria-live="polite"></div>
+      </form>
+    </div>
   </div>
 </section>
 
 <section class="wrap" id="ranking">
   <div class="section-head">
-    <h2>選ぶときの<span class="marker">チェックポイント</span> 🏆</h2>
-    <p>ランキングではなく、使い方別に比較するための目安です。</p>
+    <div>
+      <h2>選ぶときの<span class="marker">チェックポイント</span> 🏆</h2>
+      <p>ランキングではなく、使い方別に比較するための目安です。</p>
+    </div>
   </div>
 
   <div class="ranklist">
@@ -1034,22 +935,22 @@ footer a {
       <span class="medal">💸</span>
       <div>
         <strong>月額料金を重視</strong>
-        <small>データ量・通話・割引後の料金を合計して比較</small>
+        <small>月のデータ量・通話・割引後の料金を合計して比較</small>
       </div>
       <a href="#compare">4社を比較</a>
     </div>
 
     <div class="rankrow">
-      <span class="medal">📶</span>
+      <span class="medal" style="background:#dff5ff">📶</span>
       <div>
         <strong>電波・通信を重視</strong>
-        <small>自宅・職場・よく行く場所のエリアを確認</small>
+        <small>自宅・職場・よく行く場所のエリアと混雑時の傾向を確認</small>
       </div>
       <a href="#compare">確認する</a>
     </div>
 
     <div class="rankrow">
-      <span class="medal">☎️</span>
+      <span class="medal" style="background:#ffe1ef">☎️</span>
       <div>
         <strong>電話をよく使う</strong>
         <small>通話定額の対象、専用アプリの要否、超過料金を確認</small>
@@ -1061,19 +962,21 @@ footer a {
 
 <section class="wrap" id="faq">
   <div class="section-head">
-    <h2>よくある質問 💬</h2>
-    <p>乗り換え前の不安をひとつずつ解消。</p>
+    <div>
+      <h2>よくある質問 💬</h2>
+      <p>乗り換え前の不安をひとつずつ解消。</p>
+    </div>
   </div>
 
   <div class="faq">
     <details>
       <summary>今の電話番号はそのまま使える？</summary>
-      <p>多くの場合、番号を引き継ぐ手続きができます。契約先・申込先の最新手順やMNPの対象条件を確認してください。</p>
+      <p>多くの場合、番号を引き継ぐ手続きができます。契約先・申込先の最新手順や、MNPワンストップの対象条件を確認してください。</p>
     </details>
 
     <details>
       <summary>格安SIMは必ず通信が遅い？</summary>
-      <p>必ず遅いとは限りません。利用場所・時間帯・回線方式・端末などによって体感が変わります。</p>
+      <p>必ず遅いとは言い切れません。利用場所・時間帯・回線方式・端末などによって体感が変わるため、よく使う場所での状況を確認しましょう。</p>
     </details>
 
     <details>
@@ -1090,14 +993,11 @@ footer a {
 
 <section class="wrap">
   <div class="disclosure">
-    <strong>広告について：</strong>
-    今後アフィリエイト広告を掲載する場合は、広告リンクを含むことを読者に分かるように明示します。
-    このページの「公式サイトで確認」ボタンは各社の公式サイトへのリンクです。<br><br>
     <strong>運営方針：</strong>
-    掲載内容は情報提供を目的としています。料金・特典・サービス内容は変更されることがあるため、申込前に必ず各社の公式情報をご確認ください。
+    このページは情報提供を目的としています。料金・特典・サービス内容は変更されることがあるため、申込前に必ず各社の公式情報をご確認ください。
+    今後アフィリエイト広告を掲載する場合は、広告リンクを含むことを読者に分かるように明示します。
   </div>
 </section>
-
 </main>
 
 <section class="footer-hero">
@@ -1117,100 +1017,97 @@ footer a {
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-const steps = [...document.querySelectorAll(".qstep")];
+const steps = [...document.querySelectorAll('.qstep')];
 let current = 0;
 
-function showStep(number) {
-  current = number;
-  steps.forEach((step, index) => {
-    step.classList.toggle("active", index === number);
+function showStep(n){
+  current = n;
+  steps.forEach((step,index)=>{
+    step.classList.toggle('active',index === n);
   });
 }
 
-document.querySelectorAll("[data-next]").forEach(button => {
-  button.addEventListener("click", () => {
-    const field = current === 0 ? "data" : "priority";
-    const selected = document.querySelector(
-      'input[name="' + field + '"]:checked'
-    );
+document.querySelectorAll('[data-next]').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const field = current === 0 ? 'data' : 'priority';
 
-    if (!selected) {
-      alert("選択肢をひとつ選んでね！");
+    if(!document.querySelector(`input[name="${field}"]:checked`)){
+      alert('選択肢をひとつ選んでね！');
       return;
     }
 
-    showStep(Math.min(current + 1, 2));
+    showStep(Math.min(current + 1,2));
   });
 });
 
-document.querySelectorAll("[data-prev]").forEach(button => {
-  button.addEventListener("click", () => {
-    showStep(Math.max(current - 1, 0));
+document.querySelectorAll('[data-prev]').forEach(button=>{
+  button.addEventListener('click',()=>{
+    showStep(Math.max(current - 1,0));
   });
 });
 
-document.getElementById("simQuiz").addEventListener("submit", event => {
+document.getElementById('simQuiz').addEventListener('submit',event=>{
   event.preventDefault();
 
   const data = document.querySelector('input[name="data"]:checked')?.value;
   const priority = document.querySelector('input[name="priority"]:checked')?.value;
   const call = document.querySelector('input[name="call"]:checked')?.value;
 
-  if (!data || !priority || !call) {
-    alert("3つの質問すべてに回答してね！");
+  if(!data || !priority || !call){
+    alert('3つの質問すべてに回答してね！');
     return;
   }
 
-  let title = "まずは各社の条件を比較してみよう";
-  let body = "データ使用量・通話・サポート条件を並べ、毎月の合計費用で比較するのがおすすめです。";
+  let title = 'まずは各社の条件を比較してみよう';
+  let body = 'データ使用量・通話・サポート条件を並べ、毎月の合計費用で比較するのがおすすめです。';
 
-  if (data === "high") {
-    title = "データをたくさん使う人";
-    body = "データ容量の上限・追加料金・混雑時の通信・テザリング条件を確認しましょう。楽天モバイルなどの使用量に応じたプランや、大容量プランを公式情報で比較しましょう。";
-  } else if (data === "low" && priority === "price") {
-    title = "少容量で料金重視の人";
-    body = "小容量プランの月額、通話料、割引条件を比較しましょう。IIJmioなど複数の容量から選べるサービスも候補です。";
-  } else if (data === "mid" && priority === "data") {
-    title = "中容量を使う人";
-    body = "毎月の実際の使用量に合う容量と、速度・通話条件のバランスを比較しましょう。LINEMOやahamoなども候補として確認できます。";
-  } else if (priority === "support") {
-    title = "サポートを重視する人";
-    body = "オンライン専用プランは手続きやサポートがオンライン中心の場合があります。店舗相談の可否・有料サポート・対応時間を申込前に確認しましょう。";
+  if(data === 'high'){
+    title = 'データをたくさん使う人';
+    body = 'データ容量の上限・追加料金・混雑時の通信・テザリング条件を確認しましょう。楽天モバイルなどの使用量に応じたプランや、大容量プランを公式情報で比較してください。';
+  }else if(data === 'low' && priority === 'price'){
+    title = '少容量で料金重視の人';
+    body = '小容量プランの月額、通話料、割引条件を比較しましょう。IIJmioなど複数の容量から選べるサービスも候補です。';
+  }else if(data === 'mid' && priority === 'data'){
+    title = '中容量を使う人';
+    body = '毎月の実際の使用量に合う容量と、速度・通話条件のバランスを比較しましょう。LINEMOやahamoなども候補として確認できます。';
+  }else if(priority === 'support'){
+    title = 'サポートを重視する人';
+    body = 'オンライン専用プランは手続きやサポートがオンライン中心の場合があります。店舗相談の可否・有料サポート・対応時間を申込前に確認しましょう。';
   }
 
-  if (call === "long") {
-    body += " 長電話が多い場合は、かけ放題の対象や専用アプリの要否、対象外通話の料金を必ず確認してください。";
-  } else if (call === "some") {
-    body += " 短い電話が多い場合は、短時間通話オプションの条件と超過後の料金を比較しましょう。";
-  } else if (call === "unknown") {
-    body += " 通話履歴を1〜2か月確認すると、通話オプションが必要か判断しやすくなります。";
+  if(call === 'long'){
+    body += ' 長電話が多い場合は、かけ放題の対象や専用アプリの要否、対象外通話の料金を必ず確認してください。';
+  }else if(call === 'some'){
+    body += ' 短い電話が多い場合は、短時間通話オプションの条件と超過後の料金を比較しましょう。';
+  }else if(call === 'unknown'){
+    body += ' 通話履歴を1〜2か月確認すると、通話オプションが必要か判断しやすくなります。';
   }
 
-  const result = document.getElementById("quizResult");
-
+  const result = document.getElementById('quizResult');
   result.replaceChildren();
 
-  const heading = document.createElement("h3");
-  heading.textContent = "🎉 診断結果：" + title;
+  const heading = document.createElement('h3');
+  heading.textContent = '🎉 診断結果：' + title;
 
-  const paragraph = document.createElement("p");
+  const paragraph = document.createElement('p');
   paragraph.textContent = body;
 
-  const nextStep = document.createElement("p");
-  nextStep.textContent = "次のステップ：下の比較欄から各社の公式情報を確認してください。";
+  const next = document.createElement('p');
+  const strong = document.createElement('strong');
+  strong.textContent = '次のステップ：';
+  next.append(strong,document.createTextNode('下の比較欄から各社の公式情報を確認してください。'));
 
-  const link = document.createElement("a");
-  link.className = "btn";
-  link.href = "#compare";
-  link.textContent = "プラン比較へ →";
+  const link = document.createElement('a');
+  link.className = 'btn';
+  link.href = '#compare';
+  link.textContent = 'プラン比較へ →';
 
-  result.append(heading, paragraph, nextStep, link);
-  result.classList.add("show");
-  result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  result.append(heading,paragraph,next,link);
+  result.classList.add('show');
+  result.scrollIntoView({behavior:'smooth',block:'nearest'});
 });
 </script>
-
 </body>
 </html>

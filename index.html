@@ -6,7 +6,10 @@
 
   <title>スマホ代見直しガイド｜あなたに合う格安SIMを見つけよう！</title>
 
-  <meta name="description" content="スマホ代を安くしたい人向けの料金比較ガイド。LINEMO、楽天モバイル、ahamo、IIJmioの料金や特徴を比較して、自分に合ったスマホプランを見つけよう！">
+  <meta
+    name="description"
+    content="スマホ代を安くしたい人向けの料金比較ガイド。LINEMO、楽天モバイル、ahamo、IIJmioの料金や特徴を比較して、自分に合ったスマホプランを見つけよう！"
+  >
 
   <meta name="theme-color" content="#fff4fa">
 
@@ -379,51 +382,34 @@
       font-size: 0.91rem;
     }
 
-    /* 料金表示の修正：料金と金額を必ず表示する */
     .price-list {
-      display: grid !important;
-      grid-template-columns: minmax(0, 1fr);
+      display: grid;
       gap: 10px;
       margin: 0 0 18px;
-      width: 100%;
-      visibility: visible;
-      opacity: 1;
     }
 
     .price-row {
-      display: flex !important;
+      display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      width: 100%;
-      min-height: 48px;
       padding: 12px 14px;
       border-radius: 14px;
       background: #fff8fc;
       border: 1px solid #f8e6f0;
-      visibility: visible;
-      opacity: 1;
     }
 
     .price-data {
-      display: inline-block !important;
-      color: #30283a;
       font-weight: 800;
       font-size: 0.9rem;
-      visibility: visible;
-      opacity: 1;
     }
 
     .price-amount {
-      display: inline-block !important;
-      color: #ed438b;
       white-space: nowrap;
       text-align: right;
       font-size: 1.18rem;
       font-weight: 900;
       letter-spacing: -0.03em;
-      visibility: visible;
-      opacity: 1;
     }
 
     .price-amount small {
@@ -843,8 +829,10 @@
 
   <main id="top">
 
+    <!-- ヒーロー -->
     <section class="hero">
       <div class="container hero-inner">
+
         <div class="hero-copy">
           <span class="eyebrow">スマホ代、見直してみない？</span>
 
@@ -859,60 +847,88 @@
           </p>
 
           <div class="hero-buttons">
-            <a class="button button-primary" href="#prices">💰 料金を比較する</a>
-            <a class="button button-secondary" href="#quiz">✨ おすすめ診断</a>
+            <a class="button button-primary" href="#prices">
+              💰 料金を比較する
+            </a>
+
+            <a class="button button-secondary" href="#quiz">
+              ✨ おすすめ診断
+            </a>
           </div>
         </div>
 
         <div class="hero-art">
-          <img src="hero-pop-girl.PNG" alt="スマホ代の見直しをイメージしたイラスト" fetchpriority="high">
+          <img
+            src="hero-pop-girl.PNG"
+            alt="スマホ代の見直しをイメージしたイラスト"
+            fetchpriority="high"
+          >
 
           <div class="hero-sticker">
             毎月の固定費を見直そう！
             <span>節約スタート♡</span>
           </div>
         </div>
+
       </div>
     </section>
 
+    <!-- お悩み -->
     <section class="section">
       <div class="container">
+
         <div class="section-heading">
           <span class="section-kicker">Let's Review</span>
           <h2>こんなお悩み、ありませんか？</h2>
-          <p>スマホの料金は、使い方に合わせて選ぶことが大切です。</p>
+          <p>
+            スマホの料金は、使い方に合わせて選ぶことが大切です。
+          </p>
         </div>
 
         <div class="problems-grid">
+
           <article class="problem-card">
             <div class="problem-icon">💸</div>
             <h3>毎月の料金が高い</h3>
-            <p>あまり使っていないのに、スマホ代が高いと感じている。</p>
+            <p>
+              あまり使っていないのに、スマホ代が高いと感じている。
+            </p>
           </article>
 
           <article class="problem-card">
             <div class="problem-icon">📱</div>
             <h3>プランの違いがわからない</h3>
-            <p>データ容量や通話オプションが多くて、選び方に迷ってしまう。</p>
+            <p>
+              データ容量や通話オプションが多くて、選び方に迷ってしまう。
+            </p>
           </article>
 
           <article class="problem-card">
             <div class="problem-icon">🔍</div>
             <h3>自分に合う会社を知りたい</h3>
-            <p>安さだけでなく、データ容量や通話の使いやすさも重視したい。</p>
+            <p>
+              安さだけでなく、データ容量や通話の使いやすさも重視したい。
+            </p>
           </article>
+
         </div>
       </div>
     </section>
 
+    <!-- 料金比較 -->
     <section class="section price-section" id="prices">
       <div class="container">
+
         <div class="section-heading">
           <span class="section-kicker">Price Comparison</span>
           <h2>人気4社の料金を比較！</h2>
-          <p>月額料金を比べて、自分の使い方に合うプランを探してみましょう。</p>
+          <p>
+            月額料金を比べて、自分の使い方に合うプランを探してみましょう。
+          </p>
 
-          <div class="price-date">料金確認日：2026年10月21日</div>
+          <div class="price-date">
+            料金確認日：2026年10月21日
+          </div>
         </div>
 
         <div class="price-notice">
@@ -941,18 +957,22 @@
             </p>
 
             <div class="price-list">
+
               <div class="price-row">
                 <span class="price-data">3GBまで</span>
                 <span class="price-amount">990円<small>/月</small></span>
               </div>
+
               <div class="price-row">
                 <span class="price-data">3GB超〜10GB</span>
                 <span class="price-amount">2,090円<small>/月</small></span>
               </div>
+
               <div class="price-row">
                 <span class="price-data">30GB</span>
                 <span class="price-amount">2,970円<small>/月</small></span>
               </div>
+
             </div>
 
             <ul class="carrier-features">
@@ -962,12 +982,22 @@
             </ul>
 
             <div class="carrier-footer">
-              <a class="official-link" href="https://www.linemo.jp/plan/" target="_blank" rel="noopener noreferrer">
+              <a
+                class="official-link"
+                href="https://www.linemo.jp/plan/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 公式サイトで料金を確認 ↗
               </a>
+
               <p class="source-note">
                 料金出典：
-                <a href="https://www.linemo.jp/plan/" target="_blank" rel="noopener noreferrer">LINEMO公式・料金プラン</a>
+                <a
+                  href="https://www.linemo.jp/plan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >LINEMO公式・料金プラン</a>
               </p>
             </div>
           </article>
@@ -988,18 +1018,22 @@
             </p>
 
             <div class="price-list">
+
               <div class="price-row">
                 <span class="price-data">3GBまで</span>
                 <span class="price-amount">1,078円<small>/月</small></span>
               </div>
+
               <div class="price-row">
                 <span class="price-data">3GB超〜20GB</span>
                 <span class="price-amount">2,178円<small>/月</small></span>
               </div>
+
               <div class="price-row">
                 <span class="price-data">20GB超〜無制限</span>
                 <span class="price-amount">3,278円<small>/月</small></span>
               </div>
+
             </div>
 
             <ul class="carrier-features">
@@ -1009,12 +1043,22 @@
             </ul>
 
             <div class="carrier-footer">
-              <a class="official-link" href="https://network.mobile.rakuten.co.jp/fee/saikyo-plan/" target="_blank" rel="noopener noreferrer">
+              <a
+                class="official-link"
+                href="https://network.mobile.rakuten.co.jp/fee/saikyo-plan/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 公式サイトで料金を確認 ↗
               </a>
+
               <p class="source-note">
                 料金出典：
-                <a href="https://network.mobile.rakuten.co.jp/fee/saikyo-plan/" target="_blank" rel="noopener noreferrer">楽天モバイル公式・料金プラン</a>
+                <a
+                  href="https://network.mobile.rakuten.co.jp/fee/saikyo-plan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >楽天モバイル公式・料金プラン</a>
               </p>
             </div>
           </article>
@@ -1035,14 +1079,17 @@
             </p>
 
             <div class="price-list">
+
               <div class="price-row">
                 <span class="price-data">30GB</span>
                 <span class="price-amount">2,970円<small>/月</small></span>
               </div>
+
               <div class="price-row">
                 <span class="price-data">110GB</span>
                 <span class="price-amount">4,950円<small>/月</small></span>
               </div>
+
             </div>
 
             <ul class="carrier-features">
@@ -1060,12 +1107,22 @@
             </div>
 
             <div class="carrier-footer" style="margin-top:18px;">
-              <a class="official-link" href="https://ahamo.com/plan/" target="_blank" rel="noopener noreferrer">
+              <a
+                class="official-link"
+                href="https://ahamo.com/plan/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 公式サイトで料金を確認 ↗
               </a>
+
               <p class="source-note">
                 料金出典：
-                <a href="https://ahamo.com/plan/" target="_blank" rel="noopener noreferrer">ahamo公式・料金プラン</a>
+                <a
+                  href="https://ahamo.com/plan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >ahamo公式・料金プラン</a>
               </p>
             </div>
           </article>
@@ -1086,26 +1143,32 @@
             </p>
 
             <div class="price-list">
+
               <div class="price-row">
                 <span class="price-data">2GB</span>
                 <span class="price-amount">850円<small>/月</small></span>
               </div>
+
               <div class="price-row">
                 <span class="price-data">5GB</span>
                 <span class="price-amount">950円<small>/月</small></span>
               </div>
+
               <div class="price-row">
                 <span class="price-data">10GB</span>
                 <span class="price-amount">1,400円<small>/月</small></span>
               </div>
+
               <div class="price-row">
                 <span class="price-data">15GB</span>
                 <span class="price-amount">1,800円<small>/月</small></span>
               </div>
+
               <div class="price-row">
                 <span class="price-data">25GB</span>
                 <span class="price-amount">2,000円<small>/月</small></span>
               </div>
+
             </div>
 
             <ul class="carrier-features">
@@ -1115,12 +1178,22 @@
             </ul>
 
             <div class="carrier-footer">
-              <a class="official-link" href="https://www.iijmio.jp/gigaplan/" target="_blank" rel="noopener noreferrer">
+              <a
+                class="official-link"
+                href="https://www.iijmio.jp/gigaplan/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 公式サイトで料金を確認 ↗
               </a>
+
               <p class="source-note">
                 料金出典：
-                <a href="https://www.iijmio.jp/gigaplan/" target="_blank" rel="noopener noreferrer">IIJmio公式・ギガプラン</a>
+                <a
+                  href="https://www.iijmio.jp/gigaplan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >IIJmio公式・ギガプラン</a>
               </p>
             </div>
           </article>
@@ -1129,143 +1202,233 @@
       </div>
     </section>
 
+    <!-- かんたん診断 -->
     <section class="section" id="quiz">
       <div class="container">
+
         <div class="section-heading">
           <span class="section-kicker">Simple Diagnosis</span>
           <h2>あなたに合うプランを診断！</h2>
-          <p>2つの質問に答えるだけ。使い方に合いそうな候補を見つけましょう。</p>
+          <p>
+            2つの質問に答えるだけ。使い方に合いそうな候補を見つけましょう。
+          </p>
         </div>
 
         <div class="quiz-wrap">
+
           <div id="question1">
-            <p class="quiz-question">Q1. 毎月どれくらいデータを使う？</p>
+            <p class="quiz-question">
+              Q1. 毎月どれくらいデータを使う？
+            </p>
+
             <div class="quiz-options">
-              <button class="quiz-option" data-q="data" data-value="small">🌱 3〜5GBくらい</button>
-              <button class="quiz-option" data-q="data" data-value="medium">🌷 10〜30GBくらい</button>
-              <button class="quiz-option" data-q="data" data-value="large">🚀 30GB以上</button>
-              <button class="quiz-option" data-q="data" data-value="unknown">🤔 よくわからない</button>
+              <button class="quiz-option" data-q="data" data-value="small">
+                🌱 3〜5GBくらい
+              </button>
+
+              <button class="quiz-option" data-q="data" data-value="medium">
+                🌷 10〜30GBくらい
+              </button>
+
+              <button class="quiz-option" data-q="data" data-value="large">
+                🚀 30GB以上
+              </button>
+
+              <button class="quiz-option" data-q="data" data-value="unknown">
+                🤔 よくわからない
+              </button>
             </div>
           </div>
 
           <div id="question2" style="margin-top:28px;">
-            <p class="quiz-question">Q2. スマホ選びで一番重視するのは？</p>
+            <p class="quiz-question">
+              Q2. スマホ選びで一番重視するのは？
+            </p>
+
             <div class="quiz-options">
-              <button class="quiz-option" data-q="priority" data-value="cheap">💰 とにかく料金を抑えたい</button>
-              <button class="quiz-option" data-q="priority" data-value="line">💬 LINEをよく使う</button>
-              <button class="quiz-option" data-q="priority" data-value="call">☎️ 通話もよく使う</button>
-              <button class="quiz-option" data-q="priority" data-value="data">📶 ギガをたくさん使いたい</button>
+              <button class="quiz-option" data-q="priority" data-value="cheap">
+                💰 とにかく料金を抑えたい
+              </button>
+
+              <button class="quiz-option" data-q="priority" data-value="line">
+                💬 LINEをよく使う
+              </button>
+
+              <button class="quiz-option" data-q="priority" data-value="call">
+                ☎️ 通話もよく使う
+              </button>
+
+              <button class="quiz-option" data-q="priority" data-value="data">
+                📶 ギガをたくさん使いたい
+              </button>
             </div>
           </div>
 
-          <button class="button button-primary quiz-next" id="diagnose">診断結果を見る ✨</button>
+          <button class="button button-primary quiz-next" id="diagnose">
+            診断結果を見る ✨
+          </button>
 
           <div class="quiz-result" id="quizResult" aria-live="polite">
             <h3 id="resultTitle">おすすめはこちら！</h3>
             <p id="resultText"></p>
             <p id="resultLink"></p>
-            <p>※診断結果は簡易的な目安です。電波状況や通話頻度、割引条件も確認して選びましょう。</p>
+            <p>
+              ※診断結果は簡易的な目安です。
+              電波状況や通話頻度、割引条件も確認して選びましょう。
+            </p>
           </div>
+
         </div>
       </div>
     </section>
 
+    <!-- 選び方 -->
     <section class="section">
       <div class="container">
+
         <div class="section-heading">
           <span class="section-kicker">How To Choose</span>
           <h2>スマホプラン選びのポイント</h2>
-          <p>月額料金だけでなく、普段の使い方もチェックしましょう。</p>
+          <p>
+            月額料金だけでなく、普段の使い方もチェックしましょう。
+          </p>
         </div>
 
         <div class="check-grid">
+
           <article class="check-card">
             <h3>📶 1. データ使用量を確認</h3>
-            <p>毎月どれくらいギガを使うか確認してみましょう。Wi-Fi中心なら小容量プランで十分な場合があります。</p>
+            <p>
+              毎月どれくらいギガを使うか確認してみましょう。
+              Wi-Fi中心なら小容量プランで十分な場合があります。
+            </p>
           </article>
 
           <article class="check-card">
             <h3>☎️ 2. 通話料金も確認</h3>
-            <p>電話をよくかける人は、通話定額の有無や対象となる電話番号、専用アプリの必要性をチェックしましょう。</p>
+            <p>
+              電話をよくかける人は、通話定額の有無や対象となる電話番号、
+              専用アプリの必要性をチェックしましょう。
+            </p>
           </article>
 
           <article class="check-card">
             <h3>📍 3. エリアと通信環境を確認</h3>
-            <p>自宅、職場、学校、通勤経路などで利用できるか、公式サイトのサービスエリアを確認しましょう。</p>
+            <p>
+              自宅、職場、学校、通勤経路などで利用できるか、
+              公式サイトのサービスエリアを確認しましょう。
+            </p>
           </article>
 
           <article class="check-card">
             <h3>🧾 4. 割引や初期費用を確認</h3>
-            <p>家族割引、キャンペーン、契約事務手数料、SIM発行費用なども含めて比較すると、実際の負担額を把握しやすくなります。</p>
+            <p>
+              家族割引、キャンペーン、契約事務手数料、SIM発行費用なども
+              含めて比較すると、実際の負担額を把握しやすくなります。
+            </p>
           </article>
+
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section" id="faq">
       <div class="container">
+
         <div class="section-heading">
           <span class="section-kicker">FAQ</span>
           <h2>よくある質問</h2>
         </div>
 
         <div class="faq-list">
+
           <details class="faq-item">
             <summary>格安SIMにすると、必ず安くなりますか？</summary>
             <div class="faq-answer">
-              <p>必ず安くなるとは限りません。データ使用量、通話料、端末代、割引条件などによって変わるため、現在の請求額と乗り換え先の総額を比較するのがおすすめです。</p>
+              <p>
+                必ず安くなるとは限りません。
+                データ使用量、通話料、端末代、割引条件などによって変わるため、
+                現在の請求額と乗り換え先の総額を比較するのがおすすめです。
+              </p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary>表示されている料金には何が含まれていますか？</summary>
             <div class="faq-answer">
-              <p>原則として、各プランの税込月額基本料金を表示しています。端末代、通話料、追加データ、オプションなどは別途かかる場合があります。各社の公式ページで条件を確認してください。</p>
+              <p>
+                原則として、各プランの税込月額基本料金を表示しています。
+                端末代、通話料、追加データ、オプションなどは別途かかる場合があります。
+                各社の公式ページで条件を確認してください。
+              </p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary>このサイトの料金は自動で更新されますか？</summary>
             <div class="faq-answer">
-              <p>いいえ。このページの料金はコードに記載された固定値です。料金改定やキャンペーン変更があっても自動更新されません。定期的に各社の公式ページを確認して、必要に応じて更新してください。</p>
+              <p>
+                いいえ。このページの料金はコードに記載された固定値です。
+                料金改定やキャンペーン変更があっても自動更新されません。
+                定期的に各社の公式ページを確認して、必要に応じて更新してください。
+              </p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary>ahamoの料金は今後変わりますか？</summary>
             <div class="faq-answer">
-              <p>公式発表では、2026年12月1日から料金体系の変更が予定されています。このページには2026年10月21日時点の料金と、発表されている変更予定を分けて掲載しています。申し込み時は公式ページで最新条件をご確認ください。</p>
+              <p>
+                公式発表では、2026年12月1日から料金体系の変更が予定されています。
+                このページには2026年10月21日時点の料金と、発表されている変更予定を
+                分けて掲載しています。申し込み時は公式ページで最新条件をご確認ください。
+              </p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary>乗り換えると電話番号は変わりますか？</summary>
             <div class="faq-answer">
-              <p>MNP（携帯電話番号ポータビリティ）を利用すれば、対応する手続きと条件のもとで、現在の電話番号を引き継いで乗り換えられます。詳細は乗り換え先の公式案内をご確認ください。</p>
+              <p>
+                MNP（携帯電話番号ポータビリティ）を利用すれば、
+                対応する手続きと条件のもとで、現在の電話番号を引き継いで
+                乗り換えられます。詳細は乗り換え先の公式案内をご確認ください。
+              </p>
             </div>
           </details>
+
         </div>
       </div>
     </section>
 
+    <!-- 締め -->
     <section class="section">
       <div class="container">
         <div class="closing">
           <h2>スマホ代を見直してみよう！ ✨</h2>
+
           <p>
             料金プランを比較すると、自分に合う選択肢が見つかるかもしれません。
             まずは公式サイトで最新料金や適用条件をチェックしてみましょう。
           </p>
-          <a class="button button-primary" href="#prices">もう一度、料金を比較する</a>
+
+          <a class="button button-primary" href="#prices">
+            もう一度、料金を比較する
+          </a>
         </div>
       </div>
     </section>
 
   </main>
 
+  <!-- フッター -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-brand">スマホ代見直しガイド</div>
+
+      <div class="footer-brand">
+        スマホ代見直しガイド
+      </div>
 
       <nav class="footer-links" aria-label="フッターメニュー">
         <a href="#top">トップ</a>
@@ -1282,21 +1445,22 @@
       <p class="footer-copy">
         &copy; <span id="copyrightYear">2026</span> スマホ代見直しガイド
       </p>
+
     </div>
   </footer>
 
   <script>
+    // フッターの年を自動表示
     document.getElementById("copyrightYear").textContent =
       new Date().getFullYear();
 
+    // かんたん診断
     const answers = {
       data: null,
       priority: null
     };
 
     document.querySelectorAll(".quiz-option").forEach((button) => {
-      button.setAttribute("aria-pressed", "false");
-
       button.addEventListener("click", () => {
         const question = button.dataset.q;
         const value = button.dataset.value;
@@ -1326,7 +1490,7 @@
         title.textContent = "あと少し！";
         text.textContent =
           "Q1とQ2の両方に回答すると、診断結果が表示されます。";
-        link.textContent = "";
+        link.innerHTML = "";
         result.scrollIntoView({ behavior: "smooth", block: "center" });
         return;
       }
@@ -1340,10 +1504,7 @@
         explanation =
           "LINEをよく使うなら、LINEギガフリーが特徴のLINEMOを比較候補にしてみましょう。";
         url = "https://www.linemo.jp/plan/";
-      } else if (
-        answers.priority === "data" ||
-        answers.data === "large"
-      ) {
+      } else if (answers.priority === "data" || answers.data === "large") {
         recommendation = "楽天モバイル";
         explanation =
           "データをたくさん使うなら、データ使用量に応じて料金が変わる楽天モバイルを比較してみましょう。";
@@ -1353,17 +1514,13 @@
         explanation =
           "通話も使うなら、5分以内の国内通話定額が含まれるahamoを比較候補にしてみましょう。通話条件も確認してください。";
         url = "https://ahamo.com/plan/";
-      } else if (
-        answers.data === "small" ||
-        answers.priority === "cheap"
-      ) {
+      } else if (answers.data === "small" || answers.priority === "cheap") {
         recommendation = "IIJmio";
         explanation =
           "月額料金を抑えたいなら、小容量プランも選べるIIJmioを比較候補にしてみましょう。";
         url = "https://www.iijmio.jp/gigaplan/";
       } else {
-        recommendation =
-          "LINEMO・楽天モバイル・ahamo・IIJmio";
+        recommendation = "LINEMO・楽天モバイル・ahamo・IIJmio";
         explanation =
           "使うギガ数や通話頻度によって向いているプランが変わります。4社の料金を比べてみましょう。";
         url = "#prices";
@@ -1372,19 +1529,9 @@
       result.classList.add("visible");
       title.textContent = "おすすめ候補：" + recommendation;
       text.textContent = explanation;
-
-      link.replaceChildren();
-
-      const resultAnchor = document.createElement("a");
-      resultAnchor.href = url;
-      resultAnchor.textContent = "料金プランの詳細を確認する ↗";
-
-      if (url.startsWith("https://")) {
-        resultAnchor.target = "_blank";
-        resultAnchor.rel = "noopener noreferrer";
-      }
-
-      link.appendChild(resultAnchor);
+      link.innerHTML =
+        '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' +
+        "料金プランの詳細を確認する ↗</a>";
 
       result.scrollIntoView({ behavior: "smooth", block: "center" });
     });

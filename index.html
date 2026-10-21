@@ -1,1541 +1,1327 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>スマホ代見直しガイド｜あなたに合う格安SIMを見つけよう！</title>
-
-  <meta
-    name="description"
-    content="スマホ代を安くしたい人向けの料金比較ガイド。LINEMO、楽天モバイル、ahamo、IIJmioの料金や特徴を比較して、自分に合ったスマホプランを見つけよう！"
-  >
-
-  <meta name="theme-color" content="#fff4fa">
-
-  <style>
-    :root {
-      --pink: #ff70ad;
-      --pink-dark: #ed438b;
-      --pink-light: #fff0f7;
-      --purple: #8c68ef;
-      --yellow: #ffe879;
-      --blue: #6bc9f5;
-      --green: #8cdbb0;
-      --ink: #30283a;
-      --muted: #716a78;
-      --white: #ffffff;
-      --border: #f0dce8;
-      --shadow: 0 10px 30px rgba(112, 65, 94, 0.09);
-      --radius: 22px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 5% 5%, #ffe1f0 0, transparent 24rem),
-        radial-gradient(circle at 95% 18%, #e8e0ff 0, transparent 24rem),
-        #fffafd;
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Hiragino Kaku Gothic ProN",
-        "Hiragino Sans",
-        "Noto Sans JP",
-        Meiryo,
-        sans-serif;
-      line-height: 1.8;
-      overflow-wrap: anywhere;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .container {
-      width: min(1100px, calc(100% - 36px));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 250, 253, 0.93);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(240, 220, 232, 0.8);
-    }
-
-    .header-inner {
-      min-height: 66px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .logo {
-      font-weight: 900;
-      font-size: 1.05rem;
-      line-height: 1.3;
-      text-decoration: none;
-      letter-spacing: -0.04em;
-    }
-
-    .logo span {
-      color: var(--pink-dark);
-    }
-
-    .header-nav {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-
-    .header-nav a {
-      text-decoration: none;
-    }
-
-    .header-nav a:hover {
-      color: var(--pink-dark);
-    }
-
-    .hero {
-      padding: 54px 0 48px;
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 5px 14px;
-      border-radius: 999px;
-      background: var(--yellow);
-      font-size: 0.83rem;
-      font-weight: 900;
-      transform: rotate(-2deg);
-    }
-
-    h1 {
-      margin: 18px 0;
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
-      line-height: 1.28;
-      letter-spacing: -0.055em;
-    }
-
-    h1 .highlight {
-      color: var(--pink-dark);
-      position: relative;
-      display: inline-block;
-    }
-
-    .hero-description {
-      color: var(--muted);
-      font-size: 1.05rem;
-      font-weight: 600;
-      max-width: 550px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .button {
-      min-height: 48px;
-      padding: 12px 22px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 900;
-      border: 2px solid transparent;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(112, 65, 94, 0.12);
-    }
-
-    .button-primary {
-      background: var(--pink);
-      color: white;
-    }
-
-    .button-secondary {
-      background: white;
-      border-color: var(--border);
-    }
-
-    .hero-art {
-      position: relative;
-      min-width: 0;
-    }
-
-    .hero-art img {
-      display: block;
-      width: 100%;
-      max-height: 470px;
-      object-fit: contain;
-      filter: drop-shadow(0 15px 20px rgba(112, 65, 94, 0.12));
-    }
-
-    .hero-sticker {
-      position: absolute;
-      right: 0;
-      bottom: 15px;
-      max-width: 180px;
-      padding: 12px 16px;
-      background: var(--yellow);
-      border: 3px solid white;
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      font-weight: 900;
-      line-height: 1.45;
-      transform: rotate(5deg);
-    }
-
-    .hero-sticker span {
-      display: block;
-      color: var(--pink-dark);
-      font-size: 1.15rem;
-    }
-
-    .section {
-      padding: 56px 0;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .section-kicker {
-      color: var(--pink-dark);
-      font-size: 0.85rem;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      margin: 8px 0 12px;
-      font-size: clamp(1.7rem, 4vw, 2.65rem);
-      line-height: 1.4;
-      letter-spacing: -0.04em;
-    }
-
-    .section-heading p {
-      max-width: 690px;
-      margin: 0 auto;
-      color: var(--muted);
-    }
-
-    .problems-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .problem-card {
-      background: white;
-      padding: 24px 20px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .problem-icon {
-      font-size: 2rem;
-    }
-
-    .problem-card h3 {
-      margin: 8px 0;
-      font-size: 1.08rem;
-    }
-
-    .problem-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .price-section {
-      background: linear-gradient(180deg, #fff1f8, #fffafd);
-      border-top: 1px solid #ffe0ef;
-      border-bottom: 1px solid #ffe0ef;
-    }
-
-    .price-date {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: white;
-      border: 1px solid var(--border);
-      font-size: 0.82rem;
-      font-weight: 800;
-    }
-
-    .price-notice {
-      margin: 22px auto 28px;
-      max-width: 900px;
-      padding: 15px 18px;
-      background: #fffbe7;
-      border: 1px solid #f3df85;
-      border-radius: 16px;
-      font-size: 0.9rem;
-    }
-
-    .price-notice strong {
-      color: #9b6513;
-    }
-
-    .carrier-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .carrier-card {
-      position: relative;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      padding: 25px;
-      background: white;
-      border: 2px solid var(--border);
-      border-radius: 26px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .carrier-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 7px;
-      background: var(--carrier-color, var(--pink));
-    }
-
-    .carrier-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .carrier-name {
-      margin: 4px 0 0;
-      font-size: 1.55rem;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-    }
-
-    .carrier-tag {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--pink-light);
-      color: var(--pink-dark);
-      font-size: 0.76rem;
-      font-weight: 900;
-    }
-
-    .carrier-summary {
-      margin: 12px 0 18px;
-      color: var(--muted);
-      font-size: 0.91rem;
-    }
-
-    .price-list {
-      display: grid;
-      gap: 10px;
-      margin: 0 0 18px;
-    }
-
-    .price-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: #fff8fc;
-      border: 1px solid #f8e6f0;
-    }
-
-    .price-data {
-      font-weight: 800;
-      font-size: 0.9rem;
-    }
-
-    .price-amount {
-      white-space: nowrap;
-      text-align: right;
-      font-size: 1.18rem;
-      font-weight: 900;
-      letter-spacing: -0.03em;
-    }
-
-    .price-amount small {
-      font-size: 0.72rem;
-      font-weight: 700;
-    }
-
-    .carrier-features {
-      padding-left: 1.3em;
-      margin: 0 0 20px;
-      color: #504857;
-      font-size: 0.9rem;
-    }
-
-    .carrier-features li {
-      margin: 5px 0;
-    }
-
-    .carrier-footer {
-      margin-top: auto;
-    }
-
-    .official-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      width: 100%;
-      min-height: 48px;
-      padding: 12px 16px;
-      color: white;
-      background: var(--carrier-color, var(--pink));
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 900;
-      text-align: center;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-
-    .official-link:hover {
-      opacity: 0.88;
-      transform: translateY(-2px);
-    }
-
-    .source-note {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 0.76rem;
-      line-height: 1.6;
-    }
-
-    .source-note a {
-      color: inherit;
-      text-decoration: underline;
-    }
-
-    .rakuten {
-      --carrier-color: #bf2638;
-    }
-
-    .linemo {
-      --carrier-color: #06a85b;
-    }
-
-    .ahamo {
-      --carrier-color: #252525;
-    }
-
-    .iijmio {
-      --carrier-color: #e74a84;
-    }
-
-    .recommend-badge {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 5px 11px;
-      border-radius: 999px;
-      background: var(--yellow);
-      font-size: 0.78rem;
-      font-weight: 900;
-    }
-
-    .future-notice {
-      margin-top: 12px;
-      padding: 12px 14px;
-      background: #fff4e6;
-      border: 1px solid #f5d2a5;
-      border-radius: 14px;
-      color: #774b20;
-      font-size: 0.82rem;
-    }
-
-    .quiz-wrap {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 28px;
-      border-radius: 28px;
-      background: white;
-      border: 2px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .quiz-question {
-      margin: 0 0 16px;
-      font-size: 1.15rem;
-      font-weight: 900;
-    }
-
-    .quiz-options {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .quiz-option {
-      min-height: 54px;
-      padding: 12px 14px;
-      background: #fff8fc;
-      border: 2px solid var(--border);
-      border-radius: 15px;
-      color: var(--ink);
-      font: inherit;
-      font-size: 0.94rem;
-      font-weight: 800;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .quiz-option:hover,
-    .quiz-option.selected {
-      border-color: var(--pink);
-      background: #ffedf6;
-    }
-
-    .quiz-next {
-      display: block;
-      margin: 22px auto 0;
-      min-width: 180px;
-      border: 0;
-      cursor: pointer;
-      font: inherit;
-    }
-
-    .quiz-result {
-      display: none;
-      margin-top: 24px;
-      padding: 20px;
-      background: #f4f0ff;
-      border-radius: 18px;
-    }
-
-    .quiz-result.visible {
-      display: block;
-    }
-
-    .quiz-result h3 {
-      margin-top: 0;
-    }
-
-    .quiz-result a {
-      color: var(--pink-dark);
-      font-weight: 900;
-    }
-
-    .check-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .check-card {
-      padding: 22px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-    }
-
-    .check-card h3 {
-      margin-top: 0;
-    }
-
-    .check-card p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    .faq-list {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      margin-bottom: 12px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .faq-item summary {
-      padding: 17px 20px;
-      font-weight: 900;
-      cursor: pointer;
-    }
-
-    .faq-answer {
-      padding: 0 20px 18px;
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    .faq-answer p {
-      margin: 0;
-    }
-
-    .closing {
-      padding: 42px 24px;
-      text-align: center;
-      background: linear-gradient(135deg, #ffe5f1, #ece6ff);
-      border-radius: 28px;
-    }
-
-    .closing h2 {
-      margin-top: 0;
-    }
-
-    .closing p {
-      max-width: 650px;
-      margin: 0 auto 20px;
-    }
-
-    .site-footer {
-      margin-top: 60px;
-      padding: 30px 0;
-      background: #342c3c;
-      color: white;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .footer-brand {
-      font-weight: 900;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-size: 0.85rem;
-    }
-
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-
-    .footer-copy {
-      width: 100%;
-      margin: 0;
-      color: #d4cbd9;
-      font-size: 0.76rem;
-    }
-
-    @media (max-width: 760px) {
-      .container {
-        width: min(100% - 28px, 600px);
-      }
-
-      .header-inner {
-        min-height: 58px;
-      }
-
-      .logo {
-        font-size: 0.93rem;
-      }
-
-      .header-nav {
-        gap: 12px;
-        font-size: 0.77rem;
-      }
-
-      .hero {
-        padding: 34px 0 30px;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .hero-copy {
-        text-align: center;
-      }
-
-      .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 0.97rem;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-      }
-
-      .hero-art {
-        max-width: 440px;
-        width: 100%;
-        margin: 0 auto;
-      }
-
-      .hero-art img {
-        max-height: 340px;
-      }
-
-      .hero-sticker {
-        right: 0;
-        bottom: 5px;
-        max-width: 145px;
-        font-size: 0.82rem;
-      }
-
-      .section {
-        padding: 42px 0;
-      }
-
-      .problems-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .problem-card {
-        padding: 20px;
-      }
-
-      .carrier-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-
-      .carrier-card {
-        padding: 22px 18px;
-      }
-
-      .carrier-name {
-        font-size: 1.4rem;
-      }
-
-      .price-row {
-        padding: 11px 12px;
-      }
-
-      .price-amount {
-        font-size: 1.1rem;
-      }
-
-      .quiz-wrap {
-        padding: 22px 16px;
-      }
-
-      .quiz-options {
-        grid-template-columns: 1fr;
-      }
-
-      .check-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .footer-links {
-        gap: 14px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        transition: none !important;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>スマホ代見直しガイド｜あなたに合う格安SIMを見つけよう！</title>
+
+<meta name="description" content="LINEMO、楽天モバイル、ahamo、IIJmioの料金を比較！あなたに合うスマホプランを見つけよう。">
+<meta name="theme-color" content="#fff4fa">
+
+<style>
+:root {
+  --pink:#ff70ad;
+  --pink-dark:#ed438b;
+  --pink-light:#fff0f7;
+  --purple:#8060e8;
+  --yellow:#ffe879;
+  --blue:#65c8f5;
+  --green:#19b86b;
+  --ink:#19354d;
+  --muted:#617487;
+  --border:#f0dce8;
+  --shadow:0 10px 30px rgba(112,65,94,.09);
+  --radius:24px;
+}
+
+* { box-sizing:border-box; }
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:85px;
+}
+
+body {
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 5% 5%,#ffe1f0 0,transparent 24rem),
+    radial-gradient(circle at 95% 18%,#e8e0ff 0,transparent 24rem),
+    #fffafd;
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",
+    "Hiragino Sans","Noto Sans JP",Meiryo,sans-serif;
+  line-height:1.8;
+  overflow-wrap:anywhere;
+}
+
+a { color:inherit; }
+img { max-width:100%; height:auto; }
+button { font:inherit; }
+
+.container {
+  width:min(1100px,calc(100% - 32px));
+  margin:0 auto;
+}
+
+.site-header {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,250,253,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner {
+  min-height:68px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.logo {
+  font-size:1.05rem;
+  font-weight:900;
+  line-height:1.35;
+  text-decoration:none;
+  letter-spacing:-.04em;
+}
+
+.logo span { color:var(--pink-dark); }
+
+.header-nav {
+  display:flex;
+  gap:15px;
+  align-items:center;
+  font-size:.84rem;
+  font-weight:800;
+}
+
+.header-nav a { text-decoration:none; }
+.header-nav a:hover { color:var(--pink-dark); }
+
+.hero { padding:48px 0; }
+
+.hero-inner {
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  align-items:center;
+  gap:30px;
+}
+
+.eyebrow {
+  display:inline-block;
+  padding:5px 14px;
+  border-radius:999px;
+  background:var(--yellow);
+  font-size:.84rem;
+  font-weight:900;
+  transform:rotate(-2deg);
+}
+
+h1 {
+  margin:18px 0;
+  font-size:clamp(2.2rem,5vw,4rem);
+  line-height:1.3;
+  letter-spacing:-.05em;
+}
+
+.highlight { color:var(--pink-dark); }
+
+.hero-description {
+  max-width:550px;
+  color:var(--muted);
+  font-size:1.04rem;
+  font-weight:600;
+}
+
+.hero-buttons {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:24px;
+}
+
+.button {
+  min-height:50px;
+  padding:12px 22px;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:900;
+  border:2px solid transparent;
+  cursor:pointer;
+  transition:transform .2s,box-shadow .2s;
+}
+
+.button:hover {
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+
+.button-primary {
+  background:var(--pink);
+  color:white;
+}
+
+.button-secondary {
+  background:white;
+  border-color:var(--border);
+}
+
+.hero-art {
+  position:relative;
+  min-width:0;
+}
+
+.hero-art img {
+  display:block;
+  width:100%;
+  max-height:440px;
+  object-fit:contain;
+  filter:drop-shadow(0 15px 20px rgba(112,65,94,.12));
+}
+
+.hero-sticker {
+  position:absolute;
+  right:0;
+  bottom:10px;
+  max-width:180px;
+  padding:12px 16px;
+  background:var(--yellow);
+  border:3px solid white;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  font-weight:900;
+  line-height:1.5;
+  transform:rotate(4deg);
+}
+
+.hero-sticker span {
+  display:block;
+  color:var(--pink-dark);
+  font-size:1.12rem;
+}
+
+.section { padding:55px 0; }
+
+.section-heading {
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.section-kicker {
+  color:var(--pink-dark);
+  font-size:.85rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+h2 {
+  margin:8px 0 12px;
+  font-size:clamp(1.7rem,4vw,2.6rem);
+  line-height:1.4;
+  letter-spacing:-.04em;
+}
+
+.section-heading p {
+  max-width:700px;
+  margin:0 auto;
+  color:var(--muted);
+}
+
+.problems-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+
+.problem-card {
+  padding:24px 20px;
+  background:white;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.problem-icon { font-size:2rem; }
+
+.problem-card h3 { margin:8px 0; }
+
+.problem-card p {
+  margin:0;
+  color:var(--muted);
+  font-size:.93rem;
+}
+
+.price-section {
+  background:linear-gradient(180deg,#fff0f7,#fffafd);
+  border-top:1px solid #ffe0ef;
+  border-bottom:1px solid #ffe0ef;
+}
+
+.price-date {
+  display:inline-block;
+  margin-top:12px;
+  padding:6px 13px;
+  border-radius:999px;
+  background:white;
+  border:1px solid var(--border);
+  font-size:.82rem;
+  font-weight:800;
+}
+
+.price-notice {
+  margin:22px auto 28px;
+  max-width:900px;
+  padding:16px 18px;
+  background:#fffbe7;
+  border:1px solid #f3df85;
+  border-radius:16px;
+  font-size:.88rem;
+}
+
+.price-notice strong { color:#9b6513; }
+
+.carrier-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+
+.carrier-card {
+  position:relative;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  padding:25px;
+  background:white;
+  border:2px solid var(--carrier-color,var(--border));
+  border-radius:26px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.carrier-card::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:7px;
+  background:var(--carrier-color,var(--pink));
+}
+
+.carrier-top {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+}
+
+.carrier-name {
+  margin:4px 0 0;
+  font-size:1.75rem;
+  font-weight:900;
+  letter-spacing:-.04em;
+  color:var(--carrier-color,var(--ink));
+}
+
+.carrier-tag {
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  background:var(--pink-light);
+  color:var(--pink-dark);
+  font-size:.76rem;
+  font-weight:900;
+}
+
+.carrier-summary {
+  margin:12px 0 18px;
+  color:var(--muted);
+  font-size:.92rem;
+}
+
+/* 料金表示 */
+.price-list {
+  display:grid;
+  gap:10px;
+  margin:0 0 18px;
+}
+
+.price-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:14px;
+  border-radius:15px;
+  background:var(--carrier-pale,#fff6fb);
+  border:1px solid var(--carrier-border,#f8e6f0);
+}
+
+.price-data {
+  font-weight:900;
+  font-size:.91rem;
+}
+
+.price-amount {
+  flex-shrink:0;
+  color:var(--carrier-color,var(--pink-dark));
+  text-align:right;
+  white-space:nowrap;
+  font-size:1.35rem;
+  line-height:1.4;
+  font-weight:1000;
+  letter-spacing:-.04em;
+}
+
+.price-amount small {
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:0;
+}
+
+.carrier-features {
+  padding-left:1.3em;
+  margin:0 0 20px;
+  color:#504857;
+  font-size:.9rem;
+}
+
+.carrier-features li { margin:5px 0; }
+
+.carrier-footer { margin-top:auto; }
+
+.official-link {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  width:100%;
+  min-height:50px;
+  padding:12px 16px;
+  color:white;
+  background:var(--carrier-color,var(--pink));
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:900;
+  text-align:center;
+  transition:opacity .2s,transform .2s;
+}
+
+.official-link:hover {
+  opacity:.88;
+  transform:translateY(-2px);
+}
+
+.source-note {
+  margin-top:12px;
+  color:var(--muted);
+  font-size:.76rem;
+  line-height:1.7;
+}
+
+.source-note a { text-decoration:underline; }
+
+.linemo {
+  --carrier-color:#06a85b;
+  --carrier-pale:#eafff3;
+  --carrier-border:#b9f2d2;
+}
+
+.rakuten {
+  --carrier-color:#e52c55;
+  --carrier-pale:#fff0f4;
+  --carrier-border:#ffd0dc;
+}
+
+.ahamo {
+  --carrier-color:#078be0;
+  --carrier-pale:#edf8ff;
+  --carrier-border:#bce7ff;
+}
+
+.iijmio {
+  --carrier-color:#8060e8;
+  --carrier-pale:#f4efff;
+  --carrier-border:#d9ccff;
+}
+
+.future-notice {
+  margin:0 0 18px;
+  padding:12px 14px;
+  background:#fff4e6;
+  border:1px solid #f5d2a5;
+  border-radius:14px;
+  color:#774b20;
+  font-size:.82rem;
+}
+
+.quiz-wrap {
+  max-width:760px;
+  margin:0 auto;
+  padding:28px;
+  border-radius:28px;
+  background:white;
+  border:2px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.quiz-question {
+  margin:0 0 16px;
+  font-size:1.12rem;
+  font-weight:900;
+}
+
+.quiz-options {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+
+.quiz-option {
+  min-height:54px;
+  padding:12px;
+  background:#fff8fc;
+  border:2px solid var(--border);
+  border-radius:15px;
+  color:var(--ink);
+  font-size:.94rem;
+  font-weight:800;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.quiz-option:hover,
+.quiz-option.selected {
+  border-color:var(--pink);
+  background:#ffedf6;
+}
+
+.quiz-next {
+  display:flex;
+  margin:22px auto 0;
+  min-width:180px;
+}
+
+.quiz-result {
+  display:none;
+  margin-top:24px;
+  padding:20px;
+  background:#f4f0ff;
+  border-radius:18px;
+}
+
+.quiz-result.visible { display:block; }
+
+.quiz-result h3 { margin-top:0; }
+
+.quiz-result a {
+  color:var(--pink-dark);
+  font-weight:900;
+}
+
+.check-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+
+.check-card {
+  padding:22px;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:20px;
+}
+
+.check-card h3 { margin-top:0; }
+
+.check-card p {
+  margin-bottom:0;
+  color:var(--muted);
+  font-size:.93rem;
+}
+
+.faq-list {
+  max-width:820px;
+  margin:0 auto;
+}
+
+.faq-item {
+  margin-bottom:12px;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.faq-item summary {
+  padding:17px 20px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.faq-answer {
+  padding:0 20px 18px;
+  color:var(--muted);
+  font-size:.93rem;
+}
+
+.faq-answer p { margin:0; }
+
+.closing {
+  padding:42px 24px;
+  text-align:center;
+  background:linear-gradient(135deg,#ffe5f1,#ece6ff);
+  border-radius:28px;
+}
+
+.closing h2 { margin-top:0; }
+
+.closing p {
+  max-width:650px;
+  margin:0 auto 20px;
+}
+
+.site-footer {
+  margin-top:55px;
+  padding:30px 0;
+  background:#342c3c;
+  color:white;
+}
+
+.footer-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.footer-brand { font-weight:900; }
+
+.footer-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  font-size:.85rem;
+}
+
+.footer-links a {
+  color:white;
+  text-decoration:none;
+}
+
+.footer-links a:hover { text-decoration:underline; }
+
+.footer-copy {
+  width:100%;
+  margin:0;
+  color:#d4cbd9;
+  font-size:.76rem;
+}
+
+@media(max-width:760px) {
+  .container { width:calc(100% - 28px); }
+
+  .header-inner {
+    min-height:60px;
+    gap:8px;
+  }
+
+  .logo { font-size:.9rem; }
+
+  .header-nav {
+    gap:10px;
+    font-size:.73rem;
+  }
+
+  .hero { padding:32px 0; }
+
+  .hero-inner {
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .hero-copy { text-align:center; }
+
+  .hero-description {
+    margin-left:auto;
+    margin-right:auto;
+    font-size:.97rem;
+  }
+
+  .hero-buttons { justify-content:center; }
+
+  .hero-art {
+    width:100%;
+    max-width:440px;
+    margin:0 auto;
+  }
+
+  .hero-art img { max-height:330px; }
+
+  .hero-sticker {
+    right:0;
+    bottom:5px;
+    max-width:145px;
+    font-size:.82rem;
+  }
+
+  .section { padding:42px 0; }
+
+  .problems-grid,
+  .carrier-grid,
+  .check-grid {
+    grid-template-columns:1fr;
+  }
+
+  .problem-card { padding:20px; }
+
+  .carrier-card { padding:23px 18px; }
+
+  .carrier-name { font-size:1.55rem; }
+
+  .price-row { padding:13px 12px; }
+
+  .price-data { font-size:.88rem; }
+
+  .price-amount { font-size:1.3rem; }
+
+  .quiz-wrap { padding:22px 16px; }
+
+  .quiz-options { grid-template-columns:1fr; }
+
+  .footer-inner {
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-links { gap:12px; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+
+  *,
+  *::before,
+  *::after {
+    transition:none !important;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#top">
-        スマホ代<span>見直し</span>ガイド
-      </a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="#top">
+      スマホ代<span>見直し</span>ガイド
+    </a>
 
-      <nav class="header-nav" aria-label="メインメニュー">
-        <a href="#prices">料金比較</a>
-        <a href="#quiz">かんたん診断</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+    <nav class="header-nav" aria-label="メインメニュー">
+      <a href="#prices">料金比較</a>
+      <a href="#quiz">SIM診断</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="container hero-inner">
+
+    <div class="hero-copy">
+      <span class="eyebrow">スマホ代、見直してみない？</span>
+
+      <h1>
+        スマホ代を<br>
+        <span class="highlight">もっとおトク</span>に！
+      </h1>
+
+      <p class="hero-description">
+        毎月のスマホ代、なんとなく払い続けていませんか？
+        料金プランを比べて、自分にぴったりのスマホを見つけよう！
+      </p>
+
+      <div class="hero-buttons">
+        <a class="button button-primary" href="#prices">
+          💰 料金を比較する
+        </a>
+
+        <a class="button button-secondary" href="#quiz">
+          ✨ おすすめ診断
+        </a>
+      </div>
     </div>
-  </header>
 
-  <main id="top">
+    <div class="hero-art">
+      <img
+        src="hero-pop-girl.PNG"
+        alt="スマホ代の見直しをイメージしたイラスト"
+        fetchpriority="high"
+      >
 
-    <!-- ヒーロー -->
-    <section class="hero">
-      <div class="container hero-inner">
+      <div class="hero-sticker">
+        毎月の固定費を見直そう！
+        <span>節約スタート♡</span>
+      </div>
+    </div>
 
-        <div class="hero-copy">
-          <span class="eyebrow">スマホ代、見直してみない？</span>
+  </div>
+</section>
 
-          <h1>
-            スマホ代を<br>
-            <span class="highlight">もっとおトク</span>に！
-          </h1>
+<!-- お悩み -->
+<section class="section">
+  <div class="container">
 
-          <p class="hero-description">
-            毎月のスマホ代、なんとなく払い続けていませんか？
-            料金プランを比べて、自分にぴったりのスマホを見つけよう！
-          </p>
+    <div class="section-heading">
+      <span class="section-kicker">Let's Review</span>
+      <h2>こんなお悩み、ありませんか？</h2>
+      <p>スマホの料金は、使い方に合わせて選ぶことが大切です。</p>
+    </div>
 
-          <div class="hero-buttons">
-            <a class="button button-primary" href="#prices">
-              💰 料金を比較する
-            </a>
+    <div class="problems-grid">
+      <article class="problem-card">
+        <div class="problem-icon">💸</div>
+        <h3>毎月の料金が高い</h3>
+        <p>あまり使っていないのに、スマホ代が高いと感じている。</p>
+      </article>
 
-            <a class="button button-secondary" href="#quiz">
-              ✨ おすすめ診断
-            </a>
+      <article class="problem-card">
+        <div class="problem-icon">📱</div>
+        <h3>プランの違いがわからない</h3>
+        <p>データ容量や通話オプションが多くて、選び方に迷ってしまう。</p>
+      </article>
+
+      <article class="problem-card">
+        <div class="problem-icon">🔍</div>
+        <h3>自分に合う会社を知りたい</h3>
+        <p>安さだけでなく、データ容量や通話の使いやすさも重視したい。</p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- 料金比較 -->
+<section class="section price-section" id="prices">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-kicker">Price Comparison</span>
+      <h2>人気4社の料金を比較！</h2>
+      <p>各社の月額料金を直接表示しています。自分の使い方に合うプランを探しましょう。</p>
+
+      <div class="price-date">
+        料金確認日：2026年10月21日
+      </div>
+    </div>
+
+    <div class="price-notice">
+      <strong>📌 料金について</strong><br>
+      表示価格は税込の月額基本料金の目安です。
+      通話料、端末代、オプション料金などは別途かかる場合があります。
+      割引・キャンペーン・適用条件によって実際の支払額は変わります。
+      お申し込み前に各社の公式ページで最新条件をご確認ください。
+    </div>
+
+    <div class="carrier-grid">
+
+      <!-- LINEMO -->
+      <article class="carrier-card linemo">
+        <div class="carrier-top">
+          <div>
+            <span class="carrier-tag">LINEをよく使う人に</span>
+            <h3 class="carrier-name">LINEMO</h3>
+          </div>
+          <span aria-hidden="true" style="font-size:2rem;">💚</span>
+        </div>
+
+        <p class="carrier-summary">
+          ソフトバンク回線のオンライン専用ブランド。
+          LINEギガフリーに対応しています。
+        </p>
+
+        <div class="price-list">
+          <div class="price-row">
+            <span class="price-data">3GBまで</span>
+            <span class="price-amount">990円<small>/月</small></span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-data">3GB超〜10GB</span>
+            <span class="price-amount">2,090円<small>/月</small></span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-data">30GB</span>
+            <span class="price-amount">2,970円<small>/月</small></span>
           </div>
         </div>
 
-        <div class="hero-art">
-          <img
-            src="hero-pop-girl.PNG"
-            alt="スマホ代の見直しをイメージしたイラスト"
-            fetchpriority="high"
-          >
-
-          <div class="hero-sticker">
-            毎月の固定費を見直そう！
-            <span>節約スタート♡</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- お悩み -->
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-kicker">Let's Review</span>
-          <h2>こんなお悩み、ありませんか？</h2>
-          <p>
-            スマホの料金は、使い方に合わせて選ぶことが大切です。
-          </p>
-        </div>
-
-        <div class="problems-grid">
-
-          <article class="problem-card">
-            <div class="problem-icon">💸</div>
-            <h3>毎月の料金が高い</h3>
-            <p>
-              あまり使っていないのに、スマホ代が高いと感じている。
-            </p>
-          </article>
-
-          <article class="problem-card">
-            <div class="problem-icon">📱</div>
-            <h3>プランの違いがわからない</h3>
-            <p>
-              データ容量や通話オプションが多くて、選び方に迷ってしまう。
-            </p>
-          </article>
-
-          <article class="problem-card">
-            <div class="problem-icon">🔍</div>
-            <h3>自分に合う会社を知りたい</h3>
-            <p>
-              安さだけでなく、データ容量や通話の使いやすさも重視したい。
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 料金比較 -->
-    <section class="section price-section" id="prices">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-kicker">Price Comparison</span>
-          <h2>人気4社の料金を比較！</h2>
-          <p>
-            月額料金を比べて、自分の使い方に合うプランを探してみましょう。
-          </p>
-
-          <div class="price-date">
-            料金確認日：2026年10月21日
-          </div>
-        </div>
-
-        <div class="price-notice">
-          <strong>📌 料金について</strong><br>
-          表示価格は税込の月額基本料金です。
-          通話料、端末代、オプション料金などは別途かかる場合があります。
-          割引・キャンペーン・適用条件によって実際の支払額は変わります。
-          申し込み前に各社の公式ページで最新条件をご確認ください。
-        </div>
-
-        <div class="carrier-grid">
-
-          <!-- LINEMO -->
-          <article class="carrier-card linemo">
-            <div class="carrier-top">
-              <div>
-                <span class="carrier-tag">LINEをよく使う人に</span>
-                <h3 class="carrier-name">LINEMO</h3>
-              </div>
-              <span aria-hidden="true" style="font-size:2rem;">💚</span>
-            </div>
-
-            <p class="carrier-summary">
-              ソフトバンク回線のオンライン専用ブランド。
-              LINEギガフリーに対応しています。
-            </p>
-
-            <div class="price-list">
-
-              <div class="price-row">
-                <span class="price-data">3GBまで</span>
-                <span class="price-amount">990円<small>/月</small></span>
-              </div>
-
-              <div class="price-row">
-                <span class="price-data">3GB超〜10GB</span>
-                <span class="price-amount">2,090円<small>/月</small></span>
-              </div>
-
-              <div class="price-row">
-                <span class="price-data">30GB</span>
-                <span class="price-amount">2,970円<small>/月</small></span>
-              </div>
-
-            </div>
-
-            <ul class="carrier-features">
-              <li>LINEギガフリーに対応</li>
-              <li>30GBプランは5分以内の国内通話定額付き</li>
-              <li>申し込みやサポートはオンライン中心</li>
-            </ul>
-
-            <div class="carrier-footer">
-              <a
-                class="official-link"
-                href="https://www.linemo.jp/plan/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                公式サイトで料金を確認 ↗
-              </a>
-
-              <p class="source-note">
-                料金出典：
-                <a
-                  href="https://www.linemo.jp/plan/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >LINEMO公式・料金プラン</a>
-              </p>
-            </div>
-          </article>
-
-          <!-- 楽天モバイル -->
-          <article class="carrier-card rakuten">
-            <div class="carrier-top">
-              <div>
-                <span class="carrier-tag">データをたくさん使う人に</span>
-                <h3 class="carrier-name">楽天モバイル</h3>
-              </div>
-              <span aria-hidden="true" style="font-size:2rem;">❤️</span>
-            </div>
-
-            <p class="carrier-summary">
-              毎月のデータ使用量に応じて料金が変わる段階制プラン。
-              データをたくさん使う人にも向いています。
-            </p>
-
-            <div class="price-list">
-
-              <div class="price-row">
-                <span class="price-data">3GBまで</span>
-                <span class="price-amount">1,078円<small>/月</small></span>
-              </div>
-
-              <div class="price-row">
-                <span class="price-data">3GB超〜20GB</span>
-                <span class="price-amount">2,178円<small>/月</small></span>
-              </div>
-
-              <div class="price-row">
-                <span class="price-data">20GB超〜無制限</span>
-                <span class="price-amount">3,278円<small>/月</small></span>
-              </div>
-
-            </div>
-
-            <ul class="carrier-features">
-              <li>データ使用量に応じて月額料金が変動</li>
-              <li>Rakuten Linkアプリで国内通話が無料になる場合あり</li>
-              <li>家族割引などで料金が変わる場合あり</li>
-            </ul>
-
-            <div class="carrier-footer">
-              <a
-                class="official-link"
-                href="https://network.mobile.rakuten.co.jp/fee/saikyo-plan/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                公式サイトで料金を確認 ↗
-              </a>
-
-              <p class="source-note">
-                料金出典：
-                <a
-                  href="https://network.mobile.rakuten.co.jp/fee/saikyo-plan/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >楽天モバイル公式・料金プラン</a>
-              </p>
-            </div>
-          </article>
-
-          <!-- ahamo -->
-          <article class="carrier-card ahamo">
-            <div class="carrier-top">
-              <div>
-                <span class="carrier-tag">データも通話も使いたい人に</span>
-                <h3 class="carrier-name">ahamo</h3>
-              </div>
-              <span aria-hidden="true" style="font-size:2rem;">🖤</span>
-            </div>
-
-            <p class="carrier-summary">
-              ドコモ回線のオンライン専用プラン。
-              5分以内の国内通話定額が基本料金に含まれます。
-            </p>
-
-            <div class="price-list">
-
-              <div class="price-row">
-                <span class="price-data">30GB</span>
-                <span class="price-amount">2,970円<small>/月</small></span>
-              </div>
-
-              <div class="price-row">
-                <span class="price-data">110GB</span>
-                <span class="price-amount">4,950円<small>/月</small></span>
-              </div>
-
-            </div>
-
-            <ul class="carrier-features">
-              <li>基本プランは30GB</li>
-              <li>5分以内の国内通話定額付き</li>
-              <li>110GBは大盛りオプション利用時の容量</li>
-            </ul>
-
-            <div class="future-notice">
-              <strong>⚠️ 2026年12月1日から料金体系が変更予定</strong><br>
-              公式発表では、40GBまで3,135円、60GBまで4,125円、
-              120GBまで5,115円となる予定です。
-              大盛りオプションは2026年11月30日で提供終了予定です。
-              変更前後の条件は公式情報をご確認ください。
-            </div>
-
-            <div class="carrier-footer" style="margin-top:18px;">
-              <a
-                class="official-link"
-                href="https://ahamo.com/plan/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                公式サイトで料金を確認 ↗
-              </a>
-
-              <p class="source-note">
-                料金出典：
-                <a
-                  href="https://ahamo.com/plan/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >ahamo公式・料金プラン</a>
-              </p>
-            </div>
-          </article>
-
-          <!-- IIJmio -->
-          <article class="carrier-card iijmio">
-            <div class="carrier-top">
-              <div>
-                <span class="carrier-tag">料金を細かく選びたい人に</span>
-                <h3 class="carrier-name">IIJmio</h3>
-              </div>
-              <span aria-hidden="true" style="font-size:2rem;">💗</span>
-            </div>
-
-            <p class="carrier-summary">
-              データ容量の選択肢が豊富な格安SIM。
-              自分に必要なギガ数に合わせて選びやすいのが特徴です。
-            </p>
-
-            <div class="price-list">
-
-              <div class="price-row">
-                <span class="price-data">2GB</span>
-                <span class="price-amount">850円<small>/月</small></span>
-              </div>
-
-              <div class="price-row">
-                <span class="price-data">5GB</span>
-                <span class="price-amount">950円<small>/月</small></span>
-              </div>
-
-              <div class="price-row">
-                <span class="price-data">10GB</span>
-                <span class="price-amount">1,400円<small>/月</small></span>
-              </div>
-
-              <div class="price-row">
-                <span class="price-data">15GB</span>
-                <span class="price-amount">1,800円<small>/月</small></span>
-              </div>
-
-              <div class="price-row">
-                <span class="price-data">25GB</span>
-                <span class="price-amount">2,000円<small>/月</small></span>
-              </div>
-
-            </div>
-
-            <ul class="carrier-features">
-              <li>音声SIM・音声eSIMの基本料金</li>
-              <li>小容量から中容量まで選択肢が豊富</li>
-              <li>通話料やオプション料金は別途確認が必要</li>
-            </ul>
-
-            <div class="carrier-footer">
-              <a
-                class="official-link"
-                href="https://www.iijmio.jp/gigaplan/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                公式サイトで料金を確認 ↗
-              </a>
-
-              <p class="source-note">
-                料金出典：
-                <a
-                  href="https://www.iijmio.jp/gigaplan/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >IIJmio公式・ギガプラン</a>
-              </p>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- かんたん診断 -->
-    <section class="section" id="quiz">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-kicker">Simple Diagnosis</span>
-          <h2>あなたに合うプランを診断！</h2>
-          <p>
-            2つの質問に答えるだけ。使い方に合いそうな候補を見つけましょう。
-          </p>
-        </div>
-
-        <div class="quiz-wrap">
-
-          <div id="question1">
-            <p class="quiz-question">
-              Q1. 毎月どれくらいデータを使う？
-            </p>
-
-            <div class="quiz-options">
-              <button class="quiz-option" data-q="data" data-value="small">
-                🌱 3〜5GBくらい
-              </button>
-
-              <button class="quiz-option" data-q="data" data-value="medium">
-                🌷 10〜30GBくらい
-              </button>
-
-              <button class="quiz-option" data-q="data" data-value="large">
-                🚀 30GB以上
-              </button>
-
-              <button class="quiz-option" data-q="data" data-value="unknown">
-                🤔 よくわからない
-              </button>
-            </div>
-          </div>
-
-          <div id="question2" style="margin-top:28px;">
-            <p class="quiz-question">
-              Q2. スマホ選びで一番重視するのは？
-            </p>
-
-            <div class="quiz-options">
-              <button class="quiz-option" data-q="priority" data-value="cheap">
-                💰 とにかく料金を抑えたい
-              </button>
-
-              <button class="quiz-option" data-q="priority" data-value="line">
-                💬 LINEをよく使う
-              </button>
-
-              <button class="quiz-option" data-q="priority" data-value="call">
-                ☎️ 通話もよく使う
-              </button>
-
-              <button class="quiz-option" data-q="priority" data-value="data">
-                📶 ギガをたくさん使いたい
-              </button>
-            </div>
-          </div>
-
-          <button class="button button-primary quiz-next" id="diagnose">
-            診断結果を見る ✨
-          </button>
-
-          <div class="quiz-result" id="quizResult" aria-live="polite">
-            <h3 id="resultTitle">おすすめはこちら！</h3>
-            <p id="resultText"></p>
-            <p id="resultLink"></p>
-            <p>
-              ※診断結果は簡易的な目安です。
-              電波状況や通話頻度、割引条件も確認して選びましょう。
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 選び方 -->
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-kicker">How To Choose</span>
-          <h2>スマホプラン選びのポイント</h2>
-          <p>
-            月額料金だけでなく、普段の使い方もチェックしましょう。
-          </p>
-        </div>
-
-        <div class="check-grid">
-
-          <article class="check-card">
-            <h3>📶 1. データ使用量を確認</h3>
-            <p>
-              毎月どれくらいギガを使うか確認してみましょう。
-              Wi-Fi中心なら小容量プランで十分な場合があります。
-            </p>
-          </article>
-
-          <article class="check-card">
-            <h3>☎️ 2. 通話料金も確認</h3>
-            <p>
-              電話をよくかける人は、通話定額の有無や対象となる電話番号、
-              専用アプリの必要性をチェックしましょう。
-            </p>
-          </article>
-
-          <article class="check-card">
-            <h3>📍 3. エリアと通信環境を確認</h3>
-            <p>
-              自宅、職場、学校、通勤経路などで利用できるか、
-              公式サイトのサービスエリアを確認しましょう。
-            </p>
-          </article>
-
-          <article class="check-card">
-            <h3>🧾 4. 割引や初期費用を確認</h3>
-            <p>
-              家族割引、キャンペーン、契約事務手数料、SIM発行費用なども
-              含めて比較すると、実際の負担額を把握しやすくなります。
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-kicker">FAQ</span>
-          <h2>よくある質問</h2>
-        </div>
-
-        <div class="faq-list">
-
-          <details class="faq-item">
-            <summary>格安SIMにすると、必ず安くなりますか？</summary>
-            <div class="faq-answer">
-              <p>
-                必ず安くなるとは限りません。
-                データ使用量、通話料、端末代、割引条件などによって変わるため、
-                現在の請求額と乗り換え先の総額を比較するのがおすすめです。
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>表示されている料金には何が含まれていますか？</summary>
-            <div class="faq-answer">
-              <p>
-                原則として、各プランの税込月額基本料金を表示しています。
-                端末代、通話料、追加データ、オプションなどは別途かかる場合があります。
-                各社の公式ページで条件を確認してください。
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>このサイトの料金は自動で更新されますか？</summary>
-            <div class="faq-answer">
-              <p>
-                いいえ。このページの料金はコードに記載された固定値です。
-                料金改定やキャンペーン変更があっても自動更新されません。
-                定期的に各社の公式ページを確認して、必要に応じて更新してください。
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>ahamoの料金は今後変わりますか？</summary>
-            <div class="faq-answer">
-              <p>
-                公式発表では、2026年12月1日から料金体系の変更が予定されています。
-                このページには2026年10月21日時点の料金と、発表されている変更予定を
-                分けて掲載しています。申し込み時は公式ページで最新条件をご確認ください。
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>乗り換えると電話番号は変わりますか？</summary>
-            <div class="faq-answer">
-              <p>
-                MNP（携帯電話番号ポータビリティ）を利用すれば、
-                対応する手続きと条件のもとで、現在の電話番号を引き継いで
-                乗り換えられます。詳細は乗り換え先の公式案内をご確認ください。
-              </p>
-            </div>
-          </details>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 締め -->
-    <section class="section">
-      <div class="container">
-        <div class="closing">
-          <h2>スマホ代を見直してみよう！ ✨</h2>
-
-          <p>
-            料金プランを比較すると、自分に合う選択肢が見つかるかもしれません。
-            まずは公式サイトで最新料金や適用条件をチェックしてみましょう。
-          </p>
-
-          <a class="button button-primary" href="#prices">
-            もう一度、料金を比較する
+        <ul class="carrier-features">
+          <li>LINEギガフリーに対応</li>
+          <li>30GBプランは5分以内の国内通話定額付き</li>
+          <li>申し込みやサポートはオンライン中心</li>
+        </ul>
+
+        <div class="carrier-footer">
+          <a class="official-link"
+             href="https://www.linemo.jp/plan/"
+             target="_blank" rel="noopener noreferrer">
+            LINEMO公式サイトで確認 ↗
           </a>
+
+          <p class="source-note">
+            料金出典：
+            <a href="https://www.linemo.jp/plan/"
+               target="_blank" rel="noopener noreferrer">LINEMO公式・料金プラン</a>
+          </p>
         </div>
-      </div>
-    </section>
+      </article>
 
-  </main>
+      <!-- 楽天モバイル -->
+      <article class="carrier-card rakuten">
+        <div class="carrier-top">
+          <div>
+            <span class="carrier-tag">データをたくさん使う人に</span>
+            <h3 class="carrier-name">楽天モバイル</h3>
+          </div>
+          <span aria-hidden="true" style="font-size:2rem;">❤️</span>
+        </div>
 
-  <!-- フッター -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
+        <p class="carrier-summary">
+          毎月のデータ使用量に応じて料金が変わる段階制プラン。
+          データをたくさん使う人にも向いています。
+        </p>
 
-      <div class="footer-brand">
-        スマホ代見直しガイド
-      </div>
+        <div class="price-list">
+          <div class="price-row">
+            <span class="price-data">3GBまで</span>
+            <span class="price-amount">1,078円<small>/月</small></span>
+          </div>
 
-      <nav class="footer-links" aria-label="フッターメニュー">
-        <a href="#top">トップ</a>
-        <a href="#prices">料金比較</a>
-        <a href="#faq">よくある質問</a>
-        <a href="policy.html">運営方針・広告について</a>
-      </nav>
+          <div class="price-row">
+            <span class="price-data">3GB超〜20GB</span>
+            <span class="price-amount">2,178円<small>/月</small></span>
+          </div>
 
-      <p class="footer-copy">
-        ※掲載情報は参考情報です。料金・サービス・キャンペーンは変更される場合があります。
-        契約前に必ず各社の公式情報をご確認ください。
-      </p>
+          <div class="price-row">
+            <span class="price-data">20GB超〜無制限</span>
+            <span class="price-amount">3,278円<small>/月</small></span>
+          </div>
+        </div>
 
-      <p class="footer-copy">
-        &copy; <span id="copyrightYear">2026</span> スマホ代見直しガイド
-      </p>
+        <ul class="carrier-features">
+          <li>データ使用量に応じて月額料金が変動</li>
+          <li>Rakuten Linkアプリで国内通話が無料になる場合あり</li>
+          <li>家族割引などで料金が変わる場合あり</li>
+        </ul>
+
+        <div class="carrier-footer">
+          <a class="official-link"
+             href="https://network.mobile.rakuten.co.jp/fee/saikyo-plan/"
+             target="_blank" rel="noopener noreferrer">
+            楽天モバイル公式サイトで確認 ↗
+          </a>
+
+          <p class="source-note">
+            料金出典：
+            <a href="https://network.mobile.rakuten.co.jp/fee/saikyo-plan/"
+               target="_blank" rel="noopener noreferrer">楽天モバイル公式・料金プラン</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- ahamo -->
+      <article class="carrier-card ahamo">
+        <div class="carrier-top">
+          <div>
+            <span class="carrier-tag">データも通話も使いたい人に</span>
+            <h3 class="carrier-name">ahamo</h3>
+          </div>
+          <span aria-hidden="true" style="font-size:2rem;">💙</span>
+        </div>
+
+        <p class="carrier-summary">
+          ドコモ回線のオンライン専用プラン。
+          5分以内の国内通話定額が基本料金に含まれます。
+        </p>
+
+        <div class="price-list">
+          <div class="price-row">
+            <span class="price-data">30GB</span>
+            <span class="price-amount">2,970円<small>/月</small></span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-data">110GB</span>
+            <span class="price-amount">4,950円<small>/月</small></span>
+          </div>
+        </div>
+
+        <ul class="carrier-features">
+          <li>基本プランは30GB</li>
+          <li>5分以内の国内通話定額付き</li>
+          <li>110GBは大盛りオプション利用時の容量</li>
+        </ul>
+
+        <div class="future-notice">
+          <strong>⚠️ 2026年12月1日から料金体系の変更予定</strong><br>
+          公式発表では、40GBまで3,135円、60GBまで4,125円、
+          120GBまで5,115円となる予定です。
+          大盛りオプションは2026年11月30日で提供終了予定です。
+          申し込み前に公式情報をご確認ください。
+        </div>
+
+        <div class="carrier-footer">
+          <a class="official-link"
+             href="https://ahamo.com/plan/"
+             target="_blank" rel="noopener noreferrer">
+            ahamo公式サイトで確認 ↗
+          </a>
+
+          <p class="source-note">
+            料金出典：
+            <a href="https://ahamo.com/plan/"
+               target="_blank" rel="noopener noreferrer">ahamo公式・料金プラン</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- IIJmio -->
+      <article class="carrier-card iijmio">
+        <div class="carrier-top">
+          <div>
+            <span class="carrier-tag">料金を細かく選びたい人に</span>
+            <h3 class="carrier-name">IIJmio</h3>
+          </div>
+          <span aria-hidden="true" style="font-size:2rem;">💜</span>
+        </div>
+
+        <p class="carrier-summary">
+          データ容量の選択肢が豊富な格安SIM。
+          自分に必要なギガ数に合わせて選びやすいのが特徴です。
+        </p>
+
+        <div class="price-list">
+          <div class="price-row">
+            <span class="price-data">2GB</span>
+            <span class="price-amount">850円<small>/月</small></span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-data">5GB</span>
+            <span class="price-amount">950円<small>/月</small></span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-data">10GB</span>
+            <span class="price-amount">1,400円<small>/月</small></span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-data">15GB</span>
+            <span class="price-amount">1,600円<small>/月</small></span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-data">25GB</span>
+            <span class="price-amount">2,000円<small>/月</small></span>
+          </div>
+        </div>
+
+        <ul class="carrier-features">
+          <li>音声SIM・音声eSIMの基本料金</li>
+          <li>小容量から中容量まで選択肢が豊富</li>
+          <li>通話料やオプション料金は別途確認が必要</li>
+        </ul>
+
+        <div class="carrier-footer">
+          <a class="official-link"
+             href="https://www.iijmio.jp/gigaplan/"
+             target="_blank" rel="noopener noreferrer">
+            IIJmio公式サイトで確認 ↗
+          </a>
+
+          <p class="source-note">
+            料金出典：
+            <a href="https://www.iijmio.jp/gigaplan/"
+               target="_blank" rel="noopener noreferrer">IIJmio公式・ギガプラン</a>
+          </p>
+        </div>
+      </article>
 
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    // フッターの年を自動表示
-    document.getElementById("copyrightYear").textContent =
-      new Date().getFullYear();
+<!-- SIM診断 -->
+<section class="section" id="quiz">
+  <div class="container">
 
-    // かんたん診断
-    const answers = {
-      data: null,
-      priority: null
-    };
+    <div class="section-heading">
+      <span class="section-kicker">Simple Diagnosis</span>
+      <h2>あなたに合うプランを診断！</h2>
+      <p>2つの質問に答えるだけ。使い方に合いそうな候補を見つけましょう。</p>
+    </div>
 
-    document.querySelectorAll(".quiz-option").forEach((button) => {
-      button.addEventListener("click", () => {
-        const question = button.dataset.q;
-        const value = button.dataset.value;
+    <div class="quiz-wrap">
 
-        answers[question] = value;
+      <div>
+        <p class="quiz-question">Q1. 毎月どれくらいデータを使う？</p>
 
-        document
-          .querySelectorAll('.quiz-option[data-q="' + question + '"]')
-          .forEach((option) => {
-            option.classList.remove("selected");
-            option.setAttribute("aria-pressed", "false");
-          });
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-q="data" data-value="small">🌱 3〜5GBくらい</button>
+          <button type="button" class="quiz-option" data-q="data" data-value="medium">🌷 10〜30GBくらい</button>
+          <button type="button" class="quiz-option" data-q="data" data-value="large">🚀 30GB以上</button>
+          <button type="button" class="quiz-option" data-q="data" data-value="unknown">🤔 よくわからない</button>
+        </div>
+      </div>
 
-        button.classList.add("selected");
-        button.setAttribute("aria-pressed", "true");
+      <div style="margin-top:28px;">
+        <p class="quiz-question">Q2. スマホ選びで一番重視するのは？</p>
+
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-q="priority" data-value="cheap">💰 とにかく料金を抑えたい</button>
+          <button type="button" class="quiz-option" data-q="priority" data-value="line">💬 LINEをよく使う</button>
+          <button type="button" class="quiz-option" data-q="priority" data-value="call">☎️ 通話もよく使う</button>
+          <button type="button" class="quiz-option" data-q="priority" data-value="data">📶 ギガをたくさん使いたい</button>
+        </div>
+      </div>
+
+      <button type="button" class="button button-primary quiz-next" id="diagnose">
+        診断結果を見る ✨
+      </button>
+
+      <div class="quiz-result" id="quizResult" aria-live="polite">
+        <h3 id="resultTitle">おすすめはこちら！</h3>
+        <p id="resultText"></p>
+        <p id="resultLink"></p>
+        <p>※診断結果は簡易的な目安です。電波状況や通話頻度、割引条件も確認して選びましょう。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 選び方 -->
+<section class="section">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-kicker">How To Choose</span>
+      <h2>スマホプラン選びのポイント</h2>
+      <p>月額料金だけでなく、普段の使い方もチェックしましょう。</p>
+    </div>
+
+    <div class="check-grid">
+      <article class="check-card">
+        <h3>📶 1. データ使用量を確認</h3>
+        <p>毎月どれくらいギガを使うか確認しましょう。Wi-Fi中心なら小容量プランで十分な場合があります。</p>
+      </article>
+
+      <article class="check-card">
+        <h3>☎️ 2. 通話料金も確認</h3>
+        <p>電話をよくかける人は、通話定額の有無や対象となる電話番号、専用アプリの必要性を確認しましょう。</p>
+      </article>
+
+      <article class="check-card">
+        <h3>📍 3. エリアと通信環境を確認</h3>
+        <p>自宅、職場、学校、通勤経路などで利用できるか、公式サイトのサービスエリアを確認しましょう。</p>
+      </article>
+
+      <article class="check-card">
+        <h3>🧾 4. 割引や初期費用を確認</h3>
+        <p>家族割引、キャンペーン、契約事務手数料、SIM発行費用なども含めて比較しましょう。</p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-kicker">FAQ</span>
+      <h2>よくある質問</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>格安SIMにすると、必ず安くなりますか？</summary>
+        <div class="faq-answer">
+          <p>必ず安くなるとは限りません。データ使用量、通話料、端末代、割引条件などによって変わるため、現在の請求額と乗り換え先の総額を比較するのがおすすめです。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>表示されている料金には何が含まれていますか？</summary>
+        <div class="faq-answer">
+          <p>原則として各プランの税込月額基本料金です。端末代、通話料、追加データ、オプションなどは別途かかる場合があります。各社の公式ページで条件をご確認ください。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>このサイトの料金は自動で更新されますか？</summary>
+        <div class="faq-answer">
+          <p>いいえ。このページの料金はHTMLに記載された固定値です。料金改定やキャンペーン変更があっても自動更新されません。定期的に各社の公式ページを確認し、必要に応じて更新してください。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>ahamoの料金は今後変わりますか？</summary>
+        <div class="faq-answer">
+          <p>公式発表では2026年12月1日から料金体系の変更が予定されています。申し込み時は公式ページで最新条件をご確認ください。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>乗り換えると電話番号は変わりますか？</summary>
+        <div class="faq-answer">
+          <p>MNP（携帯電話番号ポータビリティ）を利用すれば、所定の手続きと条件のもとで現在の電話番号を引き継いで乗り換えられます。詳細は乗り換え先の公式案内をご確認ください。</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- 締め -->
+<section class="section">
+  <div class="container">
+    <div class="closing">
+      <h2>スマホ代を見直してみよう！ ✨</h2>
+
+      <p>
+        料金プランを比較すると、自分に合う選択肢が見つかるかもしれません。
+        まずは公式サイトで最新料金や適用条件をチェックしてみましょう。
+      </p>
+
+      <a class="button button-primary" href="#prices">
+        もう一度、料金を比較する
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- フッター -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">スマホ代見直しガイド</div>
+
+    <nav class="footer-links" aria-label="フッターメニュー">
+      <a href="#top">トップ</a>
+      <a href="#prices">料金比較</a>
+      <a href="#faq">よくある質問</a>
+      <a href="policy.html">運営方針・広告について</a>
+    </nav>
+
+    <p class="footer-copy">
+      ※掲載情報は参考情報です。料金・サービス・キャンペーンは変更される場合があります。
+      契約前に必ず各社の公式情報をご確認ください。
+    </p>
+
+    <p class="footer-copy">
+      &copy; <span id="copyrightYear">2026</span> スマホ代見直しガイド
+    </p>
+
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+// フッターの年を自動表示
+document.getElementById("copyrightYear").textContent =
+  new Date().getFullYear();
+
+// SIM診断
+const answers = {
+  data: null,
+  priority: null
+};
+
+document.querySelectorAll(".quiz-option").forEach(function(button) {
+  button.setAttribute("aria-pressed", "false");
+
+  button.addEventListener("click", function() {
+    const question = button.dataset.q;
+    const value = button.dataset.value;
+
+    answers[question] = value;
+
+    document.querySelectorAll('.quiz-option[data-q="' + question + '"]')
+      .forEach(function(option) {
+        option.classList.remove("selected");
+        option.setAttribute("aria-pressed", "false");
       });
-    });
 
-    document.getElementById("diagnose").addEventListener("click", () => {
-      const result = document.getElementById("quizResult");
-      const title = document.getElementById("resultTitle");
-      const text = document.getElementById("resultText");
-      const link = document.getElementById("resultLink");
+    button.classList.add("selected");
+    button.setAttribute("aria-pressed", "true");
+  });
+});
 
-      if (!answers.data || !answers.priority) {
-        result.classList.add("visible");
-        title.textContent = "あと少し！";
-        text.textContent =
-          "Q1とQ2の両方に回答すると、診断結果が表示されます。";
-        link.innerHTML = "";
-        result.scrollIntoView({ behavior: "smooth", block: "center" });
-        return;
-      }
+document.getElementById("diagnose").addEventListener("click", function() {
+  const result = document.getElementById("quizResult");
+  const title = document.getElementById("resultTitle");
+  const text = document.getElementById("resultText");
+  const link = document.getElementById("resultLink");
 
-      let recommendation;
-      let explanation;
-      let url;
+  result.classList.add("visible");
 
-      if (answers.priority === "line") {
-        recommendation = "LINEMO";
-        explanation =
-          "LINEをよく使うなら、LINEギガフリーが特徴のLINEMOを比較候補にしてみましょう。";
-        url = "https://www.linemo.jp/plan/";
-      } else if (answers.priority === "data" || answers.data === "large") {
-        recommendation = "楽天モバイル";
-        explanation =
-          "データをたくさん使うなら、データ使用量に応じて料金が変わる楽天モバイルを比較してみましょう。";
-        url = "https://network.mobile.rakuten.co.jp/fee/saikyo-plan/";
-      } else if (answers.priority === "call") {
-        recommendation = "ahamo";
-        explanation =
-          "通話も使うなら、5分以内の国内通話定額が含まれるahamoを比較候補にしてみましょう。通話条件も確認してください。";
-        url = "https://ahamo.com/plan/";
-      } else if (answers.data === "small" || answers.priority === "cheap") {
-        recommendation = "IIJmio";
-        explanation =
-          "月額料金を抑えたいなら、小容量プランも選べるIIJmioを比較候補にしてみましょう。";
-        url = "https://www.iijmio.jp/gigaplan/";
-      } else {
-        recommendation = "LINEMO・楽天モバイル・ahamo・IIJmio";
-        explanation =
-          "使うギガ数や通話頻度によって向いているプランが変わります。4社の料金を比べてみましょう。";
-        url = "#prices";
-      }
+  if (!answers.data || !answers.priority) {
+    title.textContent = "あと少し！";
+    text.textContent = "Q1とQ2の両方に回答すると、診断結果が表示されます。";
+    link.replaceChildren();
+    result.scrollIntoView({behavior:"smooth",block:"center"});
+    return;
+  }
 
-      result.classList.add("visible");
-      title.textContent = "おすすめ候補：" + recommendation;
-      text.textContent = explanation;
-      link.innerHTML =
-        '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' +
-        "料金プランの詳細を確認する ↗</a>";
+  let recommendation;
+  let explanation;
+  let url;
 
-      result.scrollIntoView({ behavior: "smooth", block: "center" });
-    });
-  </script>
+  if (answers.priority === "line") {
+    recommendation = "LINEMO";
+    explanation = "LINEをよく使うなら、LINEギガフリーが特徴のLINEMOを比較候補にしてみましょう。";
+    url = "https://www.linemo.jp/plan/";
+  } else if (answers.priority === "data" || answers.data === "large") {
+    recommendation = "楽天モバイル";
+    explanation = "データをたくさん使うなら、データ使用量に応じて料金が変わる楽天モバイルを比較してみましょう。";
+    url = "https://network.mobile.rakuten.co.jp/fee/saikyo-plan/";
+  } else if (answers.priority === "call") {
+    recommendation = "ahamo";
+    explanation = "通話も使うなら、5分以内の国内通話定額が含まれるahamoを比較候補にしてみましょう。通話条件も確認してください。";
+    url = "https://ahamo.com/plan/";
+  } else {
+    recommendation = "IIJmio";
+    explanation = "月額料金を抑えたいなら、小容量プランも選べるIIJmioを比較候補にしてみましょう。";
+    url = "https://www.iijmio.jp/gigaplan/";
+  }
+
+  title.textContent = "おすすめ候補：" + recommendation;
+  text.textContent = explanation;
+
+  const resultAnchor = document.createElement("a");
+  resultAnchor.href = url;
+  resultAnchor.target = "_blank";
+  resultAnchor.rel = "noopener noreferrer";
+  resultAnchor.textContent = "料金プランの詳細を確認する ↗";
+
+  link.replaceChildren(resultAnchor);
+
+  result.scrollIntoView({behavior:"smooth",block:"center"});
+});
+</script>
 
 </body>
 </html>

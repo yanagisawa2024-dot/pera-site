@@ -6,500 +6,981 @@
 <meta name="theme-color" content="#16c9e8">
 <meta name="description" content="スマホ代見直しガイド。使い方にぴったりのSIMを診断して、スマホ代を見直そう！">
 <title>スマホ代見直しガイド｜ぴったりSIM診断</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
+
 :root{
+
   --cyan:#16c9e8;
+
   --blue:#079bd5;
+
   --pink:#ff398b;
+
   --yellow:#fff04a;
+
   --navy:#12385c;
+
   --pale:#effcff;
-  --green:#17bf75;
+
 }
+
 *{box-sizing:border-box}
+
 html{scroll-behavior:smooth;scroll-padding-top:80px}
+
 body{
+
   margin:0;
+
   color:var(--navy);
+
   background:#fff;
-  font-family:"Hiragino Maru Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+
+  font-family:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+
   font-weight:700;
+
   line-height:1.8;
+
   overflow-wrap:anywhere;
+
 }
+
 a{color:inherit}
+
 button,input{font:inherit}
+
 button,a{-webkit-tap-highlight-color:transparent}
+
 img{max-width:100%}
 
 header{
+
   position:sticky;
+
   top:0;
+
   z-index:20;
+
   background:#ffffffef;
+
   backdrop-filter:blur(10px);
+
   border-bottom:2px solid #d8f7fc;
+
 }
+
 .nav{
+
   max-width:1100px;
+
   margin:auto;
+
   padding:10px 16px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   gap:12px;
+
 }
+
 .brand{
+
   display:flex;
+
   align-items:center;
+
   gap:10px;
+
   text-decoration:none;
+
   font-weight:900;
+
   font-size:clamp(14px,2.6vw,21px);
+
   line-height:1.35;
+
 }
+
 .brand-icon{
+
   display:grid;
+
   place-items:center;
+
   width:43px;
+
   height:43px;
+
   flex-shrink:0;
+
   background:var(--cyan);
+
   border:3px solid white;
+
   border-radius:15px;
+
   box-shadow:0 4px 0 #9debf3;
+
   transform:rotate(-5deg);
+
   font-size:24px;
+
 }
+
 .brand small{
+
   display:block;
+
   font-size:10px;
+
   margin-top:3px;
+
 }
+
 .nav-button,.button{
+
   display:inline-flex;
+
   justify-content:center;
+
   align-items:center;
+
   text-align:center;
+
   text-decoration:none;
+
   color:#fff;
+
   background:var(--pink);
+
   border:3px solid white;
+
   border-radius:999px;
+
   box-shadow:0 5px 0 #d91d6b;
+
   padding:12px 18px;
+
   font-weight:900;
+
   cursor:pointer;
+
   transition:transform .15s;
+
+  text-shadow:none;
+
 }
+
 .nav-button{font-size:12px;white-space:nowrap}
+
 .nav-button:hover,.button:hover{transform:translateY(-2px)}
 
 .hero{
+
   color:white;
+
   background:linear-gradient(135deg,#09b7e5,#20d5df 65%,#8bead4);
+
   position:relative;
+
   overflow:hidden;
+
 }
+
 .hero:before,.hero:after{
+
   content:"✦";
+
   position:absolute;
+
   color:var(--yellow);
+
   font-size:60px;
-  text-shadow:0 3px 0 #ffffff55;
+
 }
+
 .hero:before{top:15px;right:7%}
+
 .hero:after{bottom:10px;left:3%}
+
 .hero-inner{
+
   max-width:1100px;
+
   margin:auto;
+
   padding:38px 20px 34px;
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   align-items:center;
+
   gap:24px;
+
   position:relative;
+
   z-index:1;
+
 }
+
 .sticker{
+
   display:inline-block;
+
   color:var(--navy);
+
   background:var(--yellow);
+
   border:3px solid white;
+
   border-radius:999px;
+
   padding:4px 16px;
+
   font-weight:900;
+
   box-shadow:0 4px 0 #0795bd;
+
   transform:rotate(-2deg);
+
 }
+
 .hero h1{
+
   margin:20px 0 16px;
+
   font-size:clamp(34px,5.2vw,60px);
+
   line-height:1.28;
+
   letter-spacing:-.04em;
+
   font-weight:900;
-  -webkit-text-stroke:.7px white;
-  paint-order:stroke fill;
-  text-shadow:0 4px 0 #078db8,3px 3px 0 #078db8;
+
+  /* 見出し文字の影を削除 */
+
+  text-shadow:none !important;
+
+  -webkit-text-stroke:0;
+
+  filter:none;
+
 }
+
 .hero h1 .pink{
+
   color:#ff398b;
-  -webkit-text-stroke:1px white;
-  text-shadow:0 4px 0 #c8196b,2px 2px 0 #c8196b;
+
+  text-shadow:none !important;
+
+  -webkit-text-stroke:0;
+
+  filter:none;
+
 }
+
 .hero h1 .yellow{
+
   color:var(--yellow);
-  -webkit-text-stroke:1px white;
-  text-shadow:0 4px 0 #b98624,2px 2px 0 #b98624;
+
+  text-shadow:none !important;
+
+  -webkit-text-stroke:0;
+
+  filter:none;
+
 }
+
 .hero-description{
+
   font-size:clamp(15px,2vw,18px);
+
   font-weight:900;
-  text-shadow:0 1px 3px #087ca7;
+
+  text-shadow:none;
+
 }
+
 .badges{
+
   display:flex;
+
   flex-wrap:wrap;
+
   gap:8px;
+
   margin-top:20px;
+
 }
+
 .badges span{
+
   background:#ffffff28;
+
   border:2px solid #ffffff90;
+
   border-radius:999px;
+
   padding:7px 11px;
+
   font-size:12px;
+
   font-weight:900;
+
 }
+
 .hero-art{
+
   min-width:0;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
 }
+
 .hero-art img{
+
   display:block;
+
   width:100%;
+
   max-width:500px;
+
   height:auto;
+
   border:4px solid white;
+
   border-radius:25px;
+
   box-shadow:0 9px 0 #078bb3,0 16px 30px #006a8833;
+
 }
-.hero-art img:not([src]){
-  display:none;
-}
+
 .hero-note{
+
   font-size:12px;
+
   font-weight:700;
+
   margin-top:18px;
+
 }
 
 .section{
+
   max-width:1050px;
+
   margin:auto;
+
   padding:45px 20px;
+
 }
+
 .section-title{
+
   text-align:center;
+
   font-size:clamp(25px,4vw,37px);
+
   line-height:1.4;
+
   margin:0 0 10px;
+
   font-weight:900;
+
   letter-spacing:-.03em;
+
 }
+
 .section-subtitle{
+
   text-align:center;
+
   color:#59758a;
+
   font-size:14px;
+
   margin:0 auto 26px;
+
 }
-.marker{
-  background:linear-gradient(transparent 58%,var(--yellow) 58%);
-}
+
+.marker{background:linear-gradient(transparent 58%,var(--yellow) 58%)}
+
 .pain-grid{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:18px;
+
   align-items:stretch;
+
 }
+
 .pain-card{
+
   background:var(--pale);
+
   border:3px solid #bdeff8;
+
   border-radius:24px;
+
   padding:22px;
+
 }
+
 .pain-card h3{margin:0 0 12px;font-size:21px}
+
 .pain-list{padding:0;list-style:none;margin:0}
+
 .pain-list li{margin:9px 0}
+
 .pain-list li:before{
+
   content:"✓";
+
   display:inline-grid;
+
   place-items:center;
+
   width:25px;
+
   height:25px;
+
   margin-right:8px;
+
   border-radius:50%;
+
   color:white;
+
   background:var(--pink);
+
   font-weight:900;
+
 }
+
 .pain-callout{
+
   display:grid;
+
   place-items:center;
+
   text-align:center;
+
   padding:24px;
+
   border-radius:25px;
+
   background:var(--yellow);
+
   border:3px solid #ffdf32;
+
   font-size:clamp(23px,3.4vw,32px);
+
   line-height:1.5;
+
   transform:rotate(1deg);
+
 }
+
 .pain-callout strong{color:var(--pink)}
 
-.compare-section{background:linear-gradient(#effcff,#fff)}
+.compare-section{
+
+  background:linear-gradient(#effcff,#fff);
+
+}
+
 .cards{
+
   display:grid;
+
   grid-template-columns:1fr;
+
   gap:17px;
+
   max-width:780px;
+
   margin:auto;
+
 }
+
 .sim-card{
+
   --accent:#0ab96b;
+
   --tint:#eafff3;
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:12px 20px;
+
   padding:22px;
+
   border:3px solid var(--accent);
+
   border-radius:24px;
+
   background:white;
+
   box-shadow:0 6px 0 #12385c08;
+
 }
+
 .sim-name{
+
   font-size:clamp(23px,3vw,30px);
+
   font-weight:900;
+
   color:var(--accent);
+
   line-height:1.35;
+
 }
+
 .sim-tag{font-size:12px;color:#60768a}
+
 .price-box{
+
   align-self:center;
+
   text-align:center;
+
   padding:14px 10px;
+
   border-radius:16px;
+
   background:var(--tint);
+
 }
+
 .price-box strong{display:block;font-size:19px;line-height:1.5}
+
 .price-box small{font-size:11px}
+
 .sim-card ul{
+
   margin:0;
+
   padding-left:21px;
+
   font-size:13px;
+
 }
+
 .sim-card li{margin:5px 0}
+
 .sim-card .button{
+
   align-self:center;
+
   background:var(--accent);
+
   box-shadow:0 4px 0 color-mix(in srgb,var(--accent),black 18%);
+
   font-size:13px;
+
   padding:11px 12px;
+
 }
+
 .small-note{
+
   color:#65798a;
+
   font-size:12px;
+
   margin-top:18px;
+
 }
 
 .quiz-section{
+
   background:linear-gradient(135deg,#fffde4,#f0fff7);
+
   border-top:3px solid #fff4a5;
+
   border-bottom:3px solid #fff4a5;
+
 }
+
 .quiz-shell{
+
   max-width:760px;
+
   margin:auto;
+
   padding:24px;
+
   border:3px solid #f4e96b;
+
   border-radius:28px;
+
   background:#fff;
+
   box-shadow:0 7px 0 #f4e9a5;
+
 }
+
 .quiz-shell h2{
+
   font-size:clamp(25px,4vw,36px);
+
   line-height:1.4;
+
   margin:0 0 8px;
+
   text-align:center;
+
 }
+
 .quiz-intro{text-align:center;font-size:14px;color:#5b7082}
+
 .qstep{display:none}
+
 .qstep.active{display:block}
+
 .qstep h3{font-size:19px;margin:22px 0 12px}
+
 .options{display:grid;gap:10px}
+
 .option{
+
   display:flex;
+
   gap:10px;
+
   align-items:center;
+
   padding:13px;
+
   border:2px solid #dcecf2;
+
   border-radius:15px;
+
   cursor:pointer;
+
   font-size:14px;
+
 }
+
 .option:has(input:checked){
+
   border-color:var(--pink);
+
   background:#fff0f7;
+
 }
+
 .option input{
+
   accent-color:var(--pink);
+
   width:19px;
+
   height:19px;
+
   flex-shrink:0;
+
 }
+
 .quiz-actions{
+
   display:flex;
+
   justify-content:space-between;
+
   gap:12px;
+
   margin-top:20px;
+
 }
+
 .button.secondary{
+
   color:var(--navy);
+
   background:#e8f7fc;
+
   border-color:white;
+
   box-shadow:0 4px 0 #c5e7ef;
+
 }
+
 .result{
+
   display:none;
+
   margin-top:20px;
+
   padding:18px;
+
   background:#eefdff;
+
   border:3px dashed var(--cyan);
+
   border-radius:18px;
+
 }
+
 .result.show{display:block}
+
 .result h3{margin:0 0 10px;font-size:21px}
+
 .result p{font-size:14px}
 
 .checklist{
+
   max-width:780px;
+
   margin:auto;
+
   background:#fffef0;
+
   border:3px solid #ffeb68;
+
   border-radius:23px;
+
   padding:10px 22px;
+
 }
+
 .check-row{
+
   display:flex;
+
   gap:13px;
+
   align-items:center;
+
   padding:15px 0;
+
   border-bottom:1px dashed #e9dfa0;
+
 }
+
 .check-row:last-child{border-bottom:0}
+
 .check-icon{
+
   display:grid;
+
   place-items:center;
+
   width:43px;
+
   height:43px;
+
   flex-shrink:0;
+
   border-radius:15px;
+
   background:var(--yellow);
+
   font-size:23px;
+
 }
+
 .check-row strong{display:block}
+
 .check-row small{display:block;color:#60768a;font-size:12px}
 
 .faq{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:12px;
+
 }
+
 details{
+
   border:2px solid #d8f0f6;
+
   border-radius:16px;
+
   padding:15px;
+
   background:white;
+
 }
+
 summary{cursor:pointer;font-weight:900}
+
 details p{font-size:13px;color:#587185;margin-bottom:0}
 
 .disclaimer{
+
   max-width:1000px;
+
   margin:auto;
+
   padding:18px;
+
   border-radius:16px;
+
   background:#f4f7fa;
+
   color:#607184;
+
   font-size:12px;
+
 }
+
 .footer-hero{
+
   background:linear-gradient(120deg,#06b8e0,#13c9d7);
+
   color:white;
+
   text-align:center;
+
   padding:38px 18px;
+
 }
+
 .footer-hero h2{
+
   font-size:clamp(25px,4.5vw,39px);
+
   line-height:1.4;
+
   margin:0 0 10px;
-  text-shadow:0 3px 0 #078bb3;
+
+  /* 下部の見出し文字の影を削除 */
+
+  text-shadow:none !important;
+
+  filter:none;
+
 }
+
+.footer-hero p{text-shadow:none}
+
 .footer-hero .button{margin-top:12px}
+
 footer{
+
   padding:25px 15px;
+
   text-align:center;
+
   font-size:12px;
+
   color:#60768a;
+
 }
+
 footer a{margin:0 8px}
 
 @media(max-width:760px){
+
   .hero-inner{
+
     grid-template-columns:1fr;
+
     padding:27px 16px 28px;
+
     gap:23px;
+
   }
+
   .hero h1{font-size:clamp(35px,9vw,48px)}
+
   .hero-art img{max-width:520px}
+
   .pain-grid{grid-template-columns:1fr}
+
   .section{padding:34px 15px}
+
   .faq{grid-template-columns:1fr}
+
 }
+
 @media(max-width:480px){
+
   .nav{padding:8px 10px;gap:7px}
+
   .brand{font-size:13px;gap:7px}
+
   .brand-icon{width:36px;height:36px;font-size:20px}
+
   .brand small{font-size:9px}
+
   .nav-button{padding:10px 12px;font-size:11px}
+
   .hero-inner{padding:24px 14px}
+
   .hero h1{font-size:clamp(33px,9.1vw,41px)}
+
   .hero-description{font-size:15px}
+
   .badges{gap:7px}
+
   .badges span{font-size:11px;padding:6px 9px}
+
   .section{padding:31px 14px}
+
   .pain-card{padding:17px}
+
   .sim-card{
+
     grid-template-columns:1fr;
+
     gap:10px;
+
     padding:18px 15px;
+
   }
+
   .sim-name{font-size:25px}
+
   .price-box{padding:12px}
+
   .sim-card .button{width:100%}
+
   .quiz-shell{padding:17px}
+
   .quiz-shell h2{font-size:26px}
+
   .quiz-actions .button{padding:11px 14px}
+
   .checklist{padding:8px 14px}
+
   .check-row{gap:10px}
+
 }
+
 @media(prefers-reduced-motion:reduce){
+
   html{scroll-behavior:auto}
+
   *{transition:none!important}
+
 }
+
 </style>
-</head>
+  </head>
 <body>
 <header>
   <nav class="nav">
@@ -511,40 +992,72 @@ footer a{margin:0 8px}
   </nav>
 </header>
 <main>
+
 <section class="hero" id="home">
+
   <div class="hero-inner">
+
     <div>
+
       <span class="sticker">＼ 3分でわかる！ ／</span>
+
       <h1>
+
         そのスマホ代、<br>
+
         まだ<span class="yellow">高い</span>かも…？<br>
+
         <span class="pink">ぴったりSIMを</span><br>
+
         見つけよう！
+
       </h1>
+
       <p class="hero-description">
+
         毎月のスマホ代を見直して、もっと自由に、もっと楽しく！使い方に合うプランを選ぼう。
+
       </p>
+
       <div class="badges">
+
         <span>💸 月額料金を見直す</span>
+
         <span>📶 通信条件を比較</span>
+
         <span>🔢 番号そのまま乗り換えも</span>
+
       </div>
+
       <p class="hero-note">※料金・対応端末・キャンペーンは各社の最新条件をご確認ください。</p>
+
     </div>
-<div class="hero-art">
+    <div class="hero-art">
+
   <img
+
     src="./hero-pop-girl.PNG"
+
     alt="スマホを持ち、上を指さすメガネの女の子。スマホ代をもっと軽やかに！"
+
     onerror="this.style.display='none';document.getElementById('image-error').style.display='block';"
+
   >
+
   <div id="image-error" style="display:none;background:#ffffffee;color:#12385c;border:4px dashed #fff;border-radius:20px;padding:20px;text-align:center">
+
     <strong>画像が読み込めませんでした</strong><br>
+
     GitHubで画像名が<br>
+
     <code>hero-pop-girl.PNG</code><br>
+
     になっているか確認してね。
+
   </div>
+
 </div>
-  </div>
+      </div>
 </section>
 <section class="section">
   <h2 class="section-title">こんなお悩み、<span class="marker">ありませんか？</span> 💭</h2>
@@ -572,77 +1085,139 @@ footer a{margin:0 8px}
     <h2 class="section-title">人気サービスを<span class="marker">比較しよう！</span> 🎉</h2>
     <p class="section-subtitle">料金だけでなく、容量・通話・使い方もチェック！</p>
 <div class="cards">
+
   <article class="sim-card" style="--accent:#0ab96b;--tint:#eafff3">
+
     <div>
+
       <div class="sim-name">LINEMO</div>
+
       <div class="sim-tag">ソフトバンク回線のオンライン専用ブランド</div>
+
     </div>
+
     <div class="price-box">
+
       <strong>料金を公式で確認</strong>
+
       <small>最新プラン・条件はこちら</small>
+
     </div>
+
     <ul>
+
       <li>データ容量と月額料金を確認</li>
+
       <li>LINE関連の特典条件を確認</li>
+
       <li>オンライン手続きが中心</li>
+
     </ul>
+
     <a class="button" href="https://www.linemo.jp/" target="_blank" rel="noopener noreferrer">公式サイトで確認 ↗</a>
+
   </article>
 
   <article class="sim-card" style="--accent:#ef318a;--tint:#fff0f7">
+
     <div>
+
       <div class="sim-name">楽天モバイル</div>
+
       <div class="sim-tag">データ使用量に応じた料金プラン</div>
+
     </div>
+
     <div class="price-box">
+
       <strong>料金を公式で確認</strong>
+
       <small>利用量・通話条件を確認</small>
+
     </div>
+
     <ul>
+
       <li>データ使用量に応じて選ぶ</li>
+
       <li>通話アプリの条件を確認</li>
+
       <li>利用場所の電波状況も確認</li>
+
     </ul>
+
     <a class="button" href="https://network.mobile.rakuten.co.jp/" target="_blank" rel="noopener noreferrer">公式サイトで確認 ↗</a>
+
   </article>
 
   <article class="sim-card" style="--accent:#098fe8;--tint:#edf8ff">
+
     <div>
+
       <div class="sim-name">ahamo</div>
+
       <div class="sim-tag">ドコモのオンライン専用プラン</div>
+
     </div>
+
     <div class="price-box">
+
       <strong>料金を公式で確認</strong>
+
       <small>容量・通話条件を確認</small>
+
     </div>
+
     <ul>
+
       <li>必要なデータ容量を確認</li>
+
       <li>通話の対象・条件を確認</li>
+
       <li>海外利用の条件を確認</li>
+
     </ul>
+
     <a class="button" href="https://ahamo.com/" target="_blank" rel="noopener noreferrer">公式サイトで確認 ↗</a>
+
   </article>
 
   <article class="sim-card" style="--accent:#7156d9;--tint:#f4f0ff">
+
     <div>
+
       <div class="sim-name">IIJmio</div>
+
       <div class="sim-tag">複数の容量から選べる格安SIM</div>
+
     </div>
+
     <div class="price-box">
+
       <strong>料金を公式で確認</strong>
+
       <small>音声・データ別の条件を確認</small>
+
     </div>
+
     <ul>
+
       <li>月間容量と料金を比較</li>
+
       <li>端末セットの条件を確認</li>
+
       <li>回線タイプ・対応端末を確認</li>
+
     </ul>
+
     <a class="button" href="https://www.iijmio.jp/" target="_blank" rel="noopener noreferrer">公式サイトで確認 ↗</a>
+
   </article>
+
 </div>
 
 <p class="small-note">※料金・割引・通話料・契約条件は変更される場合があります。申込前に各社の公式サイトで最新情報をご確認ください。</p>
-  </div>
+      </div>
 </section>
 <section class="quiz-section" id="quiz">
   <div class="section">
@@ -695,35 +1270,57 @@ footer a{margin:0 8px}
     <div class="result" id="quizResult" aria-live="polite"></div>
   </form>
 </div>
-  </div>
+     </div>
 </section>
 <section class="section" id="checklist">
   <h2 class="section-title">乗り換え前に<span class="marker">チェック！</span> 📝</h2>
   <p class="section-subtitle">あとで困らないように、ここだけは確認してね。</p>
-  <div class="checklist">
+ <div class="checklist">
+
     <div class="check-row">
+
       <span class="check-icon">📱</span>
+
       <div><strong>スマホが対応しているか</strong><small>対応端末・SIMロック・eSIMの条件を確認</small></div>
+
     </div>
+
     <div class="check-row">
+
       <span class="check-icon">📶</span>
+
       <div><strong>よく行く場所で使えるか</strong><small>自宅・職場・学校などの対応エリアを確認</small></div>
+
     </div>
+
     <div class="check-row">
+
       <span class="check-icon">☎️</span>
+
       <div><strong>通話料金はどうなるか</strong><small>かけ放題の対象・専用アプリ・超過料金を確認</small></div>
+
     </div>
+
     <div class="check-row">
+
       <span class="check-icon">💳</span>
+
       <div><strong>割引後の総額はいくらか</strong><small>キャンペーン終了後の料金やオプション代も確認</small></div>
+
     </div>
+
     <div class="check-row">
+
       <span class="check-icon">🔢</span>
+
       <div><strong>電話番号を引き継げるか</strong><small>MNPの手続きと申込条件を確認</small></div>
+
     </div>
+
   </div>
+
 </section>
-<section class="section" id="faq">
+ <section class="section" id="faq">
   <h2 class="section-title">よくある質問 💬</h2>
   <p class="section-subtitle">乗り換え前の疑問を解決しよう！</p>
   <div class="faq">
@@ -858,3 +1455,4 @@ document.getElementById("simQuiz").addEventListener("submit", event => {
 </script>
 </body>
 </html>
+ 

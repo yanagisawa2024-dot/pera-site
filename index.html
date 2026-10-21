@@ -6,52 +6,57 @@
 <meta name="description" content="スマホの使い方や希望に合わせて、格安SIM選びのポイントをわかりやすく比較・診断します。">
 <meta name="theme-color" content="#06b6d4">
 <title>スマホ代見直しガイド｜ぴったりSIM診断</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#12314b;--cyan:#14c8e5;--pink:#ff3d91;--yellow:#fff04b;--ink:#18334b;--muted:#5b7082;--pale:#effaff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.7;overflow-wrap:anywhere}
+body{margin:0;background:#fff;color:var(--ink);font-family:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Yu Gothic UI",sans-serif;font-weight:500;line-height:1.7;letter-spacing:.015em;overflow-wrap:anywhere}
 a{color:inherit}
 button,input{font:inherit}
+h1,h2,h3,.brand,.kicker,.navlinks,.navcta,.btn,.sim-card .logo,.price,.problem-list li,.callout,.option,summary,.rankrow strong{font-weight:900}
 .topbar{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid #e6f0f6}
 .nav{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px}
-.brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-weight:900;color:var(--navy);font-size:clamp(15px,2.3vw,22px);line-height:1.2;min-width:0}
-.brand-icon{width:40px;height:40px;flex:0 0 40px;border-radius:13px;background:linear-gradient(135deg,var(--cyan),#73e6a4);display:grid;place-items:center;font-size:23px;box-shadow:0 4px 0 #c3f4f7}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--navy);font-size:clamp(15px,2.3vw,22px);line-height:1.2;min-width:0}
+.brand-icon{width:40px;height:40px;flex:0 0 40px;border-radius:13px;background:linear-gradient(135deg,var(--cyan),#73e6a4);display:grid;place-items:center;font-size:23px;box-shadow:0 4px 0 #c3f4f7;transform:rotate(-5deg)}
 .brand small{display:block;font-size:10px;font-weight:700;margin-top:4px}
-.navlinks{display:flex;align-items:center;gap:16px;font-size:12px;font-weight:800}
+.navlinks{display:flex;align-items:center;gap:16px;font-size:12px}
 .navlinks a{text-decoration:none}
-.navcta,.btn{border:0;border-radius:999px;background:var(--pink);color:white;font-weight:900;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;box-shadow:0 5px 0 #d51c70;cursor:pointer}
+.navcta,.btn{border:0;border-radius:999px;background:var(--pink);color:white;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;box-shadow:0 5px 0 #d51c70;cursor:pointer;font-weight:900;letter-spacing:.015em;transition:transform .15s ease,filter .15s ease}
 .navcta{white-space:nowrap;font-size:12px}
+.btn:hover,.navcta:hover{filter:brightness(1.04);transform:translateY(-2px)}
 .hero{overflow:hidden;background:linear-gradient(120deg,#03a8df 0%,#23d4ed 52%,#8cebd9 100%);color:white;position:relative}
 .hero:after{content:"";position:absolute;right:-70px;bottom:-170px;width:440px;height:440px;border-radius:50%;background:#fff5;pointer-events:none}
 .hero-inner{max-width:1120px;margin:auto;padding:48px 24px 38px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:22px;position:relative;z-index:1}
-.kicker{display:inline-block;background:var(--yellow);color:var(--navy);padding:5px 13px;border-radius:7px;transform:rotate(-2deg);font-weight:1000}
-.hero h1{font-size:clamp(34px,5vw,62px);line-height:1.18;margin:18px 0 14px;font-weight:1000;letter-spacing:-.04em;text-shadow:0 3px 0 #087eae}
-.hero h1 em{font-style:normal;color:#ffec55}
-.hero p{font-size:clamp(15px,2vw,19px);font-weight:750;max-width:540px}
+.kicker{display:inline-block;background:var(--yellow);color:var(--navy);padding:5px 13px;border:2px solid #fff;border-radius:999px;transform:rotate(-2deg);box-shadow:0 3px 0 #087eae44;letter-spacing:.04em}
+.hero h1{font-size:clamp(34px,5vw,62px);line-height:1.18;margin:18px 0 14px;letter-spacing:-.035em;text-shadow:0 3px 0 #087eae,2px 2px 0 #087eae,-1px -1px 0 #087eae}
+.hero h1 em{font-style:normal;color:#ffec55;-webkit-text-stroke:.5px #fff;text-shadow:0 3px 0 #d87a24,2px 2px 0 #087eae}
+.hero p{font-size:clamp(15px,2vw,19px);font-weight:700;max-width:540px}
 .hero-art{min-height:300px;display:flex;align-items:center;justify-content:center;position:relative}
 .hero-art img{display:block;width:100%;max-width:500px;height:auto;object-fit:contain;filter:drop-shadow(0 12px 20px #075b7b30);border-radius:18px}
 .trustrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
-.trustrow span{background:#ffffff24;border:1px solid #ffffff77;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:850}
+.trustrow span{background:#ffffff24;border:1px solid #ffffff77;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:800}
 .wrap{max-width:1120px;margin:auto;padding:44px 20px}
 .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:20px}
-.section-head h2{font-size:clamp(24px,3.2vw,36px);line-height:1.25;margin:0;font-weight:1000;letter-spacing:-.03em}
+.section-head h2{font-size:clamp(24px,3.2vw,36px);line-height:1.3;margin:0;letter-spacing:-.025em;text-wrap:balance}
 .section-head p{margin:8px 0 0;color:var(--muted);font-size:14px}
-.marker{background:linear-gradient(transparent 58%,var(--yellow) 58%);padding:0 3px}
+.marker{background:linear-gradient(transparent 58%,var(--yellow) 58%);padding:0 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .problems{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center}
 .problem-card{background:#effaff;border-radius:25px;padding:24px;border:2px solid #d6f4fa}
 .problem-card h3{margin:0 0 12px;font-size:22px}
 .problem-list{list-style:none;padding:0;margin:0}
-.problem-list li{padding:7px 0;font-weight:750}
-.problem-list li:before{content:"✓";display:inline-grid;place-items:center;background:#ffd4e7;color:#e91e78;width:25px;height:25px;border-radius:50%;margin-right:9px;font-weight:1000}
-.callout{background:var(--yellow);border-radius:28px;padding:28px;text-align:center;transform:rotate(1deg);font-size:clamp(22px,3vw,31px);font-weight:1000;line-height:1.35}
+.problem-list li{padding:7px 0;font-weight:800}
+.problem-list li:before{content:"✓";display:inline-grid;place-items:center;background:#ffd4e7;color:#e91e78;width:25px;height:25px;border-radius:50%;margin-right:9px}
+.callout{background:var(--yellow);border-radius:28px;padding:28px;text-align:center;transform:rotate(1deg);font-size:clamp(22px,3vw,31px);line-height:1.35}
 .callout span{color:var(--pink)}
 .sim-section{background:linear-gradient(180deg,#effbff,#fff)}
 .cards{display:grid;grid-template-columns:1fr;gap:18px;max-width:800px;margin-inline:auto}
 .sim-card{background:white;border:2px solid var(--line);border-radius:22px;padding:22px 24px;box-shadow:0 7px 0 #18334b08;display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,.8fr);grid-template-rows:auto auto 1fr;column-gap:22px;align-items:center}
-.sim-card .logo{font-size:clamp(22px,2.3vw,28px);font-weight:1000;letter-spacing:-.04em;color:var(--accent);line-height:1.2}
-.sim-card .tag{font-size:13px;color:var(--muted);font-weight:750;margin-top:6px}
-.price{grid-column:2;grid-row:1/3;background:var(--tint);padding:15px 12px;border-radius:14px;text-align:center;font-weight:900}
+.sim-card .logo{font-size:clamp(22px,2.3vw,28px);letter-spacing:-.025em;color:var(--accent);line-height:1.2}
+.sim-card .tag{font-size:13px;color:var(--muted);font-weight:700;margin-top:6px}
+.price{grid-column:2;grid-row:1/3;background:var(--tint);padding:15px 12px;border-radius:14px;text-align:center}
 .price strong{font-size:clamp(20px,2.2vw,25px);display:block;line-height:1.3}
 .price small{font-size:11px}
 .sim-card ul{grid-column:1;grid-row:3;padding-left:20px;margin:12px 0 0;font-size:13px;font-weight:700}
@@ -67,7 +72,7 @@ button,input{font:inherit}
 .qstep.active{display:block}
 .qstep h3{margin:0 0 14px;font-size:18px}
 .options{display:grid;gap:10px}
-.option{display:flex;align-items:center;gap:10px;padding:12px;border:2px solid #e6edf3;border-radius:13px;cursor:pointer;font-weight:750}
+.option{display:flex;align-items:center;gap:10px;padding:12px;border:2px solid #e6edf3;border-radius:13px;cursor:pointer}
 .option:has(input:checked){border-color:var(--pink);background:#fff1f7}
 .option input{accent-color:var(--pink);width:18px;height:18px;flex:0 0 auto}
 .quiz-actions{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
@@ -78,17 +83,17 @@ button,input{font:inherit}
 .ranklist{border-radius:22px;border:1px solid #f2e9a2;padding:22px;background:#fffef5}
 .rankrow{display:flex;align-items:center;gap:13px;padding:14px 0;border-bottom:1px solid #e9edf0}
 .rankrow:last-child{border-bottom:0}
-.medal{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);font-size:20px;font-weight:1000;flex-shrink:0}
+.medal{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);font-size:20px;flex-shrink:0}
 .rankrow strong{display:block}
 .rankrow small{color:var(--muted)}
 .rankrow a{margin-left:auto;background:var(--pink);color:white;text-decoration:none;border-radius:999px;padding:7px 12px;font-size:11px;font-weight:900;white-space:nowrap}
 .faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 details{background:white;border:1px solid #e1edf2;border-radius:15px;padding:16px}
-summary{cursor:pointer;font-weight:900}
+summary{cursor:pointer}
 details p{font-size:14px;color:var(--muted);margin-bottom:0}
 .disclosure{background:#f6f7fa;border-radius:14px;padding:16px;font-size:12px;color:#5b6c7b}
 .footer-hero{background:linear-gradient(100deg,#134a86,#08a9d6);color:white;padding:30px 20px;text-align:center}
-.footer-hero h2{font-size:clamp(24px,4vw,38px);margin:0 0 8px}
+.footer-hero h2{font-size:clamp(24px,4vw,38px);margin:0 0 8px;letter-spacing:-.025em;text-shadow:0 2px 0 #134a86}
 footer{padding:24px 16px;text-align:center;font-size:12px;color:#607384}
 footer a{margin:0 8px}
 @media(max-width:800px){
@@ -114,13 +119,13 @@ footer a{margin:0 8px}
 .brand small{font-size:9px;max-width:205px}
 .navcta{padding:10px 12px;font-size:11px;box-shadow:0 3px 0 #d51c70}
 .hero-inner{padding:25px 15px 20px}
-.hero h1{font-size:clamp(33px,9vw,40px);line-height:1.2}
+.hero h1{font-size:clamp(33px,9vw,40px);line-height:1.2;letter-spacing:-.04em}
 .hero p{font-size:15px;line-height:1.65}
 .hero-art{margin:4px -7px 0}
 .hero-art img{border-radius:10px}
 .trustrow span{padding:6px 9px;font-size:11px}
 .wrap{padding:32px 14px}
-.section-head h2{font-size:26px}
+.section-head h2{font-size:26px;letter-spacing:-.025em}
 .section-head .btn{width:100%}
 .problem-card{padding:18px;border-radius:20px}
 .problem-card h3{font-size:19px}
@@ -154,33 +159,6 @@ footer a{margin:0 8px}
 .rankrow{flex-wrap:wrap}
 .rankrow a{margin-left:43px}
 }
-
-/* ポップな文字デザイン */
-:root{--pop-pink:#ff3d91;--pop-blue:#078fc7;--pop-yellow:#fff04b}
-body{font-family:"Hiragino Maru Gothic ProN","Yu Gothic UI","Arial Rounded MT Bold",-apple-system,BlinkMacSystemFont,"Yu Gothic",Meiryo,sans-serif;letter-spacing:.015em}
-.brand,.section-head h2,.problem-card h3,.quizbox h2,.qstep h3,.footer-hero h2{font-weight:900;letter-spacing:-.035em}
-.brand-icon{transform:rotate(-5deg)}
-.kicker{border:2px solid #fff;border-radius:999px;box-shadow:0 3px 0 #087eae44;font-weight:900;letter-spacing:.04em}
-.hero h1{letter-spacing:-.055em;text-shadow:0 3px 0 #087eae,2px 2px 0 #087eae,-1px -1px 0 #087eae}
-.hero h1 em{display:inline-block;color:#ffec55;-webkit-text-stroke:.5px #fff;text-shadow:0 3px 0 #d87a24,2px 2px 0 #087eae}
-.hero p{letter-spacing:.015em}
-.section-head h2{text-wrap:balance}
-.marker{box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.sim-card .logo{letter-spacing:-.045em;text-shadow:0 1px 0 #ffffff}
-.sim-card .btn,.navcta,.btn{font-weight:900;letter-spacing:.015em;transition:transform .15s ease,filter .15s ease}
-.sim-card .btn:hover,.navcta:hover,.btn:hover{filter:brightness(1.04);transform:translateY(-2px)}
-.option{font-weight:800}
-summary{font-weight:900}
-.footer-hero h2{letter-spacing:-.04em;text-shadow:0 2px 0 #134a86}
-@media(max-width:480px){
-body{letter-spacing:0}
-.hero h1{font-size:clamp(34px,9.2vw,42px);line-height:1.2;letter-spacing:-.06em}
-.hero h1 em{-webkit-text-stroke:.35px #fff}
-.section-head h2{letter-spacing:-.04em;line-height:1.3}
-.kicker{font-size:13px;padding:5px 12px}
-.sim-card .logo{font-size:25px}
-.btn,.navcta{min-height:44px}
-}
 @media(prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
 .sim-card .btn,.navcta,.btn{transition:none}
@@ -191,312 +169,145 @@ html{scroll-behavior:auto}
 <div class="topbar">
 <nav class="nav" aria-label="メインナビゲーション">
 <a class="brand" href="#home"><span class="brand-icon">📱</span><span>スマホ代見直しガイド<small>あなたにぴったりのSIM選びを見つけよう</small></span></a>
-<div class="navlinks">
-<a href="#home">⌂ ホーム</a>
-<a href="#quiz">✓ 診断チャート</a>
-<a href="#compare">▥ 料金比較</a>
-<a href="#ranking">♛ おすすめの選び方</a>
-<a href="#faq">？ よくある質問</a>
-</div>
+<div class="navlinks"><a href="#home">⌂ ホーム</a><a href="#quiz">✓ 診断チャート</a><a href="#compare">▥ 料金比較</a><a href="#ranking">♛ おすすめの選び方</a><a href="#faq">？ よくある質問</a></div>
 <a class="navcta" href="#quiz">📱 SIM診断へ</a>
 </nav>
 </div>
-
 <header class="hero" id="home">
 <div class="hero-inner">
 <div>
 <span class="kicker">＼ 3分でわかる！ ／</span>
 <h1>そのスマホ代、<br>まだ<strong><em>高い</em></strong>かも…？<br><span style="color:#fff">ぴったりSIMを</span><br>見つけよう！</h1>
 <p>毎月のスマホ代を見直して、もっと自由に、もっと楽しく！使い方に合うプランを選ぼう。</p>
-<div class="trustrow">
-<span>💸 月額料金を見直す</span>
-<span>📶 通信条件を比較</span>
-<span>🔢 番号そのまま乗り換えも</span>
-</div>
+<div class="trustrow"><span>💸 月額料金を見直す</span><span>📶 通信条件を比較</span><span>🔢 番号そのまま乗り換えも</span></div>
 <p style="font-size:12px;margin-top:16px">※料金・対応端末・キャンペーンは各社の最新条件をご確認ください。</p>
 </div>
-<div class="hero-art">
-<img src="hero-pop-girl.png" alt="スマホ代をもっと軽やかに！とポップな文字で呼びかける、メガネをかけたロングヘアの女の子のイラスト">
-</div>
+<div class="hero-art"><img src="hero-pop-girl.PNG" alt="スマホ代をもっと軽やかに！とポップな文字で呼びかける、メガネをかけたロングヘアの女の子のイラスト"></div>
 </div>
 </header>
-
 <main>
 <section class="wrap">
-<div class="section-head">
-<div>
-<h2>こんなお悩み、<span class="marker">ありませんか？</span></h2>
-<p>まずは「何を変えたいか」を整理するところから。</p>
-</div>
-</div>
+<div class="section-head"><div><h2>こんなお悩み、<span class="marker">ありませんか？</span></h2><p>まずは「何を変えたいか」を整理するところから。</p></div></div>
 <div class="problems">
-<div class="problem-card">
-<h3>スマホ選び、迷子になってない？ 🌀</h3>
-<ul class="problem-list">
-<li>毎月のスマホ代が高すぎる</li>
-<li>プランが多すぎて選べない</li>
-<li>通信速度やエリアが心配</li>
-<li>自分に合うデータ容量がわからない</li>
-<li>今の電話番号をそのまま使いたい</li>
-</ul>
+<div class="problem-card"><h3>スマホ選び、迷子になってない？ 🌀</h3>
+<ul class="problem-list"><li>毎月のスマホ代が高すぎる</li><li>プランが多すぎて選べない</li><li>通信速度やエリアが心配</li><li>自分に合うデータ容量がわからない</li><li>今の電話番号をそのまま使いたい</li></ul>
 </div>
 <div class="callout">その悩み、<br><span>ぴったりSIM診断</span>で<br>整理しよう！ ✨</div>
 </div>
 </section>
-
 <section class="sim-section" id="compare">
 <div class="wrap">
-<div class="section-head">
-<div>
-<h2>人気サービスを<span class="marker">比較しよう！</span> 🎉</h2>
-<p>価格だけで決めず、データ容量・通話・使い方もチェック。</p>
-</div>
-<a class="btn" href="#quiz">自分に合うプランを診断 →</a>
-</div>
+<div class="section-head"><div><h2>人気サービスを<span class="marker">比較しよう！</span> 🎉</h2><p>価格だけで決めず、データ容量・通話・使い方もチェック。</p></div><a class="btn" href="#quiz">自分に合うプランを診断 →</a></div>
 <div class="cards">
 <article class="sim-card" style="--line:#61e9a1;--accent:#0cba67;--tint:#e9fff3">
-<div class="logo">LINEMO</div>
-<div class="tag">ソフトバンク回線のオンライン専用ブランド</div>
+<div class="logo">LINEMO</div><div class="tag">ソフトバンク回線のオンライン専用ブランド</div>
 <div class="price"><strong>料金を公式で確認</strong><small>最新のプラン・条件はこちら</small></div>
-<ul>
-<li>データ容量と料金を確認</li>
-<li>LINE関連の特典条件を確認</li>
-<li>オンライン手続きが中心</li>
-</ul>
+<ul><li>データ容量と料金を確認</li><li>LINE関連の特典条件を確認</li><li>オンライン手続きが中心</li></ul>
 <a class="btn" href="https://www.linemo.jp/" target="_blank" rel="noopener">公式サイトで確認 ↗</a>
 </article>
-
 <article class="sim-card" style="--line:#ff9dcc;--accent:#ef318a;--tint:#fff0f7">
-<div class="logo">楽天モバイル</div>
-<div class="tag">データ使用量に応じた料金プラン</div>
+<div class="logo">楽天モバイル</div><div class="tag">データ使用量に応じた料金プラン</div>
 <div class="price"><strong>料金を公式で確認</strong><small>利用量・通話条件を確認</small></div>
-<ul>
-<li>使うデータ量に応じて選ぶ</li>
-<li>通話アプリの条件を確認</li>
-<li>利用場所の電波状況も確認</li>
-</ul>
+<ul><li>使うデータ量に応じて選ぶ</li><li>通話アプリの条件を確認</li><li>利用場所の電波状況も確認</li></ul>
 <a class="btn" href="https://network.mobile.rakuten.co.jp/" target="_blank" rel="noopener">公式サイトで確認 ↗</a>
 </article>
-
 <article class="sim-card" style="--line:#8bd7ff;--accent:#098fe8;--tint:#edf8ff">
-<div class="logo">ahamo</div>
-<div class="tag">ドコモのオンライン専用プラン</div>
+<div class="logo">ahamo</div><div class="tag">ドコモのオンライン専用プラン</div>
 <div class="price"><strong>料金を公式で確認</strong><small>容量・通話条件を確認</small></div>
-<ul>
-<li>必要なデータ容量を確認</li>
-<li>通話の対象・条件を確認</li>
-<li>海外利用の条件を確認</li>
-</ul>
+<ul><li>必要なデータ容量を確認</li><li>通話の対象・条件を確認</li><li>海外利用の条件を確認</li></ul>
 <a class="btn" href="https://ahamo.com/" target="_blank" rel="noopener">公式サイトで確認 ↗</a>
 </article>
-
 <article class="sim-card" style="--line:#b7a8ff;--accent:#7156d9;--tint:#f4f0ff">
-<div class="logo">IIJmio</div>
-<div class="tag">複数の容量から選べる格安SIM</div>
+<div class="logo">IIJmio</div><div class="tag">複数の容量から選べる格安SIM</div>
 <div class="price"><strong>料金を公式で確認</strong><small>音声・データ別の条件を確認</small></div>
-<ul>
-<li>月間容量と料金を比較</li>
-<li>端末セットの条件を確認</li>
-<li>回線タイプ・対応端末を確認</li>
-</ul>
+<ul><li>月間容量と料金を比較</li><li>端末セットの条件を確認</li><li>回線タイプ・対応端末を確認</li></ul>
 <a class="btn" href="https://www.iijmio.jp/" target="_blank" rel="noopener">公式サイトで確認 ↗</a>
 </article>
 </div>
 <p class="note">※このページでは、確認していない料金や順位を断定していません。料金、割引、通話料、契約条件、対応エリアは各社公式サイトで最新情報をご確認ください。</p>
 </div>
 </section>
-
 <section class="wrap" id="quiz">
 <div class="quizbox">
-<div>
-<span class="kicker">かんたん3問！</span>
-<h2>あなたに合うSIMを<br><span class="marker">一緒に見つけよう</span> 🔎</h2>
-<p>3つの質問に答えると、選び方のヒントが表示されます。診断は目安なので、最後は公式条件もチェック！</p>
-<div class="quiz-illustration">🧑‍💻✨📱</div>
-</div>
+<div><span class="kicker">かんたん3問！</span><h2>あなたに合うSIMを<br><span class="marker">一緒に見つけよう</span> 🔎</h2><p>3つの質問に答えると、選び方のヒントが表示されます。診断は目安なので、最後は公式条件もチェック！</p><div class="quiz-illustration">🧑‍💻✨📱</div></div>
 <div>
 <form class="quizform" id="simQuiz">
-<div class="qstep active" data-step="0">
-<h3>Q1. ひと月のデータ使用量は？</h3>
-<div class="options">
+<div class="qstep active" data-step="0"><h3>Q1. ひと月のデータ使用量は？</h3><div class="options">
 <label class="option"><input type="radio" name="data" value="low" required> 3〜5GBくらい</label>
 <label class="option"><input type="radio" name="data" value="mid"> 10〜30GBくらい</label>
 <label class="option"><input type="radio" name="data" value="high"> たくさん使う・無制限が気になる</label>
 <label class="option"><input type="radio" name="data" value="unknown"> わからない</label>
-</div>
-<div class="quiz-actions"><span></span><button class="btn" type="button" data-next>次へ →</button></div>
-</div>
-
-<div class="qstep" data-step="1">
-<h3>Q2. 何を一番重視する？</h3>
-<div class="options">
+</div><div class="quiz-actions"><span></span><button class="btn" type="button" data-next>次へ →</button></div></div>
+<div class="qstep" data-step="1"><h3>Q2. 何を一番重視する？</h3><div class="options">
 <label class="option"><input type="radio" name="priority" value="price" required> 月額料金の安さ</label>
 <label class="option"><input type="radio" name="priority" value="data"> データ容量・使いやすさ</label>
 <label class="option"><input type="radio" name="priority" value="support"> 店舗などのサポート</label>
 <label class="option"><input type="radio" name="priority" value="balance"> 料金とサービスのバランス</label>
-</div>
-<div class="quiz-actions">
-<button class="btn secondary" type="button" data-prev>← 戻る</button>
-<button class="btn" type="button" data-next>次へ →</button>
-</div>
-</div>
-
-<div class="qstep" data-step="2">
-<h3>Q3. 通話はどのくらい使う？</h3>
-<div class="options">
+</div><div class="quiz-actions"><button class="btn secondary" type="button" data-prev>← 戻る</button><button class="btn" type="button" data-next>次へ →</button></div></div>
+<div class="qstep" data-step="2"><h3>Q3. 通話はどのくらい使う？</h3><div class="options">
 <label class="option"><input type="radio" name="call" value="little" required> ほとんどしない</label>
 <label class="option"><input type="radio" name="call" value="some"> 短い電話をよくする</label>
 <label class="option"><input type="radio" name="call" value="long"> 長電話が多い</label>
 <label class="option"><input type="radio" name="call" value="unknown"> わからない</label>
-</div>
-<div class="quiz-actions">
-<button class="btn secondary" type="button" data-prev>← 戻る</button>
-<button class="btn" type="submit">診断結果を見る ✨</button>
-</div>
-</div>
+</div><div class="quiz-actions"><button class="btn secondary" type="button" data-prev>← 戻る</button><button class="btn" type="submit">診断結果を見る ✨</button></div></div>
 <div class="result" id="quizResult" aria-live="polite"></div>
 </form>
 </div>
 </div>
 </section>
-
 <section class="wrap" id="ranking">
-<div class="section-head">
-<div>
-<h2>選ぶときの<span class="marker">チェックポイント</span> 🏆</h2>
-<p>ランキングではなく、使い方別に比較するための目安です。</p>
-</div>
-</div>
+<div class="section-head"><div><h2>選ぶときの<span class="marker">チェックポイント</span> 🏆</h2><p>ランキングではなく、使い方別に比較するための目安です。</p></div></div>
 <div class="ranklist">
-<div class="rankrow">
-<span class="medal">💸</span>
-<div><strong>月額料金を重視</strong><small>月のデータ量・通話・割引後の料金を合計して比較</small></div>
-<a href="#compare">4社を比較</a>
-</div>
-<div class="rankrow">
-<span class="medal" style="background:#dff5ff">📶</span>
-<div><strong>電波・通信を重視</strong><small>自宅・職場・よく行く場所のエリアと混雑時の傾向を確認</small></div>
-<a href="#compare">確認する</a>
-</div>
-<div class="rankrow">
-<span class="medal" style="background:#ffe1ef">☎️</span>
-<div><strong>電話をよく使う</strong><small>通話定額の対象、専用アプリの要否、超過料金を確認</small></div>
-<a href="#compare">確認する</a>
-</div>
+<div class="rankrow"><span class="medal">💸</span><div><strong>月額料金を重視</strong><small>月のデータ量・通話・割引後の料金を合計して比較</small></div><a href="#compare">4社を比較</a></div>
+<div class="rankrow"><span class="medal" style="background:#dff5ff">📶</span><div><strong>電波・通信を重視</strong><small>自宅・職場・よく行く場所のエリアと混雑時の傾向を確認</small></div><a href="#compare">確認する</a></div>
+<div class="rankrow"><span class="medal" style="background:#ffe1ef">☎️</span><div><strong>電話をよく使う</strong><small>通話定額の対象、専用アプリの要否、超過料金を確認</small></div><a href="#compare">確認する</a></div>
 </div>
 </section>
-
 <section class="wrap" id="faq">
-<div class="section-head">
-<div>
-<h2>よくある質問 💬</h2>
-<p>乗り換え前の不安をひとつずつ解消。</p>
-</div>
-</div>
+<div class="section-head"><div><h2>よくある質問 💬</h2><p>乗り換え前の不安をひとつずつ解消。</p></div></div>
 <div class="faq">
-<details>
-<summary>今の電話番号はそのまま使える？</summary>
-<p>多くの場合、番号を引き継ぐ手続きができます。契約先・申込先の最新手順や、MNPワンストップの対象条件を確認してください。</p>
-</details>
-<details>
-<summary>格安SIMは必ず通信が遅い？</summary>
-<p>必ず遅いとは言い切れません。利用場所・時間帯・回線方式・端末などによって体感が変わるため、よく使う場所での状況を確認しましょう。</p>
-</details>
-<details>
-<summary>乗り換え前に確認することは？</summary>
-<p>端末の対応状況、SIMロック、本人確認書類、支払い方法、メールアドレス、割引の終了、解約・契約条件を確認しましょう。</p>
-</details>
-<details>
-<summary>この診断だけで契約先を決めていい？</summary>
-<p>診断は比較のきっかけです。最終決定の前に公式の料金、通話条件、エリア、キャンペーンの適用条件を確認してください。</p>
-</details>
+<details><summary>今の電話番号はそのまま使える？</summary><p>多くの場合、番号を引き継ぐ手続きができます。契約先・申込先の最新手順や、MNPワンストップの対象条件を確認してください。</p></details>
+<details><summary>格安SIMは必ず通信が遅い？</summary><p>必ず遅いとは言い切れません。利用場所・時間帯・回線方式・端末などによって体感が変わるため、よく使う場所での状況を確認しましょう。</p></details>
+<details><summary>乗り換え前に確認することは？</summary><p>端末の対応状況、SIMロック、本人確認書類、支払い方法、メールアドレス、割引の終了、解約・契約条件を確認しましょう。</p></details>
+<details><summary>この診断だけで契約先を決めていい？</summary><p>診断は比較のきっかけです。最終決定の前に公式の料金、通話条件、エリア、キャンペーンの適用条件を確認してください。</p></details>
 </div>
 </section>
-
 <section class="wrap">
-<div class="disclosure">
-<strong>広告について：</strong>今後、アフィリエイト広告を掲載する場合は、広告リンクを含むことを読者に分かるように明示します。現在の「公式サイトで確認」ボタンは各社の公式サイトへのリンクであり、アフィリエイトリンクではありません。
-<br><br>
-<strong>運営方針：</strong>掲載内容は情報提供を目的としています。料金・特典・サービス内容は変更されることがあるため、申込前に必ず各社の公式情報をご確認ください。
-</div>
+<div class="disclosure"><strong>広告について：</strong>今後、アフィリエイト広告を掲載する場合は、広告リンクを含むことを読者に分かるように明示します。現在の「公式サイトで確認」ボタンは各社の公式サイトへのリンクであり、アフィリエイトリンクではありません。<br><br><strong>運営方針：</strong>掲載内容は情報提供を目的としています。料金・特典・サービス内容は変更されることがあるため、申込前に必ず各社の公式情報をご確認ください。</div>
 </section>
 </main>
-
-<section class="footer-hero">
-<h2>スマホ代を見直して、<br>もっと自分らしい毎日へ！ 🌈</h2>
-<p>あなたの使い方に合うプランを、納得して選ぼう。</p>
-<a class="btn" href="#quiz">無料のSIM診断を始める →</a>
-</section>
-
-<footer>
-<p>スマホ代見直しガイド</p>
-<p><a href="#compare">料金比較</a><a href="#quiz">SIM診断</a><a href="#faq">よくある質問</a></p>
-<p>© <span id="year"></span> スマホ代見直しガイド</p>
-</footer>
-
+<section class="footer-hero"><h2>スマホ代を見直して、<br>もっと自分らしい毎日へ！ 🌈</h2><p>あなたの使い方に合うプランを、納得して選ぼう。</p><a class="btn" href="#quiz">無料のSIM診断を始める →</a></section>
+<footer><p>スマホ代見直しガイド</p><p><a href="#compare">料金比較</a><a href="#quiz">SIM診断</a><a href="#faq">よくある質問</a></p><p>© <span id="year"></span> スマホ代見直しガイド</p></footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
-
 const steps=[...document.querySelectorAll('.qstep')];
 let current=0;
-
-function showStep(n){
-  current=n;
-  steps.forEach((s,i)=>s.classList.toggle('active',i===n));
-}
-
+function showStep(n){current=n;steps.forEach((s,i)=>s.classList.toggle('active',i===n));}
 document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>{
-  const field=current===0?'data':'priority';
-  if(!document.querySelector(`input[name="${field}"]:checked`)){
-    alert('選択肢をひとつ選んでね！');
-    return;
-  }
-  showStep(Math.min(current+1,2));
+const field=current===0?'data':'priority';
+if(!document.querySelector(`input[name="${field}"]:checked`)){alert('選択肢をひとつ選んでね！');return;}
+showStep(Math.min(current+1,2));
 }));
-
 document.querySelectorAll('[data-prev]').forEach(b=>b.addEventListener('click',()=>showStep(Math.max(current-1,0))));
-
 document.getElementById('simQuiz').addEventListener('submit',e=>{
-  e.preventDefault();
-
-  const data=document.querySelector('input[name="data"]:checked')?.value;
-  const priority=document.querySelector('input[name="priority"]:checked')?.value;
-  const call=document.querySelector('input[name="call"]:checked')?.value;
-
-  if(!data||!priority||!call){
-    alert('3つの質問すべてに回答してね！');
-    return;
-  }
-
-  let title='まずは各社の条件を比較してみよう';
-  let body='データ使用量・通話・サポート条件を並べ、毎月の合計費用で比較するのがおすすめです。';
-
-  if(data==='high'){
-    title='データをたくさん使う人';
-    body='データ容量の上限・追加料金・混雑時の通信・テザリング条件を確認。楽天モバイルなどの使用量に応じたプランや、大容量プランを公式情報で比較しましょう。';
-  }else if(data==='low'&&priority==='price'){
-    title='少容量で料金重視の人';
-    body='小容量プランの月額、通話料、割引条件を比較しましょう。IIJmioなど複数の容量から選べるサービスも候補です。';
-  }else if(data==='mid'&&priority==='data'){
-    title='中容量を使う人';
-    body='毎月の実際の使用量に合う容量と、速度・通話条件のバランスを比較しましょう。LINEMOやahamoなども候補として確認できます。';
-  }else if(priority==='support'){
-    title='サポートを重視する人';
-    body='オンライン専用プランは手続きやサポートがオンライン中心の場合があります。店舗相談の可否・有料サポート・対応時間を申込前に確認しましょう。';
-  }
-
-  if(call==='long'){
-    body+=' 長電話が多い場合は、かけ放題の対象や専用アプリの要否、対象外通話の料金を必ず確認してください。';
-  }else if(call==='some'){
-    body+=' 短い電話が多い場合は、短時間通話オプションの条件と超過後の料金を比較しましょう。';
-  }else if(call==='unknown'){
-    body+=' 通話履歴を1〜2か月確認すると、通話オプションが必要か判断しやすくなります。';
-  }
-
-  const result=document.getElementById('quizResult');
-  result.innerHTML='<h3>🎉 診断結果：'+title+'</h3><p>'+body+'</p><p><strong>次のステップ：</strong>下の比較欄から各社の公式情報を確認してください。</p><a class="btn" href="#compare">プラン比較へ →</a>';
-  result.classList.add('show');
-  result.scrollIntoView({behavior:'smooth',block:'nearest'});
+e.preventDefault();
+const data=document.querySelector('input[name="data"]:checked')?.value;
+const priority=document.querySelector('input[name="priority"]:checked')?.value;
+const call=document.querySelector('input[name="call"]:checked')?.value;
+if(!data||!priority||!call){alert('3つの質問すべてに回答してね！');return;}
+let title='まずは各社の条件を比較してみよう';
+let body='データ使用量・通話・サポート条件を並べ、毎月の合計費用で比較するのがおすすめです。';
+if(data==='high'){title='データをたくさん使う人';body='データ容量の上限・追加料金・混雑時の通信・テザリング条件を確認。楽天モバイルなどの使用量に応じたプランや、大容量プランを公式情報で比較しましょう。';}
+else if(data==='low'&&priority==='price'){title='少容量で料金重視の人';body='小容量プランの月額、通話料、割引条件を比較しましょう。IIJmioなど複数の容量から選べるサービスも候補です。';}
+else if(data==='mid'&&priority==='data'){title='中容量を使う人';body='毎月の実際の使用量に合う容量と、速度・通話条件のバランスを比較しましょう。LINEMOやahamoなども候補として確認できます。';}
+else if(priority==='support'){title='サポートを重視する人';body='オンライン専用プランは手続きやサポートがオンライン中心の場合があります。店舗相談の可否・有料サポート・対応時間を申込前に確認しましょう。';}
+if(call==='long'){body+=' 長電話が多い場合は、かけ放題の対象や専用アプリの要否、対象外通話の料金を必ず確認してください。';}
+else if(call==='some'){body+=' 短い電話が多い場合は、短時間通話オプションの条件と超過後の料金を比較しましょう。';}
+else if(call==='unknown'){body+=' 通話履歴を1〜2か月確認すると、通話オプションが必要か判断しやすくなります。';}
+const result=document.getElementById('quizResult');
+result.innerHTML='<h3>🎉 診断結果：'+title+'</h3><p>'+body+'</p><p><strong>次のステップ：</strong>下の比較欄から各社の公式情報を確認してください。</p><a class="btn" href="#compare">プラン比較へ →</a>';
+result.classList.add('show');
+result.scrollIntoView({behavior:'smooth',block:'nearest'});
 });
 </script>
 </body>

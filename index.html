@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="スマホの使い方や希望に合わせて、格安SIM選びのポイントをわかりやすく比較・診断します。">
-<meta name="theme-color" content="#06b6d4">
+<meta name="description" content="スマホの使い方や希望に合わせて、格安SIMの料金やプランを比較・診断します。">
+<meta name="theme-color" content="#14c8e5">
 <title>スマホ代見直しガイド｜ぴったりSIM診断</title>
 
 <style>
 :root {
   --navy: #12314b;
+  --blue: #087fc1;
   --cyan: #14c8e5;
-  --pink: #ff3d91;
+  --light-blue: #effaff;
   --yellow: #fff04b;
   --ink: #18334b;
   --muted: #5b7082;
-  --pale: #effaff;
 }
 
 * {
@@ -24,14 +24,15 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 76px;
+  scroll-padding-top: 75px;
 }
 
 body {
   margin: 0;
-  background: #fff;
+  background: #ffffff;
   color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   line-height: 1.7;
   overflow-wrap: anywhere;
 }
@@ -45,24 +46,23 @@ input {
   font: inherit;
 }
 
-/* ヘッダー */
 .topbar {
   position: sticky;
   top: 0;
   z-index: 10;
   background: #ffffffed;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e6f0f6;
+  border-bottom: 1px solid #dcecf4;
 }
 
 .nav {
   max-width: 1120px;
   margin: auto;
+  padding: 10px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 10px 18px;
 }
 
 .brand {
@@ -74,7 +74,6 @@ input {
   color: var(--navy);
   font-size: clamp(15px, 2.3vw, 22px);
   line-height: 1.2;
-  min-width: 0;
 }
 
 .brand-icon {
@@ -92,7 +91,6 @@ input {
 .brand small {
   display: block;
   font-size: 10px;
-  font-weight: 700;
   margin-top: 4px;
 }
 
@@ -112,8 +110,8 @@ input {
 .btn {
   border: 0;
   border-radius: 999px;
-  background: var(--pink);
-  color: white;
+  background: var(--blue);
+  color: #ffffff;
   font-weight: 900;
   text-decoration: none;
   display: inline-flex;
@@ -121,7 +119,7 @@ input {
   justify-content: center;
   gap: 8px;
   padding: 12px 20px;
-  box-shadow: 0 5px 0 #d51c70;
+  box-shadow: 0 5px 0 #075b8c;
   cursor: pointer;
 }
 
@@ -130,15 +128,19 @@ input {
   font-size: 12px;
 }
 
-/* メインビジュアル */
 .hero {
   overflow: hidden;
-  background: linear-gradient(120deg, #03a8df 0%, #23d4ed 52%, #8cebd9 100%);
-  color: white;
+  background: linear-gradient(
+    120deg,
+    #03a8df 0%,
+    #23d4ed 52%,
+    #8cebd9 100%
+  );
+  color: #ffffff;
   position: relative;
 }
 
-.hero:after {
+.hero::after {
   content: "";
   position: absolute;
   right: -70px;
@@ -146,7 +148,7 @@ input {
   width: 440px;
   height: 440px;
   border-radius: 50%;
-  background: #fff5;
+  background: #ffffff55;
   pointer-events: none;
 }
 
@@ -155,7 +157,7 @@ input {
   margin: auto;
   padding: 48px 24px 38px;
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
+  grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
   gap: 22px;
   position: relative;
@@ -177,13 +179,13 @@ input {
   line-height: 1.18;
   margin: 18px 0 14px;
   font-weight: 1000;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   text-shadow: 0 3px 0 #087eae;
 }
 
 .hero h1 em {
   font-style: normal;
-  color: #ffec55;
+  color: var(--yellow);
 }
 
 .hero p {
@@ -197,7 +199,6 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .hero-art img {
@@ -226,7 +227,6 @@ input {
   font-weight: 850;
 }
 
-/* 共通セクション */
 .wrap {
   max-width: 1120px;
   margin: auto;
@@ -246,7 +246,7 @@ input {
   line-height: 1.25;
   margin: 0;
   font-weight: 1000;
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
 }
 
 .section-head p {
@@ -256,20 +256,22 @@ input {
 }
 
 .marker {
-  background: linear-gradient(transparent 58%, var(--yellow) 58%);
+  background: linear-gradient(
+    transparent 58%,
+    var(--yellow) 58%
+  );
   padding: 0 3px;
 }
 
-/* お悩み紹介 */
 .problems {
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 20px;
   align-items: center;
 }
 
 .problem-card {
-  background: #effaff;
+  background: var(--light-blue);
   border-radius: 25px;
   padding: 24px;
   border: 2px solid #d6f4fa;
@@ -291,12 +293,12 @@ input {
   font-weight: 750;
 }
 
-.problem-list li:before {
+.problem-list li::before {
   content: "✓";
   display: inline-grid;
   place-items: center;
-  background: #ffd4e7;
-  color: #e91e78;
+  background: #d8f5ff;
+  color: #087fc1;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -316,12 +318,11 @@ input {
 }
 
 .callout span {
-  color: var(--pink);
+  color: var(--blue);
 }
 
-/* 料金比較 */
 .sim-section {
-  background: linear-gradient(180deg, #effbff, #fff);
+  background: linear-gradient(180deg, #effbff, #ffffff);
 }
 
 .cards {
@@ -333,13 +334,13 @@ input {
 }
 
 .sim-card {
-  background: white;
+  background: #ffffff;
   border: 2px solid var(--line);
   border-radius: 22px;
   padding: 22px 24px;
   box-shadow: 0 7px 0 #18334b08;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, .8fr);
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.8fr);
   grid-template-rows: auto auto 1fr;
   column-gap: 22px;
   align-items: center;
@@ -348,7 +349,7 @@ input {
 .sim-card .logo {
   font-size: clamp(22px, 2.3vw, 28px);
   font-weight: 1000;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   color: var(--accent);
   line-height: 1.2;
 }
@@ -380,19 +381,14 @@ input {
   font-size: 11px;
 }
 
-.price .price-line {
+.price-line {
   display: block;
   font-size: 13px;
   line-height: 1.65;
   font-weight: 800;
 }
 
-.price .price-line strong {
-  display: inline;
-  font-size: inherit;
-}
-
-.price .price-caption {
+.price-caption {
   display: block;
   font-size: 11px;
   font-weight: 700;
@@ -416,7 +412,7 @@ input {
   grid-column: 2;
   grid-row: 3;
   background: var(--accent);
-  box-shadow: 0 4px 0 color-mix(in srgb, var(--accent), #000 17%);
+  box-shadow: 0 4px 0 var(--shadow);
   padding: 12px 14px;
   font-size: 13px;
   align-self: end;
@@ -428,10 +424,9 @@ input {
   margin-top: 14px;
 }
 
-/* SIM診断 */
 .quizbox {
   display: grid;
-  grid-template-columns: 1fr .8fr;
+  grid-template-columns: 1fr 0.8fr;
   gap: 24px;
   align-items: center;
   background: linear-gradient(120deg, #fffde1, #f3ffea);
@@ -446,17 +441,13 @@ input {
   margin: 0 0 10px;
 }
 
-.quizbox p {
-  margin: 0 0 20px;
-}
-
 .quiz-illustration {
   font-size: 96px;
   text-align: center;
 }
 
 .quizform {
-  background: white;
+  background: #ffffff;
   border: 1px solid #e8e8c4;
   border-radius: 20px;
   padding: 22px;
@@ -493,12 +484,12 @@ input {
 }
 
 .option:has(input:checked) {
-  border-color: var(--pink);
-  background: #fff1f7;
+  border-color: var(--blue);
+  background: #eafaff;
 }
 
 .option input {
-  accent-color: var(--pink);
+  accent-color: var(--blue);
   width: 18px;
   height: 18px;
   flex: 0 0 auto;
@@ -534,7 +525,6 @@ input {
   margin-top: 0;
 }
 
-/* 選び方のポイント */
 .ranklist {
   border-radius: 22px;
   border: 1px solid #f2e9a2;
@@ -576,8 +566,8 @@ input {
 
 .rankrow a {
   margin-left: auto;
-  background: var(--pink);
-  color: white;
+  background: var(--blue);
+  color: #ffffff;
   text-decoration: none;
   border-radius: 999px;
   padding: 7px 12px;
@@ -586,7 +576,6 @@ input {
   white-space: nowrap;
 }
 
-/* よくある質問 */
 .faq {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -594,7 +583,7 @@ input {
 }
 
 details {
-  background: white;
+  background: #ffffff;
   border: 1px solid #e1edf2;
   border-radius: 15px;
   padding: 16px;
@@ -611,7 +600,6 @@ details p {
   margin-bottom: 0;
 }
 
-/* 広告について */
 .disclosure {
   background: #f6f7fa;
   border-radius: 14px;
@@ -620,10 +608,9 @@ details p {
   color: #5b6c7b;
 }
 
-/* 下部案内 */
 .footer-hero {
   background: linear-gradient(100deg, #134a86, #08a9d6);
-  color: white;
+  color: #ffffff;
   padding: 30px 20px;
   text-align: center;
 }
@@ -644,7 +631,6 @@ footer a {
   margin: 0 8px;
 }
 
-/* タブレット */
 @media (max-width: 800px) {
   .nav {
     padding: 9px 12px;
@@ -676,15 +662,6 @@ footer a {
     border-radius: 14px;
   }
 
-  .trustrow {
-    gap: 8px;
-    margin-top: 18px;
-  }
-
-  .trustrow span {
-    font-size: 12px;
-  }
-
   .problems,
   .quizbox {
     grid-template-columns: 1fr;
@@ -700,7 +677,7 @@ footer a {
   }
 
   .section-head {
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
   }
 
@@ -708,18 +685,13 @@ footer a {
     grid-template-columns: 1fr;
   }
 
-  .cards {
-    gap: 14px;
-  }
-
   .sim-card {
     padding: 20px;
-    grid-template-columns: minmax(0, 1fr) minmax(145px, .75fr);
+    grid-template-columns: minmax(0, 1fr) minmax(145px, 0.75fr);
     column-gap: 14px;
   }
 }
 
-/* スマートフォン */
 @media (max-width: 480px) {
   .brand {
     font-size: 14px;
@@ -742,7 +714,7 @@ footer a {
   .navcta {
     padding: 10px 12px;
     font-size: 11px;
-    box-shadow: 0 3px 0 #d51c70;
+    box-shadow: 0 3px 0 #075b8c;
   }
 
   .hero-inner {
@@ -812,7 +784,6 @@ footer a {
 
   .sim-card .tag {
     font-size: 12px;
-    min-height: 0;
     margin-top: 0;
   }
 
@@ -859,30 +830,12 @@ footer a {
     padding: 11px;
     font-size: 14px;
   }
-
-  .quiz-actions .btn {
-    padding: 11px 15px;
-  }
-
-  .ranklist {
-    padding: 16px;
-  }
-
-  .rankrow {
-    gap: 9px;
-  }
-
-  .rankrow a {
-    padding: 7px 9px;
-    font-size: 10px;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- ヘッダー -->
 <div class="topbar">
   <nav class="nav">
     <a class="brand" href="#home">
@@ -897,15 +850,14 @@ footer a {
       <a href="#home">⌂ ホーム</a>
       <a href="#quiz">✓ 診断チャート</a>
       <a href="#compare">▥ 料金比較</a>
-      <a href="#ranking">♛ おすすめの選び方</a>
-      <a href="#faq">？ よくある質問</a>
+      <a href="#ranking">チェックポイント</a>
+      <a href="#faq">よくある質問</a>
     </div>
 
     <a class="navcta" href="#quiz">📱 SIM診断へ</a>
   </nav>
 </div>
 
-<!-- メインビジュアル -->
 <header class="hero" id="home">
   <div class="hero-inner">
     <div>
@@ -914,7 +866,7 @@ footer a {
       <h1>
         そのスマホ代、<br>
         まだ<strong><em>高い</em></strong>かも…？<br>
-        <span style="color:#fff">ぴったりSIMを</span><br>
+        <span style="color:#ffffff">ぴったりSIMを</span><br>
         見つけよう！
       </h1>
 
@@ -937,7 +889,7 @@ footer a {
     <div class="hero-art">
       <img
         src="hero-pop-girl.PNG"
-        alt="スマホ代をもっと軽やかに！とポップな文字で呼びかける、メガネをかけたロングヘアの女の子のイラスト"
+        alt="スマホ代を見直そうと呼びかけるポップなイラスト"
       >
     </div>
   </div>
@@ -945,7 +897,6 @@ footer a {
 
 <main>
 
-<!-- お悩み紹介 -->
 <section class="wrap">
   <div class="section-head">
     <div>
@@ -957,7 +908,6 @@ footer a {
   <div class="problems">
     <div class="problem-card">
       <h3>スマホ選び、迷子になってない？ 🌀</h3>
-
       <ul class="problem-list">
         <li>毎月のスマホ代が高すぎる</li>
         <li>プランが多すぎて選べない</li>
@@ -975,7 +925,6 @@ footer a {
   </div>
 </section>
 
-<!-- 料金比較 -->
 <section class="sim-section" id="compare">
   <div class="wrap">
     <div class="section-head">
@@ -983,14 +932,13 @@ footer a {
         <h2>人気サービスを<span class="marker">比較しよう！</span> 🎉</h2>
         <p>価格だけで決めず、データ容量・通話・使い方もチェック。</p>
       </div>
-
       <a class="btn" href="#quiz">自分に合うプランを診断 →</a>
     </div>
 
     <div class="cards">
 
-      <!-- LINEMO -->
-      <article class="sim-card" style="--line:#61e9a1;--accent:#0cba67;--tint:#e9fff3">
+      <article class="sim-card"
+        style="--line:#61e9a1;--accent:#0cba67;--tint:#e9fff3;--shadow:#078747">
         <div class="logo">LINEMO</div>
         <div class="tag">ソフトバンク回線のオンライン専用ブランド</div>
 
@@ -1008,13 +956,12 @@ footer a {
           <li>オンライン手続きが中心</li>
         </ul>
 
-        <a class="btn" href="https://www.linemo.jp/" target="_blank" rel="noopener">
-          公式サイトで確認 ↗
-        </a>
+        <a class="btn" href="https://www.linemo.jp/"
+          target="_blank" rel="noopener">公式サイトで確認 ↗</a>
       </article>
 
-      <!-- 楽天モバイル -->
-      <article class="sim-card" style="--line:#ff9dcc;--accent:#ef318a;--tint:#fff0f7">
+      <article class="sim-card"
+        style="--line:#9bdcff;--accent:#087fc1;--tint:#eaf8ff;--shadow:#075b8c">
         <div class="logo">楽天モバイル</div>
         <div class="tag">データ使用量に応じた料金プラン</div>
 
@@ -1032,13 +979,12 @@ footer a {
           <li>利用場所の電波状況も確認</li>
         </ul>
 
-        <a class="btn" href="https://network.mobile.rakuten.co.jp/" target="_blank" rel="noopener">
-          公式サイトで確認 ↗
-        </a>
+        <a class="btn" href="https://network.mobile.rakuten.co.jp/"
+          target="_blank" rel="noopener">公式サイトで確認 ↗</a>
       </article>
 
-      <!-- ahamo -->
-      <article class="sim-card" style="--line:#8bd7ff;--accent:#098fe8;--tint:#edf8ff">
+      <article class="sim-card"
+        style="--line:#8bd7ff;--accent:#098fe8;--tint:#edf8ff;--shadow:#0667a9">
         <div class="logo">ahamo</div>
         <div class="tag">ドコモのオンライン専用プラン</div>
 
@@ -1055,13 +1001,12 @@ footer a {
           <li>海外利用の条件を確認</li>
         </ul>
 
-        <a class="btn" href="https://ahamo.com/" target="_blank" rel="noopener">
-          公式サイトで確認 ↗
-        </a>
+        <a class="btn" href="https://ahamo.com/"
+          target="_blank" rel="noopener">公式サイトで確認 ↗</a>
       </article>
 
-      <!-- IIJmio -->
-      <article class="sim-card" style="--line:#b7a8ff;--accent:#7156d9;--tint:#f4f0ff">
+      <article class="sim-card"
+        style="--line:#b7dfff;--accent:#2868bd;--tint:#edf5ff;--shadow:#1a498a">
         <div class="logo">IIJmio</div>
         <div class="tag">複数の容量から選べる格安SIM</div>
 
@@ -1079,9 +1024,8 @@ footer a {
           <li>回線タイプ・対応端末を確認</li>
         </ul>
 
-        <a class="btn" href="https://www.iijmio.jp/" target="_blank" rel="noopener">
-          公式サイトで確認 ↗
-        </a>
+        <a class="btn" href="https://www.iijmio.jp/"
+          target="_blank" rel="noopener">公式サイトで確認 ↗</a>
       </article>
 
     </div>
@@ -1095,118 +1039,57 @@ footer a {
   </div>
 </section>
 
-<!-- SIM診断 -->
 <section class="wrap" id="quiz">
   <div class="quizbox">
     <div>
       <span class="kicker">かんたん3問！</span>
-
-      <h2>
-        あなたに合うSIMを<br>
-        <span class="marker">一緒に見つけよう</span> 🔎
-      </h2>
-
+      <h2>あなたに合うSIMを<br><span class="marker">一緒に見つけよう</span> 🔎</h2>
       <p>
         3つの質問に答えると、選び方のヒントが表示されます。
         診断は目安なので、最後は公式条件もチェック！
       </p>
-
       <div class="quiz-illustration">🧑‍💻✨📱</div>
     </div>
 
     <div>
       <form class="quizform" id="simQuiz">
 
-        <!-- Q1 -->
         <div class="qstep active" data-step="0">
           <h3>Q1. ひと月のデータ使用量は？</h3>
-
           <div class="options">
-            <label class="option">
-              <input type="radio" name="data" value="low" required>
-              3〜5GBくらい
-            </label>
-
-            <label class="option">
-              <input type="radio" name="data" value="mid">
-              10〜30GBくらい
-            </label>
-
-            <label class="option">
-              <input type="radio" name="data" value="high">
-              たくさん使う・無制限が気になる
-            </label>
-
-            <label class="option">
-              <input type="radio" name="data" value="unknown">
-              わからない
-            </label>
+            <label class="option"><input type="radio" name="data" value="low" required> 3〜5GBくらい</label>
+            <label class="option"><input type="radio" name="data" value="mid"> 10〜30GBくらい</label>
+            <label class="option"><input type="radio" name="data" value="high"> たくさん使う・無制限が気になる</label>
+            <label class="option"><input type="radio" name="data" value="unknown"> わからない</label>
           </div>
-
           <div class="quiz-actions">
             <span></span>
             <button class="btn" type="button" data-next>次へ →</button>
           </div>
         </div>
 
-        <!-- Q2 -->
         <div class="qstep" data-step="1">
           <h3>Q2. 何を一番重視する？</h3>
-
           <div class="options">
-            <label class="option">
-              <input type="radio" name="priority" value="price" required>
-              月額料金の安さ
-            </label>
-
-            <label class="option">
-              <input type="radio" name="priority" value="data">
-              データ容量・使いやすさ
-            </label>
-
-            <label class="option">
-              <input type="radio" name="priority" value="support">
-              店舗などのサポート
-            </label>
-
-            <label class="option">
-              <input type="radio" name="priority" value="balance">
-              料金とサービスのバランス
-            </label>
+            <label class="option"><input type="radio" name="priority" value="price" required> 月額料金の安さ</label>
+            <label class="option"><input type="radio" name="priority" value="data"> データ容量・使いやすさ</label>
+            <label class="option"><input type="radio" name="priority" value="support"> 店舗などのサポート</label>
+            <label class="option"><input type="radio" name="priority" value="balance"> 料金とサービスのバランス</label>
           </div>
-
           <div class="quiz-actions">
             <button class="btn secondary" type="button" data-prev>← 戻る</button>
             <button class="btn" type="button" data-next>次へ →</button>
           </div>
         </div>
 
-        <!-- Q3 -->
         <div class="qstep" data-step="2">
           <h3>Q3. 通話はどのくらい使う？</h3>
-
           <div class="options">
-            <label class="option">
-              <input type="radio" name="call" value="little" required>
-              ほとんどしない
-            </label>
-
-            <label class="option">
-              <input type="radio" name="call" value="some">
-              短い電話をよくする
-            </label>
-
-            <label class="option">
-              <input type="radio" name="call" value="long">
-              長電話が多い
-            </label>
-
-            <label class="option">
-              <input type="radio" name="call" value="unknown">
-              わからない
-            </label>
+            <label class="option"><input type="radio" name="call" value="little" required> ほとんどしない</label>
+            <label class="option"><input type="radio" name="call" value="some"> 短い電話をよくする</label>
+            <label class="option"><input type="radio" name="call" value="long"> 長電話が多い</label>
+            <label class="option"><input type="radio" name="call" value="unknown"> わからない</label>
           </div>
-
           <div class="quiz-actions">
             <button class="btn secondary" type="button" data-prev>← 戻る</button>
             <button class="btn" type="submit">診断結果を見る ✨</button>
@@ -1219,7 +1102,6 @@ footer a {
   </div>
 </section>
 
-<!-- 選び方のポイント -->
 <section class="wrap" id="ranking">
   <div class="section-head">
     <div>
@@ -1248,7 +1130,7 @@ footer a {
     </div>
 
     <div class="rankrow">
-      <span class="medal" style="background:#ffe1ef">☎️</span>
+      <span class="medal" style="background:#fff3b0">☎️</span>
       <div>
         <strong>電話をよく使う</strong>
         <small>通話定額の対象、専用アプリの要否、超過料金を確認</small>
@@ -1258,7 +1140,6 @@ footer a {
   </div>
 </section>
 
-<!-- よくある質問 -->
 <section class="wrap" id="faq">
   <div class="section-head">
     <div>
@@ -1304,7 +1185,6 @@ footer a {
   </div>
 </section>
 
-<!-- 広告に関する説明 -->
 <section class="wrap">
   <div class="disclosure">
     <strong>広告について：</strong>
@@ -1317,56 +1197,45 @@ footer a {
 
 </main>
 
-<!-- ページ下部 -->
 <section class="footer-hero">
-  <h2>
-    スマホ代を見直して、<br>
-    もっと自分らしい毎日へ！ 🌈
-  </h2>
-
+  <h2>スマホ代を見直して、<br>もっと自分らしい毎日へ！ 🌈</h2>
   <p>あなたの使い方に合うプランを、納得して選ぼう。</p>
-
   <a class="btn" href="#quiz">無料のSIM診断を始める →</a>
 </section>
 
-<!-- フッター -->
 <footer>
   <p>スマホ代見直しガイド</p>
-
   <p>
     <a href="#compare">料金比較</a>
     <a href="#quiz">SIM診断</a>
     <a href="#faq">よくある質問</a>
     <a href="policy.html">運営方針</a>
   </p>
-
-  <p>
-    © <span id="year"></span> スマホ代見直しガイド
-  </p>
+  <p>© <span id="year"></span> スマホ代見直しガイド</p>
 </footer>
 
 <script>
-/* 年号を自動表示 */
-document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
-/* 診断フォーム */
-const steps = [...document.querySelectorAll('.qstep')];
+const steps = [...document.querySelectorAll(".qstep")];
 let current = 0;
 
 function showStep(n) {
   current = n;
-  steps.forEach((step, index) => {
-    step.classList.toggle('active', index === n);
+  steps.forEach((step, i) => {
+    step.classList.toggle("active", i === n);
   });
 }
 
-/* 次へボタン */
-document.querySelectorAll('[data-next]').forEach(button => {
-  button.addEventListener('click', () => {
-    const field = current === 0 ? 'data' : 'priority';
+document.querySelectorAll("[data-next]").forEach(button => {
+  button.addEventListener("click", () => {
+    const field = current === 0 ? "data" : "priority";
 
-    if (!document.querySelector(`input[name="${field}"]:checked`)) {
-      alert('選択肢をひとつ選んでね！');
+    if (!document.querySelector(
+      `input[name="${field}"]:checked`
+    )) {
+      alert("選択肢をひとつ選んでね！");
       return;
     }
 
@@ -1374,82 +1243,73 @@ document.querySelectorAll('[data-next]').forEach(button => {
   });
 });
 
-/* 戻るボタン */
-document.querySelectorAll('[data-prev]').forEach(button => {
-  button.addEventListener('click', () => {
+document.querySelectorAll("[data-prev]").forEach(button => {
+  button.addEventListener("click", () => {
     showStep(Math.max(current - 1, 0));
   });
 });
 
-/* 診断結果 */
-document.getElementById('simQuiz').addEventListener('submit', event => {
+document.getElementById("simQuiz").addEventListener("submit", event => {
   event.preventDefault();
 
-  const data = document.querySelector('input[name="data"]:checked')?.value;
-  const priority = document.querySelector('input[name="priority"]:checked')?.value;
-  const call = document.querySelector('input[name="call"]:checked')?.value;
+  const data =
+    document.querySelector('input[name="data"]:checked')?.value;
+  const priority =
+    document.querySelector('input[name="priority"]:checked')?.value;
+  const call =
+    document.querySelector('input[name="call"]:checked')?.value;
 
   if (!data || !priority || !call) {
-    alert('3つの質問すべてに回答してね！');
+    alert("3つの質問すべてに回答してね！");
     return;
   }
 
-  let title = 'まずは各社の条件を比較してみよう';
-
+  let title = "まずは各社の条件を比較してみよう";
   let body =
-    'データ使用量・通話・サポート条件を並べ、毎月の合計費用で比較するのがおすすめです。';
+    "データ使用量・通話・サポート条件を並べ、毎月の合計費用で比較するのがおすすめです。";
 
-  if (data === 'high') {
-    title = 'データをたくさん使う人';
-
+  if (data === "high") {
+    title = "データをたくさん使う人";
     body =
-      'データ容量の上限・追加料金・混雑時の通信・テザリング条件を確認。楽天モバイルなどの使用量に応じたプランや、大容量プランを公式情報で比較しましょう。';
-
-  } else if (data === 'low' && priority === 'price') {
-    title = '少容量で料金重視の人';
-
+      "データ容量の上限・追加料金・混雑時の通信・テザリング条件を確認しましょう。楽天モバイルなどの使用量に応じたプランや、大容量プランを公式情報で比較してください。";
+  } else if (data === "low" && priority === "price") {
+    title = "少容量で料金重視の人";
     body =
-      '小容量プランの月額、通話料、割引条件を比較しましょう。IIJmioなど複数の容量から選べるサービスも候補です。';
-
-  } else if (data === 'mid' && priority === 'data') {
-    title = '中容量を使う人';
-
+      "小容量プランの月額、通話料、割引条件を比較しましょう。IIJmioなど複数の容量から選べるサービスも候補です。";
+  } else if (data === "mid" && priority === "data") {
+    title = "中容量を使う人";
     body =
-      '毎月の実際の使用量に合う容量と、速度・通話条件のバランスを比較しましょう。LINEMOやahamoなども候補として確認できます。';
-
-  } else if (priority === 'support') {
-    title = 'サポートを重視する人';
-
+      "毎月の実際の使用量に合う容量と、速度・通話条件のバランスを比較しましょう。LINEMOやahamoなども候補として確認できます。";
+  } else if (priority === "support") {
+    title = "サポートを重視する人";
     body =
-      'オンライン専用プランは手続きやサポートがオンライン中心の場合があります。店舗相談の可否・有料サポート・対応時間を申込前に確認しましょう。';
+      "オンライン専用プランは手続きやサポートがオンライン中心の場合があります。店舗相談の可否・有料サポート・対応時間を申込前に確認しましょう。";
   }
 
-  if (call === 'long') {
+  if (call === "long") {
     body +=
-      ' 長電話が多い場合は、かけ放題の対象や専用アプリの要否、対象外通話の料金を必ず確認してください。';
-
-  } else if (call === 'some') {
+      " 長電話が多い場合は、かけ放題の対象や専用アプリの要否、対象外通話の料金を必ず確認してください。";
+  } else if (call === "some") {
     body +=
-      ' 短い電話が多い場合は、短時間通話オプションの条件と超過後の料金を比較しましょう。';
-
-  } else if (call === 'unknown') {
+      " 短い電話が多い場合は、短時間通話オプションの条件と超過後の料金を比較しましょう。";
+  } else if (call === "unknown") {
     body +=
-      ' 通話履歴を1〜2か月確認すると、通話オプションが必要か判断しやすくなります。';
+      " 通話履歴を1〜2か月確認すると、通話オプションが必要か判断しやすくなります。";
   }
 
-  const result = document.getElementById('quizResult');
+  const result = document.getElementById("quizResult");
 
   result.innerHTML =
-    '<h3>🎉 診断結果：' + title + '</h3>' +
-    '<p>' + body + '</p>' +
-    '<p><strong>次のステップ：</strong>下の比較欄から各社の公式情報を確認してください。</p>' +
+    "<h3>🎉 診断結果：" + title + "</h3>" +
+    "<p>" + body + "</p>" +
+    "<p><strong>次のステップ：</strong>" +
+    "下の比較欄から各社の公式情報を確認してください。</p>" +
     '<a class="btn" href="#compare">プラン比較へ →</a>';
 
-  result.classList.add('show');
-
+  result.classList.add("show");
   result.scrollIntoView({
-    behavior: 'smooth',
-    block: 'nearest'
+    behavior: "smooth",
+    block: "nearest"
   });
 });
 </script>

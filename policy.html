@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>運営方針｜スマホ代見直しガイド</title>
+
+  <meta
+    name="description"
+    content="スマホ代見直しガイドの運営方針、掲載情報、広告に関する方針について説明します。"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f0fbff;
+      color: #18334b;
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      line-height: 1.9;
+    }
+
+    header {
+      background: linear-gradient(120deg, #03a8df, #23d4ed, #8cebd9);
+      color: white;
+      padding: 28px 20px;
+    }
+
+    .header-inner {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      color: white;
+      font-weight: 900;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 35px auto;
+      padding: 0 18px;
+    }
+
+    .policy-card {
+      background: white;
+      padding: clamp(22px, 5vw, 40px);
+      border-radius: 24px;
+      border: 2px solid #d6f4fa;
+      box-shadow: 0 8px 0 #18334b08;
+    }
+
+    h1 {
+      font-size: clamp(27px, 5vw, 38px);
+      line-height: 1.4;
+      margin: 0 0 12px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 900;
+      border-left: 5px solid #14c8e5;
+      padding-left: 12px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    .back-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 28px;
+      padding: 13px 22px;
+      background: #ff3d91;
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: 0 5px 0 #d51c70;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 12px;
+      color: #607384;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="index.html">📱 スマホ代見直しガイド</a>
+  </div>
+</header>
+
+<main>
+  <article class="policy-card">
+
+    <h1>運営方針</h1>
+
+    <p>
+      スマホ代見直しガイドでは、スマートフォンの料金プランや
+      通信サービスに関する情報を整理し、サービス選びの参考となる情報を提供します。
+    </p>
+
+    <h2>掲載情報について</h2>
+
+    <p>
+      掲載情報は、各サービスの公式情報などを参考に作成しています。
+      料金、キャンペーン、提供条件、サービス内容などは変更される場合があります。
+      お申し込みの際は、必ず各社の公式サイトで最新情報をご確認ください。
+    </p>
+
+    <h2>広告・リンクについて</h2>
+
+    <p>
+      当サイトでは、各通信サービスの公式サイトへのリンクを掲載しています。
+      リンク先のサービス内容や契約条件については、各運営会社の公式サイトをご確認ください。
+    </p>
+
+    <p>
+      今後、アフィリエイト広告などを掲載する場合は、
+      広告であることが読者に分かるよう、適切に表示します。
+    </p>
+
+    <h2>免責事項</h2>
+
+    <p>
+      当サイトの情報は、サービス選びの参考として提供するものです。
+      掲載情報の正確性や最新性には配慮していますが、
+      その内容を保証するものではありません。
+      契約やサービスの利用については、ご自身で公式情報をご確認のうえご判断ください。
+    </p>
+
+    <a class="back-button" href="index.html">← トップページへ戻る</a>
+
+  </article>
+</main>
+
+<footer>
+  © <span id="year"></span> スマホ代見直しガイド
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

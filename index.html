@@ -7,9 +7,11 @@
 <meta name="theme-color" content="#06b6d4">
 <title>スマホ代見直しガイド｜ぴったりSIM診断</title>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800;900&family=Mochiy+Pop+One&display=swap');
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 
+<style>
 :root {
   --navy: #12314b;
   --cyan: #14c8e5;
@@ -17,7 +19,6 @@
   --yellow: #fff04b;
   --ink: #18334b;
   --muted: #5b7082;
-  --pale: #effaff;
 }
 
 * {
@@ -34,6 +35,7 @@ body {
   background: #fff;
   color: var(--ink);
   font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-weight: 500;
   line-height: 1.7;
   letter-spacing: .015em;
   overflow-wrap: anywhere;
@@ -189,14 +191,15 @@ input {
   line-height: 1.2;
   margin: 18px 0 14px;
   font-weight: 900;
-  letter-spacing: -.035em;
-  text-shadow: none;
+  letter-spacing: -.045em;
+  text-shadow: 0 3px 0 #087eae;
 }
 
 .hero h1 em {
   font-style: normal;
   color: #ffec55;
   font-weight: 900;
+  text-shadow: 0 3px 0 #d87a24;
 }
 
 .hero p {
@@ -247,10 +250,14 @@ input {
 
 .section-head {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
   margin-bottom: 20px;
+}
+
+.section-head > div {
+  min-width: 0;
 }
 
 .section-head h2 {
@@ -266,6 +273,7 @@ input {
   margin: 8px 0 0;
   color: var(--muted);
   font-size: 14px;
+  line-height: 1.8;
 }
 
 .marker {
@@ -334,7 +342,6 @@ input {
   line-height: 1.55;
   letter-spacing: -.025em;
   text-align: center;
-  transform: none;
   overflow-wrap: anywhere;
   box-shadow: inset 0 -5px 0 rgba(255, 198, 35, .18);
 }
@@ -344,7 +351,6 @@ input {
   color: #ff3d91;
   font-size: 1.08em;
   font-weight: 900;
-  white-space: normal;
 }
 
 .sim-section {
@@ -619,14 +625,6 @@ details p {
   margin-bottom: 0;
 }
 
-.disclosure {
-  background: #f6f7fa;
-  border-radius: 14px;
-  padding: 16px;
-  font-size: 12px;
-  color: #5b6c7b;
-}
-
 .footer-hero {
   background: linear-gradient(100deg, #134a86, #08a9d6);
   color: white;
@@ -649,10 +647,17 @@ footer {
 }
 
 footer a {
-  margin: 0 8px;
+  display: inline-block;
+  margin: 5px 8px;
+  text-decoration: none;
 }
 
-/* スマートフォン対応 */
+footer a:hover {
+  color: var(--pink);
+  text-decoration: underline;
+}
+
+/* タブレット */
 @media (max-width: 800px) {
   .nav {
     padding: 9px 12px;
@@ -713,6 +718,12 @@ footer a {
     gap: 12px;
   }
 
+  .section-head > .btn {
+    align-self: center;
+    width: min(100%, 340px);
+    text-align: center;
+  }
+
   .faq {
     grid-template-columns: 1fr;
   }
@@ -728,6 +739,7 @@ footer a {
   }
 }
 
+/* スマートフォン */
 @media (max-width: 480px) {
   body {
     letter-spacing: 0;
@@ -764,7 +776,7 @@ footer a {
   .hero h1 {
     font-size: clamp(34px, 9.2vw, 42px);
     line-height: 1.22;
-    letter-spacing: -.04em;
+    letter-spacing: -.05em;
   }
 
   .hero p {
@@ -799,7 +811,6 @@ footer a {
     line-height: 1.8;
   }
 
-  /* 診断ボタンを中央に配置 */
   .section-head > .btn {
     align-self: center;
     width: min(100%, 340px);
@@ -1001,6 +1012,7 @@ footer a {
 
 <header class="hero" id="home">
   <div class="hero-inner">
+
     <div>
       <span class="kicker">＼ 3分でわかる！ ／</span>
 
@@ -1030,9 +1042,10 @@ footer a {
     <div class="hero-art">
       <img
         src="hero-pop-girl.PNG"
-        alt="スマホ代をもっと軽やかに！とポップな文字で呼びかける、メガネをかけたロングヘアの女の子のイラスト"
+        alt="スマホ代をもっと軽やかに！とポップな文字で呼びかける女の子のイラスト"
       >
     </div>
+
   </div>
 </header>
 
@@ -1047,6 +1060,7 @@ footer a {
   </div>
 
   <div class="problems">
+
     <div class="problem-card">
       <h3>スマホ選び、迷子になってない？ 🌀</h3>
 
@@ -1064,6 +1078,7 @@ footer a {
       <span>ぴったりSIM診断</span>
       <div>で整理しよう！ ✨</div>
     </div>
+
   </div>
 </section>
 
@@ -1096,7 +1111,7 @@ footer a {
           <li>オンライン手続きが中心</li>
         </ul>
 
-        <a class="btn" href="https://www.linemo.jp/" target="_blank" rel="noopener">
+        <a class="btn" href="https://www.linemo.jp/" target="_blank" rel="noopener noreferrer">
           公式サイトで確認 ↗
         </a>
       </article>
@@ -1116,7 +1131,7 @@ footer a {
           <li>利用場所の電波状況も確認</li>
         </ul>
 
-        <a class="btn" href="https://network.mobile.rakuten.co.jp/" target="_blank" rel="noopener">
+        <a class="btn" href="https://network.mobile.rakuten.co.jp/" target="_blank" rel="noopener noreferrer">
           公式サイトで確認 ↗
         </a>
       </article>
@@ -1136,7 +1151,7 @@ footer a {
           <li>海外利用の条件を確認</li>
         </ul>
 
-        <a class="btn" href="https://ahamo.com/" target="_blank" rel="noopener">
+        <a class="btn" href="https://ahamo.com/" target="_blank" rel="noopener noreferrer">
           公式サイトで確認 ↗
         </a>
       </article>
@@ -1156,7 +1171,7 @@ footer a {
           <li>回線タイプ・対応端末を確認</li>
         </ul>
 
-        <a class="btn" href="https://www.iijmio.jp/" target="_blank" rel="noopener">
+        <a class="btn" href="https://www.iijmio.jp/" target="_blank" rel="noopener noreferrer">
           公式サイトで確認 ↗
         </a>
       </article>
@@ -1381,16 +1396,7 @@ footer a {
   </div>
 </section>
 
-<!-- 運営方針のアフィリエイトに関する文言を削除しました。
-     情報提供に関する注意書きだけを残しています。 -->
-<section class="wrap">
-  <div class="disclosure">
-    <strong>運営方針：</strong>
-    掲載内容は情報提供を目的としています。
-    料金・特典・サービス内容は変更されることがあるため、
-    申込前に必ず各社の公式情報をご確認ください。
-  </div>
-</section>
+<!-- 運営方針の本文はトップページに表示しません。 -->
 
 </main>
 
@@ -1402,11 +1408,14 @@ footer a {
 
 <footer>
   <p>スマホ代見直しガイド</p>
+
   <p>
     <a href="#compare">料金比較</a>
     <a href="#quiz">SIM診断</a>
     <a href="#faq">よくある質問</a>
+    <a href="policy.html">運営方針</a>
   </p>
+
   <p>© <span id="year"></span> スマホ代見直しガイド</p>
 </footer>
 
@@ -1418,6 +1427,7 @@ let current = 0;
 
 function showStep(n) {
   current = n;
+
   steps.forEach((step, index) => {
     step.classList.toggle('active', index === n);
   });
@@ -1455,28 +1465,46 @@ document.getElementById('simQuiz').addEventListener('submit', event => {
   }
 
   let title = 'まずは各社の条件を比較してみよう';
-  let body = 'データ使用量・通話・サポート条件を並べ、毎月の合計費用で比較するのがおすすめです。';
+
+  let body =
+    'データ使用量・通話・サポート条件を並べ、毎月の合計費用で比較するのがおすすめです。';
 
   if (data === 'high') {
     title = 'データをたくさん使う人';
-    body = 'データ容量の上限・追加料金・混雑時の通信・テザリング条件を確認。楽天モバイルなどの使用量に応じたプランや、大容量プランを公式情報で比較しましょう。';
+
+    body =
+      'データ容量の上限・追加料金・混雑時の通信・テザリング条件を確認。楽天モバイルなどの使用量に応じたプランや、大容量プランを公式情報で比較しましょう。';
+
   } else if (data === 'low' && priority === 'price') {
     title = '少容量で料金重視の人';
-    body = '小容量プランの月額、通話料、割引条件を比較しましょう。IIJmioなど複数の容量から選べるサービスも候補です。';
+
+    body =
+      '小容量プランの月額、通話料、割引条件を比較しましょう。IIJmioなど複数の容量から選べるサービスも候補です。';
+
   } else if (data === 'mid' && priority === 'data') {
     title = '中容量を使う人';
-    body = '毎月の実際の使用量に合う容量と、速度・通話条件のバランスを比較しましょう。LINEMOやahamoなども候補として確認できます。';
+
+    body =
+      '毎月の実際の使用量に合う容量と、速度・通話条件のバランスを比較しましょう。LINEMOやahamoなども候補として確認できます。';
+
   } else if (priority === 'support') {
     title = 'サポートを重視する人';
-    body = 'オンライン専用プランは手続きやサポートがオンライン中心の場合があります。店舗相談の可否・有料サポート・対応時間を申込前に確認しましょう。';
+
+    body =
+      'オンライン専用プランは手続きやサポートがオンライン中心の場合があります。店舗相談の可否・有料サポート・対応時間を申込前に確認しましょう。';
   }
 
   if (call === 'long') {
-    body += ' 長電話が多い場合は、かけ放題の対象や専用アプリの要否、対象外通話の料金を必ず確認してください。';
+    body +=
+      ' 長電話が多い場合は、かけ放題の対象や専用アプリの要否、対象外通話の料金を必ず確認してください。';
+
   } else if (call === 'some') {
-    body += ' 短い電話が多い場合は、短時間通話オプションの条件と超過後の料金を比較しましょう。';
+    body +=
+      ' 短い電話が多い場合は、短時間通話オプションの条件と超過後の料金を比較しましょう。';
+
   } else if (call === 'unknown') {
-    body += ' 通話履歴を1〜2か月確認すると、通話オプションが必要か判断しやすくなります。';
+    body +=
+      ' 通話履歴を1〜2か月確認すると、通話オプションが必要か判断しやすくなります。';
   }
 
   const result = document.getElementById('quizResult');
@@ -1488,6 +1516,7 @@ document.getElementById('simQuiz').addEventListener('submit', event => {
     '<a class="btn" href="#compare">プラン比較へ →</a>';
 
   result.classList.add('show');
+
   result.scrollIntoView({
     behavior: 'smooth',
     block: 'nearest'
